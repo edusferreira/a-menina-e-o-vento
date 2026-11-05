@@ -66,6 +66,25 @@ describe('criarCaso', () => {
     expect([0, 1, 2]).toContain(c.final.localCerto);
   });
 
+  it('a Tia Aurélia aparece em pelo menos 2 paradas em todo caso (o final 2 exige ouvi-la em 2 capitais)', () => {
+    for (const nivel of ['facil', 'medio', 'dificil']) {
+      for (let s = 0; s < 150; s += 1) {
+        const c = caso(`S${s}`.padEnd(4, 'Z').slice(0, 4), nivel);
+        const comAurelia = c.paradas.filter((p) => p.locais.some((l) => l.informante === 'aurelia')).length;
+        expect(comAurelia, `${nivel}/${c.semente}`).toBeGreaterThanOrEqual(2);
+      }
+    }
+  });
+
+  it('cada parada continua com uma pista direta e uma dedutiva no médio', () => {
+    for (let s = 0; s < 100; s += 1) {
+      const c = caso(`M${s}`.padEnd(4, 'Z').slice(0, 4), 'medio');
+      c.paradas.slice(0, -1).forEach((p) => {
+        expect(p.locais.filter((l) => l.pista).map((l) => l.pista.nivel).sort()).toEqual(['dedutiva', 'direta']);
+      });
+    }
+  });
+
   it('Pedro dá a pista da primeira capital', () => {
     const c = caso('H5J6');
     expect(c.pedro.texto.startsWith(c.rota[0])).toBe(true);

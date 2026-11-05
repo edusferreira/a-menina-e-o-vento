@@ -70,6 +70,38 @@ function montarParada(i, rota, cfg, dados, rng, opcoesExtras) {
   };
 }
 
+const AURELIA = 'aurelia';
+const temAurelia = (parada) => parada.locais.some((l) => l.informante === AURELIA);
+
+/** Põe a Aurélia na pista dedutiva da parada; se a categoria não for dela, troca por uma pista que seja (mesmo nível). */
+function chamarAurelia(parada, banco, catsDela, rng) {
+  const destinos = parada.locais.map((l, k) => ({ l, k })).filter(({ l }) => l.tipo === 'destino');
+  const alvo = destinos.find(({ l }) => l.pista.nivel === 'dedutiva') ?? destinos[0];
+  const usadas = new Set(destinos.map(({ l }) => l.pista.texto));
+  let { pista } = alvo.l;
+  if (!catsDela.includes(pista.cat)) {
+    const daAurelia = banco.filter((p) => catsDela.includes(p.cat) && !usadas.has(p.texto));
+    const mesmoNivel = daAurelia.filter((p) => p.nivel === pista.nivel);
+    const opcoes = mesmoNivel.length ? mesmoNivel : daAurelia;
+    if (!opcoes.length) return parada;
+    pista = escolher(opcoes, rng);
+  }
+  const locais = parada.locais.map((l, k) => (k === alvo.k ? { ...l, informante: AURELIA, pista } : l));
+  return { ...parada, locais };
+}
+
+/**
+ * O final 2 exige ouvir a Tia Aurélia em 2 capitais (seção 9). Sem esta garantia, o sorteio deixava o final 2
+ * impossível em cerca de 28% dos casos no fácil. Casos que já têm a Aurélia em 2 paradas não mudam.
+ */
+function garantirAurelia(paradas, rota, dados, rng) {
+  const catsDela = Object.keys(dados.regras.informantes).filter((c) => dados.regras.informantes[c].includes(AURELIA));
+  const faltam = Math.max(0, 2 - paradas.filter(temAurelia).length);
+  const semAurelia = paradas.slice(0, -1).map((_, i) => i).filter((i) => !temAurelia(paradas[i]));
+  const escolhidas = new Set(embaralhar(semAurelia, rng).slice(0, faltam));
+  return paradas.map((p, i) => (escolhidas.has(i) ? chamarAurelia(p, dados.pistas[rota[i + 1]], catsDela, rng) : p));
+}
+
 /**
  * @param {{semente: string, nivel: string, dados: object, opcoes?: {crispinaAcerto?: number}}} params
  */
@@ -80,6 +112,9 @@ export function criarCaso({ semente, nivel, dados, opcoes = {} }) {
   const rota = sortearRota(dados.capitais, cfg.capitais, rng);
   const diretas = dados.pistas[rota[0]].filter((p) => p.nivel === 'direta');
   const pedro = escolher(diretas.length ? diretas : dados.pistas[rota[0]], rng);
-  const paradas = rota.map((_, i) => montarParada(i, rota, cfg, dados, rng, opcoes));
-  return { semente, nivel, rota, paradas, pedro, final: { localCerto: inteiro(rng, 3) } };
+  const sorteadas = rota.map((_, i) => montarParada(i, rota, cfg, dados, rng, opcoes));
+  const final = { localCerto: inteiro(rng, 3) };
+  // Sorteio separado: a garantia da Aurélia não altera rota, opções nem o local do encontro.
+  const paradas = garantirAurelia(sorteadas, rota, dados, criarRng(hashTexto(`${semente}:${nivel}:aurelia`)));
+  return { semente, nivel, rota, paradas, pedro, final };
 }

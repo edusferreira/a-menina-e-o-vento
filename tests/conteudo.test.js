@@ -131,6 +131,18 @@ describe('dialogos.json e finais.json', () => {
   });
 });
 
+describe('Tia Aurélia com o conteúdo real', () => {
+  it.each(['facil', 'medio', 'dificil'])('nível %s: todo caso tem a Aurélia em 2+ capitais', async (nivel) => {
+    const { criarCaso } = await import('../src/engine/caso.js');
+    const { gerarSemente, criarRng } = await import('../src/engine/rng.js');
+    const rng = criarRng(42);
+    for (let i = 0; i < 400; i += 1) {
+      const c = criarCaso({ semente: gerarSemente(() => rng.random()), nivel, dados });
+      expect(c.paradas.filter((p) => p.locais.some((l) => l.informante === 'aurelia')).length, c.semente).toBeGreaterThanOrEqual(2);
+    }
+  });
+});
+
 describe('partida completa com o conteúdo real', () => {
   it.each(['facil', 'medio', 'dificil'])('nível %s: dá para chegar ao encontro visitando 2 locais por capital', (nivel) => {
     for (const semente of ['4F2A', 'B7K9', 'ZZ22', 'MAR1'.replace('1', 'A')]) {

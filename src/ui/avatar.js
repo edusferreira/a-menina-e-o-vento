@@ -199,22 +199,3 @@ export function desenharAvatar(cfg, { opcoes, uniforme, rotulo = 'Avatar', class
   const nome = rotulo.replace(/["<>&]/g, '');
   return `<svg class="avatar ${classe}" ${attrs} viewBox="0 0 104 124" role="img" aria-label="${nome}" style="opacity:${opacidade}">${camadas.join('')}</svg>`;
 }
-
-/** O Vento: nuvem velha, bochechuda e rabugenta, soprando. */
-export function desenharVento({ classe = '', bravo = false, attrs = '' } = {}) {
-  const nuvem = [[38, 52, 24], [62, 44, 26], [86, 54, 22], [56, 68, 26], [28, 70, 16], [92, 74, 16]]
-    .map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#eef8ec" stroke="#9ccfa8" stroke-width="2"/>`).join('');
-  const sobrancelha = bravo ? 'M40 44 l14 6 M86 44 l-14 6' : 'M40 46 q8 -6 14 0 M72 46 q8 -6 14 0';
-  return `<svg class="vento ${classe}" ${attrs} viewBox="0 0 150 110" role="img" aria-label="O Vento, uma nuvem com rosto de velho rabugento">
-    <g class="flutua">${nuvem}
-      <path d="${sobrancelha}" stroke="#4a6b55" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <circle cx="48" cy="56" r="3.5" fill="#2e4437"/><circle cx="78" cy="56" r="3.5" fill="#2e4437"/>
-      <circle cx="40" cy="66" r="7" fill="#ffb3b3" opacity=".5"/><circle cx="88" cy="66" r="7" fill="#ffb3b3" opacity=".5"/>
-      <ellipse cx="64" cy="72" rx="6" ry="7" fill="#2e4437"/>
-      <path d="M58 84 q6 8 12 0" stroke="#c9e2cf" stroke-width="5" fill="none"/>
-    </g>
-    <g class="sopro" stroke="#7fbf95" stroke-width="3" fill="none" stroke-linecap="round">
-      <path d="M100 66 q14 -4 26 2"/><path d="M104 76 q16 2 30 -2"/><path d="M98 86 q12 6 24 4"/>
-    </g>
-  </svg>`;
-}

@@ -3,7 +3,7 @@
 import { html, cru } from '../dom.js';
 import { hud, balao, retrato, avatarJogador, nomeCapital, nomeRecruta, folhaCarta, tintaDaMaria } from '../comum.js';
 import { cenaCapital } from '../cenas.js';
-import { desenharVento } from '../avatar.js';
+import { desenharVento } from '../vento.js';
 import { blocoChegada, sinalDoVento } from './capital.js';
 import { momento } from '../../engine/tempo.js';
 import { escolherLocalEncontro, iniciarTeste, responderTeste, escolherFinal } from '../../engine/jogo.js';

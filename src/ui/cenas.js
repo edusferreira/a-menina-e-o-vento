@@ -1,7 +1,8 @@
 // Ilustrações provisórias (arte plana em SVG), no espírito do cartaz: céu verde, chapéu de palha, catavento.
 // Uma paisagem por região substitui, no protótipo, as 108 ilustrações finais previstas na seção 12.
 
-import { desenharAvatar, desenharVento } from './avatar.js';
+import { desenharAvatar } from './avatar.js';
+import { desenharVento } from './vento.js';
 
 /** Céu por período do dia: manhã, tarde, fim de tarde, noite, madrugada. */
 const CEUS = [['#bfe8c9', '#f3fbe8'], ['#8fd0ff', '#dcf3ff'], ['#ff9f6b', '#ffd9a0'], ['#1f2d5c', '#3d4f8f'], ['#100c2a', '#2a2050']];
@@ -47,15 +48,15 @@ const caverna = '<path d="M250 180 Q250 60 330 60 Q410 60 410 180Z" fill="#6b5a4
 
 export function cenaPrologo(n, opcoes, personagens) {
   const pessoa = (id, x, y, w, extra = '') => desenharAvatar(personagens[id], { opcoes, rotulo: id, attrs: `x="${x}" y="${y}" width="${w}" height="${w * 1.2}" ${extra}` });
-  const vento = (x, y, w, bravo = false, classe = '') => desenharVento({ bravo, classe, attrs: `x="${x}" y="${y}" width="${w}" height="${w * 0.73}"` });
+  const vento = (x, y, w, jeito = {}) => desenharVento({ ...jeito, attrs: `x="${x}" y="${y}" width="${w}" height="${w * 0.73}"` });
   // Na última cena o chapéu de palha fica na areia: é ele que as tias encontram.
   const semChapeu = (x, y, w) => desenharAvatar({ ...personagens.maria, acessorio: 'nenhum' }, { opcoes, rotulo: 'maria', attrs: `x="${x}" y="${y}" width="${w}" height="${w * 1.2}"` });
   const cenas = [
     () => `${praia('p1')}${caverna}${pessoa('maria', 120, 96, 60)}${pessoa('pedro', 60, 100, 56)}`,
-    () => `<rect width="400" height="180" fill="#2a211b"/><path d="M0 180 Q200 130 400 180Z" fill="#4a3a2e"/>${vento(130, 50, 150)}<text x="290" y="60" class="cena-zzz">Z z z</text>${pessoa('maria', 40, 96, 56)}${pessoa('pedro', 0, 104, 50)}`,
-    () => `<rect width="400" height="180" fill="#2a211b"/>${vento(170, 30, 170, true)}${pessoa('pedro', 20, 30, 54, 'class="voando"')}${pessoa('maria', 90, 96, 60)}`,
+    () => `<rect width="400" height="180" fill="#2a211b"/><path d="M0 180 Q200 130 400 180Z" fill="#4a3a2e"/>${vento(130, 50, 150, { dormindo: true })}<text x="290" y="60" class="cena-zzz">Z z z</text>${pessoa('maria', 40, 96, 56)}${pessoa('pedro', 0, 104, 50)}`,
+    () => `<rect width="400" height="180" fill="#2a211b"/>${vento(170, 30, 170, { bravo: true })}${pessoa('pedro', 20, 30, 54, 'class="voando"')}${pessoa('maria', 90, 96, 60)}`,
     () => `${praia('p4', 2)}${vento(220, 20, 150)}${pessoa('maria', 120, 90, 66)}<g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"><path d="M200 100 q-20 -6 -40 0"/><path d="M210 120 q-30 -4 -50 4"/></g>`,
-    () => `${praia('p5', 2)}${vento(160, 4, 130)}${semChapeu(205, 0, 40)}${['adelaide', 'adalgisa', 'aurelia'].map((id, i) => pessoa(id, 30 + i * 46, 112, 46)).join('')}${pessoa('pedro', 172, 120, 40)}<ellipse cx="250" cy="160" rx="16" ry="4" fill="#e8c46a"/>`,
+    () => `${praia('p5', 2)}${vento(160, 4, 130)}${semChapeu(240, 8, 34)}${['adelaide', 'adalgisa', 'aurelia'].map((id, i) => pessoa(id, 30 + i * 46, 112, 46)).join('')}${pessoa('pedro', 172, 120, 40)}<ellipse cx="250" cy="160" rx="16" ry="4" fill="#e8c46a"/>`,
   ];
   return `<svg class="cena" viewBox="0 0 400 180" role="img" aria-label="Cena ${n + 1} do prólogo">${cenas[n]()}</svg>`;
 }
@@ -65,10 +66,10 @@ export function cenaFinal(tipo, opcoes, personagens, avatarJogador) {
   const p = (id, x, y, w, extra) => pessoa(personagens[id], x, y, w, id, extra);
   const vento = (x, y, w, attrs = '') => desenharVento({ attrs: `x="${x}" y="${y}" width="${w}" height="${w * 0.73}" ${attrs}` });
   const cenas = {
-    final1: () => `${praia('f1', 2)}<rect x="40" y="40" width="10" height="110" fill="#6b4a2b"/><circle cx="45" cy="44" r="38" fill="#2f9e5b"/>${p('placido', 26, 14, 40)}${vento(220, 10, 140)}${p('maria', 262, 0, 40)}${p('pedro', 120, 112, 44)}${pessoa(avatarJogador, 170, 106, 50, 'Você')}`,
-    final2: () => `${praia('f2', 1)}${vento(170, 20, 140)}${p('aurelia', 210, 6, 44, 'class="voando"')}${p('adelaide', 40, 108, 48)}${p('adalgisa', 92, 110, 46)}${p('maria', 300, 108, 48)}`,
+    final1: () => `${praia('f1', 2)}<rect x="40" y="40" width="10" height="110" fill="#6b4a2b"/><circle cx="45" cy="44" r="38" fill="#2f9e5b"/>${p('placido', 26, 14, 40)}${vento(200, 10, 140)}${p('maria', 344, 58, 42)}${p('pedro', 120, 112, 44)}${pessoa(avatarJogador, 170, 106, 50, 'Você')}`,
+    final2: () => `${praia('f2', 1)}${vento(160, 20, 140)}${p('aurelia', 292, 8, 42, 'class="voando"')}${p('adelaide', 40, 108, 48)}${p('adalgisa', 92, 110, 46)}${p('maria', 300, 108, 48)}`,
     final3: () => `${ceu(2, 'f3')}<rect y="130" width="400" height="50" fill="#7cc48a"/><path d="M40 130 V80 L90 50 L140 80 V130Z" fill="#f4efe6"/><path d="M30 82 L90 44 L150 82" stroke="#d94f3d" stroke-width="8" fill="none"/>${vento(230, 10, 140)}${p('mae', 160, 92, 54)}${p('maria', 210, 98, 50)}${pessoa(avatarJogador, 280, 100, 50, 'Você')}`,
-    derrota: () => `${praia('fd', 3)}${caverna}${vento(140, 30, 120)}<g class="voando"><ellipse cx="200" cy="130" rx="20" ry="5" fill="#e8c46a"/><path d="M188 130 Q188 116 200 116 Q212 116 212 130Z" fill="#e1b955"/></g>`,
+    derrota: () => `${praia('fd', 3)}${caverna}${vento(140, 30, 120)}<g class="voando"><ellipse cx="96" cy="120" rx="20" ry="5" fill="#e8c46a"/><path d="M84 120 Q84 106 96 106 Q108 106 108 120Z" fill="#e1b955"/></g>`,
   };
   return `<svg class="cena" viewBox="0 0 400 180" role="img" aria-label="Cena final">${(cenas[tipo] ?? cenas.derrota)()}</svg>`;
 }

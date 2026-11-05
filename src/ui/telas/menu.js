@@ -1,7 +1,7 @@
 // Telas fora da partida: abertura (menu), patente e créditos.
 
 import { html, cru } from '../dom.js';
-import { desenharVento } from '../avatar.js';
+import { desenharVento } from '../vento.js';
 import { retrato, avatarJogador, uniformeAtual } from '../comum.js';
 import { patente } from '../../engine/pontos.js';
 import { desbloqueios } from '../../app/perfil.js';

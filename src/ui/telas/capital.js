@@ -1,7 +1,7 @@
 // Rodada numa capital (seção 5.1): chegada, sinal do Vento, 3 locais com informantes e o caminho ao aeroporto.
 
 import { html, cru } from '../dom.js';
-import { hud, balao, retrato, nomeCapital, nomeRecruta, folhaCarta, tintaDaMaria } from '../comum.js';
+import { hud, balao, retrato, nomeCapital, tratamento, folhaCarta, tintaDaMaria } from '../comum.js';
 import { cenaCapital } from '../cenas.js';
 import { momento } from '../../engine/tempo.js';
 import { visitarLocal } from '../../engine/jogo.js';
@@ -88,11 +88,11 @@ export function capital(api) {
 function blocoInterferencia(api, interferencia, pistasOuvidas, chave) {
   if (!interferencia) return '';
   const { dialogos, porId } = api.dados;
-  const nome = nomeRecruta(api);
+  const chamado = tratamento(api);
   const i = dialogos.interferencias;
   if (interferencia.tipo === 'adelaide') {
     return html`<section class="interferencia">
-      ${balao(api, 'adelaide', preencher(variante(i.adelaide, chave), { nome }))}
+      ${balao(api, 'adelaide', preencher(variante(i.adelaide, chave), chamado))}
       ${balao(api, 'adalgisa', ecoAdalgisa(pistasOuvidas, dialogos, chave))}
       <p class="custo">${i.adelaideCusto}</p></section>`;
   }
@@ -111,7 +111,7 @@ export function local(api) {
   const chave = `${j.semente}:${j.parada}:${idx}`;
   const ouvidas = (j.visitados[j.parada] ?? []).filter((k) => k !== idx).map((k) => parada.locais[k]).filter((x) => x.pista).map((x) => x.pista);
   const conteudo = l.tipo === 'postal'
-    ? html`<p class="narracao">${dialogos.maeLocal}</p>${balao(api, 'mae', falaMae(l.rastro, nomeRecruta(api), dialogos, chave))}
+    ? html`<p class="narracao">${dialogos.maeLocal}</p>${balao(api, 'mae', falaMae(l.rastro, tratamento(api), dialogos, chave))}
       ${folhaCarta(api, l.carta, { chave, tinta: tintaDaMaria(api), reserva: l.rastro })}`
     : html`${balao(api, l.informante, falaInformante(l.informante, l.pista, dialogos, chave))}
       <p class="testemunha">Testemunhas contam que a menina ${l.rastro}.</p>`;

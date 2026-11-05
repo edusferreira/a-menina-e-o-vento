@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   carregarPerfil, salvarPerfil, salvarPartida, carregarPartida, apagarTudo, sincronizarAlbum, registrarFim, perksDoPerfil,
 } from '../src/app/perfil.js';
-import { preencher, falaInformante, ecoAdalgisa, recapAtlantica } from '../src/engine/falas.js';
+import { preencher, falaInformante, ecoAdalgisa, recapAtlantica, tratamentos } from '../src/engine/falas.js';
 import { novoJogo, visitarLocal, viajar } from '../src/engine/jogo.js';
 import { dados, regras } from './fixture.js';
 
@@ -63,6 +63,14 @@ describe('falas', () => {
     const a = falaInformante('velha', { texto: 'x' }, dialogos, 'k1');
     expect(a).toBe(falaInformante('velha', { texto: 'x' }, dialogos, 'k1'));
     expect(a.endsWith('x.')).toBe(true);
+  });
+
+  it('chama o jogador de "Recruta Bia", ou só "Recruta" quando ele não tem nome', () => {
+    expect(tratamentos('Bia')).toEqual({ nome: 'Bia', recruta: 'Recruta Bia' });
+    expect(tratamentos('')).toEqual({ nome: 'recruta', recruta: 'Recruta' });
+    // Perfis antigos gravaram "Recruta" como nome padrão.
+    expect(tratamentos('Recruta')).toEqual({ nome: 'recruta', recruta: 'Recruta' });
+    expect(preencher('{recruta}, o caso é simples.', tratamentos(''))).toBe('Recruta, o caso é simples.');
   });
 
   it('Adalgisa e Atlântica repetem pedaços de pistas já ouvidas', () => {

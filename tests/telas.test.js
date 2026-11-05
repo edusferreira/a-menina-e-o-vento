@@ -66,7 +66,9 @@ describe('telas', () => {
 
   it('telas da partida renderizam em cada fase', () => {
     const inicio = novoJogo({ semente: '4F2A', nivel: 'dificil', dados, perks: { aureliaBonus: true, placidoChamaPeloNome: true } });
-    renderizar('briefing', inicio);
+    const briefingSemNome = renderizar('briefing', inicio);
+    expect(briefingSemNome).not.toMatch(/Recruta Recruta|Recruta ,/);
+    expect(briefingSemNome).toContain('Recruta, o caso é simples');
     renderizar('capital', inicio, { chegada: 'inicio' });
     const r = visitarLocal(inicio, 0, dados);
     renderizar('local', r.estado, { idx: 0, evento: r.evento });

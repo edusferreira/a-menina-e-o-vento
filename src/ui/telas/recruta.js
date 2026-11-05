@@ -58,7 +58,8 @@ export function recruta(api) {
     },
     acoes: {
       pronto: () => {
-        const nome = rascunho.nome.trim() || 'Recruta';
+        // Sem nome, os personagens chamam só de "Recruta" (ver tratamentos em engine/falas.js).
+        const nome = rascunho.nome.trim();
         api.definirPerfil({ ...api.perfil, avatar: { ...rascunho, nome }, temAvatar: true });
         api.ir('delegacia');
       },

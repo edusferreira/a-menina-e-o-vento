@@ -5,7 +5,7 @@ import { desenharAvatar } from './avatar.js';
 import { momento, opacidadeMaria } from '../engine/tempo.js';
 import { patente } from '../engine/pontos.js';
 import { desbloqueios } from '../app/perfil.js';
-import { variante } from '../engine/falas.js';
+import { variante, tratamentos } from '../engine/falas.js';
 
 export function retrato(api, id, { classe = 'retrato', opacidade = 1 } = {}) {
   const { avatar, dialogos } = api.dados;
@@ -23,7 +23,11 @@ export function avatarJogador(api, { classe = 'retrato', rascunho } = {}) {
   return cru(desenharAvatar(seguro, { opcoes: api.dados.avatar, uniforme: uniformeAtual(api), rotulo: `Recruta ${cfg.nome || ''}`.trim(), classe }));
 }
 
-export const nomeRecruta = (api) => api.perfil.avatar.nome || 'Recruta';
+/** {nome} e {recruta} para as falas, a partir do nome digitado na criação do recruta. */
+export const tratamento = (api) => tratamentos(api.perfil.avatar.nome);
+
+/** Nome para o jogador ler na tela; sem nome, "Recruta". */
+export const nomeRecruta = (api) => (tratamento(api).nome === 'recruta' ? 'Recruta' : tratamento(api).nome);
 
 export function balao(api, id, texto, { classe = '' } = {}) {
   const nome = api.dados.dialogos.personagens[id]?.nome ?? id;

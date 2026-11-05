@@ -1,7 +1,7 @@
 // Delegacia (hub) e briefing do Comissário (seções 4.2 e 4.4): escolha de nível, código de caso e início.
 
 import { html } from '../dom.js';
-import { retrato, avatarJogador, balao, nomeRecruta } from '../comum.js';
+import { retrato, avatarJogador, balao, nomeRecruta, tratamento } from '../comum.js';
 import { normalizarSemente, gerarSemente } from '../../engine/rng.js';
 import { totalPeriodos } from '../../engine/tempo.js';
 import { novoJogo } from '../../engine/jogo.js';
@@ -66,12 +66,12 @@ export function delegacia(api) {
 export function briefing(api) {
   const { dialogos, porId } = api.dados;
   const j = api.jogo;
-  const nome = nomeRecruta(api);
+  const chamado = tratamento(api);
   const primeira = porId[j.caso.rota[0]];
   const chute = porId[primeira.distratores[0]];
   const b = dialogos.briefing;
-  const falasPlacido = b.placido.map((f) => preencher(f, { nome }));
-  if (j.perks.placidoChamaPeloNome) falasPlacido.push(preencher(b.placidoComNome, { nome }));
+  const falasPlacido = b.placido.map((f) => preencher(f, chamado));
+  if (j.perks.placidoChamaPeloNome) falasPlacido.push(preencher(b.placidoComNome, chamado));
   return {
     html: html`<main class="tela briefing">
       <h1>Briefing: o caso da menina e o vento</h1>

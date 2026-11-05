@@ -21,8 +21,18 @@ export function falaInformante(informante, pista, dialogos, chave) {
   return preencher(modelo, { pista: pista.texto });
 }
 
-export function falaMae(rastro, nome, dialogos, chave) {
-  return preencher(variante(dialogos.mae, chave), { rastro, nome });
+/**
+ * Como os personagens chamam o jogador: {recruta} = "Recruta Bia" e {nome} = "Bia".
+ * Sem nome, viram "Recruta" e "recruta", para nunca sair "Recruta Recruta" (perfis antigos gravaram "Recruta" como nome).
+ */
+export function tratamentos(nome) {
+  const limpo = String(nome ?? '').trim();
+  const temNome = limpo !== '' && limpo.toLowerCase() !== 'recruta';
+  return { nome: temNome ? limpo : 'recruta', recruta: temNome ? `Recruta ${limpo}` : 'Recruta' };
+}
+
+export function falaMae(rastro, tratamento, dialogos, chave) {
+  return preencher(variante(dialogos.mae, chave), { rastro, ...tratamento });
 }
 
 /** Tia Adalgisa ecoa, distorcido, um pedaço de pista já ouvida nesta capital. */

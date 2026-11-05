@@ -79,6 +79,10 @@ describe('dialogos.json e finais.json', () => {
     });
   });
 
+  it('nenhuma fala monta "Recruta {nome}" (vira "Recruta Recruta" sem nome); usa {recruta}', () => {
+    expect(JSON.stringify(dialogos)).not.toMatch(/Recruta \{nome\}/);
+  });
+
   it('o prólogo tem 5 cenas e há 3 finais felizes mais a derrota', () => {
     expect(dialogos.prologo).toHaveLength(5);
     expect(Object.keys(finais.finais)).toEqual(['final1', 'final2', 'final3', 'derrota']);

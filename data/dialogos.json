@@ -1,5 +1,5 @@
 {
-  "_sobre": "Falas do jogo. {pista} = texto da pista, {rastro} = o que Maria fez, {nome} = nome do recruta, {capital} = nome de uma capital. Texto próprio do protótipo, escrito na voz descrita na seção 3 da especificação.",
+  "_sobre": "Falas do jogo. {pista} = texto da pista, {rastro} = o que Maria fez, {nome} = nome do recruta, {recruta} = \"Recruta Bia\" (ou só \"Recruta\" sem nome), {capital} = nome de uma capital. Texto próprio do protótipo, escrito na voz descrita na seção 3 da especificação.",
   "personagens": {
     "maria": { "nome": "Maria", "papel": "A fugitiva" },
     "vento": { "nome": "O Vento", "papel": "Antagonista simpático" },
@@ -43,7 +43,7 @@
     ]
   },
   "mae": [
-    "Recruta {nome}, o vento acabou de trazer uma folha de árvore pela minha janela. É carta da Maria! Escuta só:",
+    "{recruta}, o vento acabou de trazer uma folha de árvore pela minha janela. É carta da Maria! Escuta só:",
     "Alô? É a mãe da Maria. Entrou uma folha voando aqui em casa, com a letrinha dela. Vou ler:",
     "Ai, {nome}, que alívio! Mais uma folha com carta da Maria. Ninguém me explica como ela faz isso!"
   ],
@@ -65,7 +65,7 @@
   "interferencias": {
     "adelaide": [
       "Isso não é lugar para mocinhas! Nem para recrutas. Volte já para a delegacia e preencha três formulários.",
-      "Recruta {nome}! Onde já se viu investigar sem uniforme passado? Fique aí até eu terminar a bronca."
+      "{recruta}! Onde já se viu investigar sem uniforme passado? Fique aí até eu terminar a bronca."
     ],
     "adalgisa": [
       "Isso mesmo que a Adelaide disse. Não é lugar para... como era mesmo? Ah: {eco}.",
@@ -105,11 +105,11 @@
   },
   "briefing": {
     "placido": [
-      "Recruta {nome}, o caso é simples: a menina Maria sumiu no domingo, na Cova do Vento.",
+      "{recruta}, o caso é simples: a menina Maria sumiu no domingo, na Cova do Vento.",
       "O suspeito é invisível. Literalmente: é o Vento.",
       "Você tem uma semana, até o fim do domingo que vem. Eu já resolvi o caso, só preciso que você descubra onde, quando e como."
     ],
-    "placidoComNome": "Recruta {nome}, conto com você. Quer dizer: conto comigo, mas você ajuda.",
+    "placidoComNome": "{recruta}, conto com você. Quer dizer: conto comigo, mas você ajuda.",
     "atlantica": "Aqui está o Diário da Aventura, vazio, e o calendário. Eu anoto tudo o que você descobrir.",
     "pedro": "Antes de sumir, o Vento falou que ia levar a Maria para {pista}. Eu ouvi tudinho, escondido atrás de uma pedra.",
     "crispina": "Isso é {capital}, certeza! Vamos agora!",

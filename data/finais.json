@@ -1,5 +1,5 @@
 {
-  "_sobre": "Finais (seção 9) e textos de promoção do espetáculo (seção 14). O verso final está sujeito à licença do texto de Maria Clara Machado; links vazios aparecem como 'em breve'.",
+  "_sobre": "Finais (seção 9) e textos de promoção do espetáculo (seção 14). As cartas de Maria chegam escritas em folhas de árvore, como na peça. O verso final está sujeito à licença do texto de Maria Clara Machado; links vazios aparecem como 'em breve'.",
   "verso": "O vento é verde, a chuva é branca, lá vem a menina cavalgando numa nuvem.",
   "finais": {
     "final1": {
@@ -10,7 +10,7 @@
         "O Comissário Plácido chega correndo, gritando ordens de prisão. O Vento dá uma bufada e o deixa pendurado no galho mais alto de uma árvore, de onde ele continua dando ordens.",
         "Crispina e Atlântica anotam tudo. Pedro ri tanto que cai sentado."
       ],
-      "desbloqueia": "Postal secreto \"Visto do alto\" no Álbum"
+      "desbloqueia": "Carta secreta \"Visto do alto\" no Álbum"
     },
     "final2": {
       "titulo": "O Ventinho da Tia Aurélia",
@@ -36,7 +36,7 @@
       "titulo": "Maria virou brisa",
       "cena": [
         "Domingo à noite. O Vento está sozinho na Cova.",
-        "Uma brisa passa e levanta o chapéu de palha de Maria. A Mãe segura o último postal.",
+        "Uma brisa passa e levanta o chapéu de palha de Maria. A Mãe segura a última folha que chegou com o vento.",
         "O Comissário Plácido encerra o inquérito: \"Caso resolvido por falta de suspeito.\""
       ]
     }

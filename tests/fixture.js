@@ -26,7 +26,7 @@ export const capitais = BASE.map(([id, regiao, lat, lon, distratores]) => ({
   lon,
   bioma: 'Bioma',
   distratores,
-  locais: [0, 1, 2].map((n) => ({ nome: `${id}-local${n}`, rastro: `fez a coisa ${n} em ${id}` })),
+  locais: [0, 1, 2].map((n) => ({ nome: `${id}-local${n}`, rastro: `fez a coisa ${n} em ${id}`, carta: `fiz a coisa ${n}.` })),
 }));
 
 export const pistas = Object.fromEntries(

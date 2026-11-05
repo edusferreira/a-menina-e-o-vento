@@ -9,9 +9,9 @@
       "O relógio no Acre fica 2 horas atrás do horário de Brasília."
     ],
     "locais": [
-      { "nome": "Passarela Joaquim Macedo", "rastro": "atravessou o rio Acre a pé, por cima da água, contando as tábuas" },
-      { "nome": "Mercado Velho", "rastro": "tomou uma cuia de tacacá com jambu que fez a boca tremer" },
-      { "nome": "Parque Chico Mendes", "rastro": "plantou uma semente de seringueira e prometeu voltar para ver crescer" }
+      { "nome": "Passarela Joaquim Macedo", "rastro": "atravessou o rio Acre a pé, por cima da água, contando as tábuas", "carta": "hoje atravessei o rio a pé, por cima da água, numa passarela comprida. Contei as tábuas uma por uma!" },
+      { "nome": "Mercado Velho", "rastro": "tomou uma cuia de tacacá com jambu que fez a boca tremer", "carta": "tomei uma cuia de tacacá com jambu e a minha boca ficou tremendo inteirinha!" },
+      { "nome": "Parque Chico Mendes", "rastro": "plantou uma semente de seringueira e prometeu voltar para ver crescer", "carta": "plantei uma semente de seringueira e prometi voltar aqui para ver a árvore crescer." }
     ],
     "distratores": ["portovelho", "manaus"]
   },
@@ -25,9 +25,9 @@
       "No estádio Zerão, a linha do meio de campo coincide com a linha do Equador."
     ],
     "locais": [
-      { "nome": "Marco Zero do Equador", "rastro": "ficou com um pé no hemisfério norte e o outro no hemisfério sul" },
-      { "nome": "Fortaleza de São José", "rastro": "espiou o rio pelas frestas de muralhas de pedra antigas" },
-      { "nome": "Trapiche Eliezer Levy", "rastro": "viu o sol se pôr sobre o rio da ponta de um píer comprido" }
+      { "nome": "Marco Zero do Equador", "rastro": "ficou com um pé no hemisfério norte e o outro no hemisfério sul", "carta": "fiquei com um pé no hemisfério norte e o outro no hemisfério sul. Sou uma menina dividida ao meio!" },
+      { "nome": "Fortaleza de São José", "rastro": "espiou o rio pelas frestas de muralhas de pedra antigas", "carta": "espiei o rio pelas frestas de umas muralhas de pedra muito antigas. Parecia um castelo." },
+      { "nome": "Trapiche Eliezer Levy", "rastro": "viu o sol se pôr sobre o rio da ponta de um píer comprido", "carta": "vi o sol se pôr sobre o rio, sentada na ponta de um píer comprido." }
     ],
     "distratores": ["belem", "boavista"]
   },
@@ -41,9 +41,9 @@
       "Depois do encontro, no Brasil, o rio passa a se chamar Amazonas."
     ],
     "locais": [
-      { "nome": "Teatro Amazonas", "rastro": "assistiu a um concerto debaixo de uma cúpula com as cores da bandeira" },
-      { "nome": "Encontro das Águas", "rastro": "pôs uma mão na água escura e a outra na água barrenta, ao mesmo tempo" },
-      { "nome": "Mercado Adolpho Lisboa", "rastro": "comeu tambaqui assado num mercado de ferro antigo à beira do rio" }
+      { "nome": "Teatro Amazonas", "rastro": "assistiu a um concerto debaixo de uma cúpula com as cores da bandeira", "carta": "assisti a um concerto debaixo de uma cúpula com as cores da bandeira. O Vento ficou lá fora, roncando." },
+      { "nome": "Encontro das Águas", "rastro": "pôs uma mão na água escura e a outra na água barrenta, ao mesmo tempo", "carta": "pus uma mão na água escura e a outra na água barrenta, ao mesmo tempo. Elas não se misturam, mãe!" },
+      { "nome": "Mercado Adolpho Lisboa", "rastro": "comeu tambaqui assado num mercado de ferro antigo à beira do rio", "carta": "comi tambaqui assado num mercado de ferro antigo, na beira do rio." }
     ],
     "distratores": ["belem", "portovelho"]
   },
@@ -57,9 +57,9 @@
       "Belém é chamada de Cidade das Mangueiras pelas árvores que sombreiam as ruas."
     ],
     "locais": [
-      { "nome": "Mercado Ver-o-Peso", "rastro": "lambeu o dedo depois de uma coisa roxa gelada e disse que era melhor que sorvete" },
-      { "nome": "Basílica de Nazaré", "rastro": "segurou uma corda gigante junto com milhares de pessoas" },
-      { "nome": "Estação das Docas", "rastro": "tomou sorvete de cupuaçu nos galpões antigos do porto, à beira da baía" }
+      { "nome": "Mercado Ver-o-Peso", "rastro": "lambeu o dedo depois de uma coisa roxa gelada e disse que era melhor que sorvete", "carta": "provei uma coisa roxa gelada e lambi o dedo. É melhor que sorvete!" },
+      { "nome": "Basílica de Nazaré", "rastro": "segurou uma corda gigante junto com milhares de pessoas", "carta": "segurei uma corda gigante junto com milhares de pessoas. Ninguém soltava!" },
+      { "nome": "Estação das Docas", "rastro": "tomou sorvete de cupuaçu nos galpões antigos do porto, à beira da baía", "carta": "tomei sorvete de cupuaçu nos galpões antigos do porto, na beira da baía." }
     ],
     "distratores": ["manaus", "saoluis"]
   },
@@ -73,9 +73,9 @@
       "O rio Madeira é um dos maiores afluentes do rio Amazonas."
     ],
     "locais": [
-      { "nome": "Complexo da Madeira-Mamoré", "rastro": "subiu numa locomotiva antiga e apitou de mentirinha" },
-      { "nome": "Três Caixas d'Água", "rastro": "deu um nome para cada uma de três torres de água iguaizinhas" },
-      { "nome": "Orla do Rio Madeira", "rastro": "comeu peixe frito olhando balsas descerem um rio barrento" }
+      { "nome": "Complexo da Madeira-Mamoré", "rastro": "subiu numa locomotiva antiga e apitou de mentirinha", "carta": "subi numa locomotiva antiga e apitei de mentirinha: piuí!" },
+      { "nome": "Três Caixas d'Água", "rastro": "deu um nome para cada uma de três torres de água iguaizinhas", "carta": "dei um nome para cada uma de três torres de água iguaizinhas. Uma se chama Mãe." },
+      { "nome": "Orla do Rio Madeira", "rastro": "comeu peixe frito olhando balsas descerem um rio barrento", "carta": "comi peixe frito olhando as balsas descerem um rio barrento enorme." }
     ],
     "distratores": ["riobranco", "cuiaba"]
   },
@@ -89,9 +89,9 @@
       "O Monte Roraima, na fronteira com a Venezuela e a Guiana, tem rochas com cerca de 2 bilhões de anos."
     ],
     "locais": [
-      { "nome": "Praça do Centro Cívico", "rastro": "ficou no meio de uma praça de onde as ruas saem como varetas de leque" },
-      { "nome": "Orla Taumanan", "rastro": "viu o rio Branco brilhar no fim da tarde de um mirante de madeira" },
-      { "nome": "Parque Anauá", "rastro": "fez piquenique debaixo de um buriti num parque enorme" }
+      { "nome": "Praça do Centro Cívico", "rastro": "ficou no meio de uma praça de onde as ruas saem como varetas de leque", "carta": "fiquei no meio de uma praça de onde as ruas saem como as varetas de um leque." },
+      { "nome": "Orla Taumanan", "rastro": "viu o rio Branco brilhar no fim da tarde de um mirante de madeira", "carta": "vi o rio brilhar no fim da tarde, lá de um mirante de madeira." },
+      { "nome": "Parque Anauá", "rastro": "fez piquenique debaixo de um buriti num parque enorme", "carta": "fiz piquenique debaixo de um buriti, num parque enorme." }
     ],
     "distratores": ["macapa", "manaus"]
   },
@@ -105,9 +105,9 @@
       "No Jalapão, perto dali, há fervedouros: nascentes onde a água empurra a gente para cima e ninguém afunda."
     ],
     "locais": [
-      { "nome": "Praça dos Girassóis", "rastro": "atravessou uma praça tão grande que cansou antes de chegar ao meio" },
-      { "nome": "Praia da Graciosa", "rastro": "tomou banho numa praia de água doce no meio do Cerrado" },
-      { "nome": "Feira de artesanato", "rastro": "ganhou uma pulseira de capim dourado que brilha feito ouro" }
+      { "nome": "Praça dos Girassóis", "rastro": "atravessou uma praça tão grande que cansou antes de chegar ao meio", "carta": "atravessei uma praça tão grande que cansei antes de chegar no meio!" },
+      { "nome": "Praia da Graciosa", "rastro": "tomou banho numa praia de água doce no meio do Cerrado", "carta": "tomei banho numa praia de água doce, no meio do Cerrado. Praia sem mar, mãe!" },
+      { "nome": "Feira de artesanato", "rastro": "ganhou uma pulseira de capim dourado que brilha feito ouro", "carta": "ganhei uma pulseira de capim dourado que brilha feito ouro." }
     ],
     "distratores": ["brasilia", "goiania"]
   },
@@ -121,9 +121,9 @@
       "É a única capital brasileira fundada por franceses, em 1612."
     ],
     "locais": [
-      { "nome": "Centro Histórico", "rastro": "contou os azulejos de um casarão até perder a conta" },
-      { "nome": "Arraial de bumba meu boi", "rastro": "dançou ao lado de um boi enfeitado de fitas e brilhos" },
-      { "nome": "Lagoa da Jansen", "rastro": "tomou um refrigerante cor-de-rosa e achou que era chiclete líquido" }
+      { "nome": "Centro Histórico", "rastro": "contou os azulejos de um casarão até perder a conta", "carta": "contei os azulejos de um casarão até perder a conta." },
+      { "nome": "Arraial de bumba meu boi", "rastro": "dançou ao lado de um boi enfeitado de fitas e brilhos", "carta": "dancei ao lado de um boi enfeitado de fitas e brilhos." },
+      { "nome": "Lagoa da Jansen", "rastro": "tomou um refrigerante cor-de-rosa e achou que era chiclete líquido", "carta": "tomei um refrigerante cor-de-rosa e achei que era chiclete líquido." }
     ],
     "distratores": ["belem", "teresina"]
   },
@@ -137,9 +137,9 @@
       "Pelas muitas descargas elétricas nas tempestades, ganhou o apelido de Chapada do Corisco."
     ],
     "locais": [
-      { "nome": "Parque Encontro dos Rios", "rastro": "viu dois rios virarem um só e ouviu a lenda do Cabeça de Cuia" },
-      { "nome": "Ponte Estaiada", "rastro": "subiu no mirante de uma ponte de cabos e viu a cidade toda lá de cima" },
-      { "nome": "Mercado do Troca-Troca", "rastro": "tomou cajuína gelada e disse que era suco de caju chique" }
+      { "nome": "Parque Encontro dos Rios", "rastro": "viu dois rios virarem um só e ouviu a lenda do Cabeça de Cuia", "carta": "vi dois rios virarem um só e ouvi a lenda do Cabeça de Cuia. Fiquei com um pouquinho de medo." },
+      { "nome": "Ponte Estaiada", "rastro": "subiu no mirante de uma ponte de cabos e viu a cidade toda lá de cima", "carta": "subi no mirante de uma ponte de cabos e vi a cidade toda lá de cima." },
+      { "nome": "Mercado do Troca-Troca", "rastro": "tomou cajuína gelada e disse que era suco de caju chique", "carta": "tomei cajuína gelada. É suco de caju chique!" }
     ],
     "distratores": ["saoluis", "palmas", "fortaleza"]
   },
@@ -153,9 +153,9 @@
       "Às quintas-feiras, a tradição é comer caranguejo na Praia do Futuro."
     ],
     "locais": [
-      { "nome": "Ponte dos Ingleses", "rastro": "andou numa ponte velha sobre o mar para ver o pôr do sol" },
-      { "nome": "Mercado Central", "rastro": "cochilou numa rede de dormir no meio de uma loja" },
-      { "nome": "Praia do Futuro", "rastro": "comeu caranguejo com martelinho numa quinta-feira" }
+      { "nome": "Ponte dos Ingleses", "rastro": "andou numa ponte velha sobre o mar para ver o pôr do sol", "carta": "andei numa ponte velha sobre o mar para ver o pôr do sol." },
+      { "nome": "Mercado Central", "rastro": "cochilou numa rede de dormir no meio de uma loja", "carta": "cochilei numa rede de dormir no meio de uma loja. Ninguém me acordou." },
+      { "nome": "Praia do Futuro", "rastro": "comeu caranguejo com martelinho numa quinta-feira", "carta": "comi caranguejo com martelinho. Era quinta-feira, e aqui quinta é dia de caranguejo!" }
     ],
     "distratores": ["natal", "joaopessoa", "teresina"]
   },
@@ -169,9 +169,9 @@
       "Na Segunda Guerra, uma base aérea americana deu a Natal o apelido de Trampolim da Vitória."
     ],
     "locais": [
-      { "nome": "Forte dos Reis Magos", "rastro": "tirou foto num forte antigo bem onde o rio encontra o mar" },
-      { "nome": "Dunas de Genipabu", "rastro": "desceu uma duna sentada numa prancha e caiu direto numa lagoa" },
-      { "nome": "Ponta Negra", "rastro": "olhou um morro de areia careca onde ninguém pode subir" }
+      { "nome": "Forte dos Reis Magos", "rastro": "tirou foto num forte antigo bem onde o rio encontra o mar", "carta": "tirei foto num forte antigo bem onde o rio encontra o mar." },
+      { "nome": "Dunas de Genipabu", "rastro": "desceu uma duna sentada numa prancha e caiu direto numa lagoa", "carta": "desci uma duna sentada numa prancha e caí direto dentro de uma lagoa!" },
+      { "nome": "Ponta Negra", "rastro": "olhou um morro de areia careca onde ninguém pode subir", "carta": "olhei um morro de areia careca, onde ninguém pode subir. Nem o Vento." }
     ],
     "distratores": ["fortaleza", "joaopessoa"]
   },
@@ -185,9 +185,9 @@
       "O nome atual homenageia João Pessoa, governador da Paraíba assassinado em 1930."
     ],
     "locais": [
-      { "nome": "Ponta do Seixas", "rastro": "acordou antes de todo mundo para ver o sol nascer primeiro" },
-      { "nome": "Praia de Tambaú", "rastro": "deu a volta inteira num hotel redondo na beira da praia" },
-      { "nome": "Parque Solon de Lucena", "rastro": "deu comida aos peixes de uma lagoa no meio da cidade" }
+      { "nome": "Ponta do Seixas", "rastro": "acordou antes de todo mundo para ver o sol nascer primeiro", "carta": "acordei antes de todo mundo para ver o sol nascer primeiro." },
+      { "nome": "Praia de Tambaú", "rastro": "deu a volta inteira num hotel redondo na beira da praia", "carta": "dei a volta inteirinha num hotel redondo na beira da praia." },
+      { "nome": "Parque Solon de Lucena", "rastro": "deu comida aos peixes de uma lagoa no meio da cidade", "carta": "dei comida aos peixes de uma lagoa no meio da cidade." }
     ],
     "distratores": ["natal", "recife"]
   },
@@ -201,9 +201,9 @@
       "Na Rua do Bom Jesus funcionou a Kahal Zur Israel, a primeira sinagoga das Américas."
     ],
     "locais": [
-      { "nome": "Marco Zero", "rastro": "ficou bem no meio de uma rosa dos ventos gigante desenhada no chão" },
-      { "nome": "Rua do Bom Jesus", "rastro": "girou um guarda-chuvinha colorido dançando frevo" },
-      { "nome": "Parque das Esculturas", "rastro": "viu esculturas gigantes no meio do mar, no fim de um quebra-mar" }
+      { "nome": "Marco Zero", "rastro": "ficou bem no meio de uma rosa dos ventos gigante desenhada no chão", "carta": "fiquei bem no meio de uma rosa dos ventos gigante desenhada no chão. O Vento adorou." },
+      { "nome": "Rua do Bom Jesus", "rastro": "girou um guarda-chuvinha colorido dançando frevo", "carta": "girei um guarda-chuvinha colorido dançando frevo." },
+      { "nome": "Parque das Esculturas", "rastro": "viu esculturas gigantes no meio do mar, no fim de um quebra-mar", "carta": "vi esculturas gigantes no meio do mar, lá no fim de um quebra-mar." }
     ],
     "distratores": ["joaopessoa", "maceio", "salvador"]
   },
@@ -217,9 +217,9 @@
       "O sururu, um marisco da lagoa Mundaú, é prato símbolo da cidade."
     ],
     "locais": [
-      { "nome": "Piscinas de Pajuçara", "rastro": "foi de jangada até uma piscina no meio do mar e viu peixinhos coloridos" },
-      { "nome": "Lagoa Mundaú", "rastro": "comeu sururu, um mariscozinho da lagoa, com leite de coco" },
-      { "nome": "Pontal da Barra", "rastro": "ganhou uma toalhinha bordada pelas rendeiras de filé" }
+      { "nome": "Piscinas de Pajuçara", "rastro": "foi de jangada até uma piscina no meio do mar e viu peixinhos coloridos", "carta": "fui de jangada até uma piscina no meio do mar e vi peixinhos coloridos." },
+      { "nome": "Lagoa Mundaú", "rastro": "comeu sururu, um mariscozinho da lagoa, com leite de coco", "carta": "comi sururu, um mariscozinho da lagoa, com leite de coco." },
+      { "nome": "Pontal da Barra", "rastro": "ganhou uma toalhinha bordada pelas rendeiras de filé", "carta": "ganhei uma toalhinha bordada pelas rendeiras de filé. Guardei para você." }
     ],
     "distratores": ["recife", "aracaju"]
   },
@@ -233,9 +233,9 @@
       "Na Passarela do Caranguejo, na Orla de Atalaia, há uma estátua de caranguejo gigante."
     ],
     "locais": [
-      { "nome": "Orla de Atalaia", "rastro": "andou de bicicleta numa orla tão comprida que perdeu a conta dos quiosques" },
-      { "nome": "Passarela do Caranguejo", "rastro": "tirou foto com um caranguejo de estátua e depois comeu um de verdade" },
-      { "nome": "Mercado Thales Ferraz", "rastro": "provou amendoim cozido quentinho vendido no saquinho" }
+      { "nome": "Orla de Atalaia", "rastro": "andou de bicicleta numa orla tão comprida que perdeu a conta dos quiosques", "carta": "andei de bicicleta numa orla tão comprida que perdi a conta dos quiosques." },
+      { "nome": "Passarela do Caranguejo", "rastro": "tirou foto com um caranguejo de estátua e depois comeu um de verdade", "carta": "tirei foto com um caranguejo de estátua e depois comi um de verdade." },
+      { "nome": "Mercado Thales Ferraz", "rastro": "provou amendoim cozido quentinho vendido no saquinho", "carta": "provei amendoim cozido quentinho, vendido no saquinho." }
     ],
     "distratores": ["maceio", "salvador"]
   },
@@ -249,9 +249,9 @@
       "O Centro Histórico, com o Pelourinho, é Patrimônio Mundial da UNESCO desde 1985."
     ],
     "locais": [
-      { "nome": "Pelourinho", "rastro": "batucou num tambor junto com uma banda nas ladeiras coloridas" },
-      { "nome": "Elevador Lacerda", "rastro": "subiu da cidade de baixo para a cidade de cima num elevador" },
-      { "nome": "Igreja do Bonfim", "rastro": "amarrou uma fitinha colorida no braço e fez três pedidos" }
+      { "nome": "Pelourinho", "rastro": "batucou num tambor junto com uma banda nas ladeiras coloridas", "carta": "batuquei num tambor junto com uma banda, nas ladeiras coloridas." },
+      { "nome": "Elevador Lacerda", "rastro": "subiu da cidade de baixo para a cidade de cima num elevador", "carta": "subi da cidade de baixo para a cidade de cima num elevador!" },
+      { "nome": "Igreja do Bonfim", "rastro": "amarrou uma fitinha colorida no braço e fez três pedidos", "carta": "amarrei uma fitinha colorida no braço e fiz três pedidos. Um é segredo." }
     ],
     "distratores": ["recife", "riodejaneiro", "aracaju"]
   },
@@ -265,9 +265,9 @@
       "A cidade tem fama de capital dos botecos do Brasil."
     ],
     "locais": [
-      { "nome": "Lagoa da Pampulha", "rastro": "viu uma igrejinha cheia de curvas e azulejos azuis na beira de uma lagoa" },
-      { "nome": "Mercado Central", "rastro": "comeu pão de queijo quentinho e levou um queijo inteiro para a mãe" },
-      { "nome": "Mirante do Mangabeiras", "rastro": "olhou a cidade toda lá de cima, cercada de montanhas" }
+      { "nome": "Lagoa da Pampulha", "rastro": "viu uma igrejinha cheia de curvas e azulejos azuis na beira de uma lagoa", "carta": "vi uma igrejinha cheia de curvas e azulejos azuis na beira de uma lagoa." },
+      { "nome": "Mercado Central", "rastro": "comeu pão de queijo quentinho e levou um queijo inteiro para a mãe", "carta": "comi pão de queijo quentinho e comprei um queijo inteiro para você." },
+      { "nome": "Mirante do Mangabeiras", "rastro": "olhou a cidade toda lá de cima, cercada de montanhas", "carta": "olhei a cidade toda lá de cima, cercada de montanhas." }
     ],
     "distratores": ["goiania", "vitoria", "saopaulo"]
   },
@@ -281,9 +281,9 @@
       "O ofício das paneleiras de Goiabeiras, que fazem as panelas da moqueca, é patrimônio cultural do Brasil."
     ],
     "locais": [
-      { "nome": "Convento da Penha", "rastro": "subiu um morro até um convento antigo e viu o mar lá de cima" },
-      { "nome": "Paneleiras de Goiabeiras", "rastro": "viu panelas de barro preto sendo feitas só com as mãos" },
-      { "nome": "Praia de Camburi", "rastro": "contou os navios esperando no mar para entrar no porto" }
+      { "nome": "Convento da Penha", "rastro": "subiu um morro até um convento antigo e viu o mar lá de cima", "carta": "subi um morro até um convento antigo e vi o mar lá de cima." },
+      { "nome": "Paneleiras de Goiabeiras", "rastro": "viu panelas de barro preto sendo feitas só com as mãos", "carta": "vi panelas de barro preto sendo feitas só com as mãos." },
+      { "nome": "Praia de Camburi", "rastro": "contou os navios esperando no mar para entrar no porto", "carta": "contei os navios esperando no mar para entrar no porto." }
     ],
     "distratores": ["florianopolis", "salvador", "riodejaneiro"]
   },
@@ -297,9 +297,9 @@
       "A Floresta da Tijuca, replantada no século XIX, é uma das maiores florestas urbanas do mundo."
     ],
     "locais": [
-      { "nome": "Cristo Redentor", "rastro": "abriu os braços igualzinho a uma estátua gigante no alto do morro" },
-      { "nome": "Pão de Açúcar", "rastro": "subiu de bondinho até um morro redondo" },
-      { "nome": "Praia de Copacabana", "rastro": "comeu biscoito de polvilho na areia e tomou mate gelado" }
+      { "nome": "Cristo Redentor", "rastro": "abriu os braços igualzinho a uma estátua gigante no alto do morro", "carta": "abri os braços igualzinho a uma estátua gigante no alto do morro." },
+      { "nome": "Pão de Açúcar", "rastro": "subiu de bondinho até um morro redondo", "carta": "subi de bondinho até um morro redondo. Dava para ver tudo!" },
+      { "nome": "Praia de Copacabana", "rastro": "comeu biscoito de polvilho na areia e tomou mate gelado", "carta": "comi biscoito de polvilho na areia e tomei mate gelado." }
     ],
     "distratores": ["salvador", "vitoria", "saopaulo"]
   },
@@ -313,9 +313,9 @@
       "O MASP, de Lina Bo Bardi, tem um vão livre de 74 metros sem nenhuma coluna no meio."
     ],
     "locais": [
-      { "nome": "Avenida Paulista", "rastro": "passou por baixo de um museu que flutua sobre pilares vermelhos" },
-      { "nome": "Bairro da Liberdade", "rastro": "comeu com palitinhos debaixo de lanternas vermelhas penduradas na rua" },
-      { "nome": "Mercado Municipal", "rastro": "comeu um sanduíche de mortadela do tamanho da cabeça dela" }
+      { "nome": "Avenida Paulista", "rastro": "passou por baixo de um museu que flutua sobre pilares vermelhos", "carta": "passei por baixo de um museu que flutua em cima de pilares vermelhos." },
+      { "nome": "Bairro da Liberdade", "rastro": "comeu com palitinhos debaixo de lanternas vermelhas penduradas na rua", "carta": "comi com palitinhos debaixo de lanternas vermelhas penduradas na rua." },
+      { "nome": "Mercado Municipal", "rastro": "comeu um sanduíche de mortadela do tamanho da cabeça dela", "carta": "comi um sanduíche de mortadela do tamanho da minha cabeça!" }
     ],
     "distratores": ["curitiba", "riodejaneiro", "belohorizonte"]
   },
@@ -329,9 +329,9 @@
       "Curitiba tem fama de capital mais fria do Brasil."
     ],
     "locais": [
-      { "nome": "Jardim Botânico", "rastro": "entrou numa estufa de vidro que parece casinha de conto de fadas" },
-      { "nome": "Ópera de Arame", "rastro": "atravessou uma ponte sobre um lago até um teatro feito de arame" },
-      { "nome": "Largo da Ordem", "rastro": "comeu pinhão cozido quentinho para espantar o frio" }
+      { "nome": "Jardim Botânico", "rastro": "entrou numa estufa de vidro que parece casinha de conto de fadas", "carta": "entrei numa estufa de vidro que parece casinha de conto de fadas." },
+      { "nome": "Ópera de Arame", "rastro": "atravessou uma ponte sobre um lago até um teatro feito de arame", "carta": "atravessei uma ponte sobre um lago até um teatro feito de arame." },
+      { "nome": "Largo da Ordem", "rastro": "comeu pinhão cozido quentinho para espantar o frio", "carta": "comi pinhão cozido quentinho para espantar o frio." }
     ],
     "distratores": ["saopaulo", "florianopolis", "portoalegre"]
   },
@@ -345,9 +345,9 @@
       "Santa Catarina é o maior produtor de ostras do Brasil."
     ],
     "locais": [
-      { "nome": "Ponte Hercílio Luz", "rastro": "viu uma ponte antiga se acender inteirinha quando anoiteceu" },
-      { "nome": "Lagoa da Conceição", "rastro": "desceu as dunas da lagoa numa prancha de areia" },
-      { "nome": "Ribeirão da Ilha", "rastro": "comeu ostras na beira do mar e fez careta na primeira" }
+      { "nome": "Ponte Hercílio Luz", "rastro": "viu uma ponte antiga se acender inteirinha quando anoiteceu", "carta": "vi uma ponte antiga se acender inteirinha quando anoiteceu." },
+      { "nome": "Lagoa da Conceição", "rastro": "desceu as dunas da lagoa numa prancha de areia", "carta": "desci as dunas da lagoa numa prancha de areia." },
+      { "nome": "Ribeirão da Ilha", "rastro": "comeu ostras na beira do mar e fez careta na primeira", "carta": "comi ostras na beira do mar e fiz careta na primeira." }
     ],
     "distratores": ["vitoria", "curitiba", "portoalegre"]
   },
@@ -361,9 +361,9 @@
       "A Revolução Farroupilha (1835–1845) é lembrada todo 20 de setembro."
     ],
     "locais": [
-      { "nome": "Orla do Guaíba", "rastro": "viu o sol se pôr na beira de uma água tão grande que parece mar" },
-      { "nome": "Mercado Público", "rastro": "tomou chimarrão na cuia e queimou a língua na bomba" },
-      { "nome": "Parque da Redenção", "rastro": "passeou numa feira de domingo num parque cheio de árvores" }
+      { "nome": "Orla do Guaíba", "rastro": "viu o sol se pôr na beira de uma água tão grande que parece mar", "carta": "vi o sol se pôr na beira de uma água tão grande que parece mar." },
+      { "nome": "Mercado Público", "rastro": "tomou chimarrão na cuia e queimou a língua na bomba", "carta": "tomei chimarrão na cuia e queimei a língua na bomba." },
+      { "nome": "Parque da Redenção", "rastro": "passeou numa feira de domingo num parque cheio de árvores", "carta": "passeei numa feira de domingo, num parque cheio de árvores." }
     ],
     "distratores": ["curitiba", "campogrande", "florianopolis"]
   },
@@ -377,9 +377,9 @@
       "Pela cor vermelha da terra, a cidade é chamada de Cidade Morena."
     ],
     "locais": [
-      { "nome": "Feira Central", "rastro": "tomou uma tigela de sobá, uma sopa de macarrão que veio de Okinawa" },
-      { "nome": "Parque das Nações Indígenas", "rastro": "viu capivaras passeando na grama de um parque enorme" },
-      { "nome": "Mercadão Municipal", "rastro": "comeu chipa, um pãozinho de queijo do Paraguai" }
+      { "nome": "Feira Central", "rastro": "tomou uma tigela de sobá, uma sopa de macarrão que veio de Okinawa", "carta": "tomei uma tigela de sobá, uma sopa de macarrão que veio de Okinawa." },
+      { "nome": "Parque das Nações Indígenas", "rastro": "viu capivaras passeando na grama de um parque enorme", "carta": "vi capivaras passeando na grama de um parque enorme." },
+      { "nome": "Mercadão Municipal", "rastro": "comeu chipa, um pãozinho de queijo do Paraguai", "carta": "comi chipa, um pãozinho de queijo do Paraguai." }
     ],
     "distratores": ["cuiaba", "portoalegre", "goiania"]
   },
@@ -393,9 +393,9 @@
       "A Chapada dos Guimarães, a uns 65 km, tem cachoeiras e paredões de arenito."
     ],
     "locais": [
-      { "nome": "Marco do Centro Geodésico", "rastro": "ficou bem no meio do continente, segundo uma placa" },
-      { "nome": "Orla do Porto", "rastro": "comeu pacu assado na beira do rio" },
-      { "nome": "Chapada dos Guimarães", "rastro": "viu uma cachoeira cair igual a um véu de noiva" }
+      { "nome": "Marco do Centro Geodésico", "rastro": "ficou bem no meio do continente, segundo uma placa", "carta": "fiquei bem no meio do continente, segundo uma placa." },
+      { "nome": "Orla do Porto", "rastro": "comeu pacu assado na beira do rio", "carta": "comi pacu assado na beira do rio." },
+      { "nome": "Chapada dos Guimarães", "rastro": "viu uma cachoeira cair igual a um véu de noiva", "carta": "vi uma cachoeira cair igualzinha a um véu de noiva." }
     ],
     "distratores": ["campogrande", "portovelho", "goiania"]
   },
@@ -409,9 +409,9 @@
       "A cidade tem fama de capital da música sertaneja."
     ],
     "locais": [
-      { "nome": "Praça Cívica", "rastro": "contou os prédios de cantos redondinhos no centro antigo" },
-      { "nome": "Mercado Central", "rastro": "comeu uma coisa amarela com espinho dentro e quase perdeu um dente" },
-      { "nome": "Parque Vaca Brava", "rastro": "dançou num show de música sertaneja ao ar livre" }
+      { "nome": "Praça Cívica", "rastro": "contou os prédios de cantos redondinhos no centro antigo", "carta": "contei os prédios de cantos redondinhos no centro antigo." },
+      { "nome": "Mercado Central", "rastro": "comeu uma coisa amarela com espinho dentro e quase perdeu um dente", "carta": "comi uma coisa amarela com espinho dentro e quase perdi um dente!" },
+      { "nome": "Parque Vaca Brava", "rastro": "dançou num show de música sertaneja ao ar livre", "carta": "dancei num show de música sertaneja ao ar livre." }
     ],
     "distratores": ["brasilia", "belohorizonte", "campogrande"]
   },
@@ -425,9 +425,9 @@
       "O Lago Paranoá é artificial: foi criado junto com a cidade."
     ],
     "locais": [
-      { "nome": "Congresso Nacional", "rastro": "deitou na grama em frente a duas cúpulas, uma de boca para cima e outra de boca para baixo" },
-      { "nome": "Catedral", "rastro": "olhou para cima numa igreja que parece mãos abertas para o céu" },
-      { "nome": "Ponte JK", "rastro": "viu o pôr do sol atrás de uma ponte com arcos que pulam como pedrinhas na água" }
+      { "nome": "Congresso Nacional", "rastro": "deitou na grama em frente a duas cúpulas, uma de boca para cima e outra de boca para baixo", "carta": "deitei na grama em frente a duas cúpulas, uma de boca para cima e outra de boca para baixo." },
+      { "nome": "Catedral", "rastro": "olhou para cima numa igreja que parece mãos abertas para o céu", "carta": "olhei para cima numa igreja que parece mãos abertas para o céu." },
+      { "nome": "Ponte JK", "rastro": "viu o pôr do sol atrás de uma ponte com arcos que pulam como pedrinhas na água", "carta": "vi o pôr do sol atrás de uma ponte com arcos que pulam como pedrinhas na água." }
     ],
     "distratores": ["goiania", "palmas"]
   }

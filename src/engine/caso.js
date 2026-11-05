@@ -43,8 +43,11 @@ function sugestaoCrispina(opcoes, certa, acerto, rng) {
   return escolher(opcoes.filter((id) => id !== certa), rng);
 }
 
-/** Copia nome e rastro (o que Maria fez ali) de cada local da capital para a parada. */
-const comLugar = (locais, capital) => locais.map((l, k) => ({ ...l, nome: capital.locais[k].nome, rastro: capital.locais[k].rastro }));
+/** Copia nome, rastro (o que Maria fez ali) e carta (o mesmo, contado por ela) de cada local para a parada. */
+const comLugar = (locais, capital) => locais.map((l, k) => {
+  const { nome, rastro, carta } = capital.locais[k];
+  return { ...l, nome, rastro, carta };
+});
 
 function montarParada(i, rota, cfg, dados, rng, opcoesExtras) {
   const capital = rota[i];

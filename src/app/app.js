@@ -8,7 +8,7 @@ import {
 import { criarSom } from './som.js';
 
 const TELA_DA_FASE = { capital: 'capital', errada: 'errada', encontro: 'encontro', teste: 'teste', conversa: 'conversa', fim: 'final' };
-const VERSAO_PARTIDA = 1;
+const VERSAO_PARTIDA = 2;
 const TELAS_DE_JOGO = new Set(['briefing', 'capital', 'local', 'diario', 'aeroporto', 'errada', 'encontro', 'teste', 'conversa', 'final']);
 
 export function criarApp({ raiz, dados, storage }) {

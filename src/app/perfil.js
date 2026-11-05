@@ -60,14 +60,15 @@ export function apagarTudo(storage) {
   } catch { /* idem */ }
 }
 
-/** Álbum: toda capital visitada (mesmo por engano) vira cartão; postais coletados ficam guardados. */
+/** Álbum: toda capital visitada (mesmo por engano) vira cartão; as cartas de Maria recebidas ficam guardadas. */
 export function sincronizarAlbum(perfil, estado) {
   const album = { ...perfil.album };
   estado.visitadas.forEach((id) => { album[id] = { ...album[id], visitada: true }; });
   resumoDiario(estado).paginas.forEach((p) => {
     if (!p.postal) return;
-    const postal = p.ultima ? p.rastros[0] : estado.caso.paradas[p.indice].locais.find((l) => l.tipo === 'postal').rastro;
-    album[p.capital] = { ...album[p.capital], visitada: true, postal };
+    const { locais } = estado.caso.paradas[p.indice];
+    const local = p.ultima ? locais[estado.caso.final.localCerto] : locais.find((l) => l.tipo === 'postal');
+    album[p.capital] = { ...album[p.capital], visitada: true, carta: local.carta };
   });
   return { ...perfil, album };
 }

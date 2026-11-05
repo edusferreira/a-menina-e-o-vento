@@ -18,7 +18,7 @@ function oQueFaltou(api, j) {
     if (!chegou.has(id)) return { id, texto: 'Você não chegou até aqui.' };
     if (p.completa) return { id, texto: 'Página completa.' };
     const vazios = p.rastros.filter((x) => !x).length;
-    return { id, texto: `${vazios} local(is) sem visita${p.postal ? '' : '; postal da Mãe não coletado'}.` };
+    return { id, texto: `${vazios} local(is) sem visita${p.postal ? '' : '; carta de Maria não recebida'}.` };
   });
 }
 

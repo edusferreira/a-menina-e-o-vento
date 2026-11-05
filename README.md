@@ -26,8 +26,9 @@ O jogo precisa ser servido por HTTP, porque carrega o conteúdo JSON com `fetch`
 
 ## Decisões tomadas onde a especificação deixava margem
 
-- **Página completa do Diário** = os 3 locais da capital visitados. Cada local preenche um espaço de "o que Maria fez", e o local da Mãe entrega o postal.
-- **Capital final**: não tem informantes. O último postal da Mãe aponta em qual dos 3 locais Maria está.
+- **Página completa do Diário** = os 3 locais da capital visitados. Cada local preenche um espaço de "o que Maria fez", e no local da Mãe chega uma carta de Maria.
+- **Cartas de Maria**: como na peça, chegam escritas em folhas de árvore que o vento leva até a Mãe, em primeira pessoa (campo `carta` de cada local em `capitais.json`). O Diário guarda a versão em terceira pessoa (`rastro`), anotada pela Atlântica.
+- **Capital final**: não tem informantes. A última carta de Maria aponta em qual dos 3 locais ela está.
 - **Teste do Vento**: o resultado vem dos acertos nas 3 perguntas (3 acertos: digno; 2: zomba; 0 ou 1: soprado). O Diário pode ser consultado durante o teste, então quem completou as páginas consegue responder.
 - **Semana**: de segunda a domingo (28 períodos; 35 no difícil). Maria some no domingo anterior, no prólogo.
 

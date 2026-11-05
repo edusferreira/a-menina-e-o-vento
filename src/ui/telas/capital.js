@@ -1,7 +1,7 @@
 // Rodada numa capital (seção 5.1): chegada, sinal do Vento, 3 locais com informantes e o caminho ao aeroporto.
 
 import { html, cru } from '../dom.js';
-import { hud, balao, retrato, nomeCapital, nomeRecruta } from '../comum.js';
+import { hud, balao, retrato, nomeCapital, nomeRecruta, folhaCarta, tintaDaMaria } from '../comum.js';
 import { cenaCapital } from '../cenas.js';
 import { momento } from '../../engine/tempo.js';
 import { visitarLocal } from '../../engine/jogo.js';
@@ -112,7 +112,7 @@ export function local(api) {
   const ouvidas = (j.visitados[j.parada] ?? []).filter((k) => k !== idx).map((k) => parada.locais[k]).filter((x) => x.pista).map((x) => x.pista);
   const conteudo = l.tipo === 'postal'
     ? html`<p class="narracao">${dialogos.maeLocal}</p>${balao(api, 'mae', falaMae(l.rastro, nomeRecruta(api), dialogos, chave))}
-      <div class="postal"><p class="postal-titulo">Postal de Maria</p><p>Maria ${l.rastro}.</p></div>`
+      ${folhaCarta(api, l.carta, { chave, tinta: tintaDaMaria(api) })}`
     : html`${balao(api, l.informante, falaInformante(l.informante, l.pista, dialogos, chave))}
       <p class="testemunha">Testemunhas contam que a menina ${l.rastro}.</p>`;
   return {

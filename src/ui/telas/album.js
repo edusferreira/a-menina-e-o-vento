@@ -1,8 +1,8 @@
-// Álbum do Brasil (seção 10.3): 27 cartões liberados ao visitar, mais o cartão do espetáculo e o postal secreto.
+// Álbum do Brasil (seção 10.3): 27 cartões liberados ao visitar, mais o cartão do espetáculo e a carta secreta.
 // Passeio de domingo (seção 11): viagem livre e sem relógio pelas capitais, pensada para professores.
 
 import { html, cru } from '../dom.js';
-import { balao } from '../comum.js';
+import { balao, folhaCarta } from '../comum.js';
 import { cenaCapital } from '../cenas.js';
 import { falaInformante } from '../../engine/falas.js';
 import { patente } from '../../engine/pontos.js';
@@ -21,7 +21,7 @@ function detalheCartao(api, c) {
     </dl>
     <h3>Curiosidades</h3>
     <ul>${c.curiosidades.map((x) => html`<li>${x}</li>`)}</ul>
-    ${registro.postal ? html`<div class="postal"><p class="postal-titulo">Postal de Maria</p><p>Maria ${registro.postal}.</p></div>` : html`<p class="nota">Postal de Maria ainda não coletado aqui.</p>`}
+    ${registro.carta ? folhaCarta(api, registro.carta, { chave: c.id }) : html`<p class="nota">Carta de Maria ainda não recebida aqui.</p>`}
   </article>`;
 }
 
@@ -43,10 +43,10 @@ export function album(api) {
         <button class="cartao ${visitada(c.id) ? '' : 'bloqueado'} regiao-${c.regiao.replace(/\W/g, '')}" data-acao="cartao" data-id="${c.id}" ${visitada(c.id) ? '' : 'disabled'}>
           <span class="cartao-uf">${visitada(c.id) ? c.uf : '?'}</span>
           <span class="cartao-nome">${visitada(c.id) ? c.nome : 'Não visitada'}</span>
-          <span class="cartao-regiao">${c.regiao}${api.perfil.album[c.id]?.postal ? ' · postal' : ''}</span>
+          <span class="cartao-regiao">${c.regiao}${api.perfil.album[c.id]?.carta ? ' · carta' : ''}</span>
         </button></li>`)}</ul>
       <section class="cartao-extra"><h2>Cartão 28: ${finais.espetaculo.titulo}</h2><p>${finais.espetaculo.texto}</p><p>${finais.espetaculo.temporada}</p></section>
-      ${des.vistoDoAlto ? html`<section class="postal secreto"><p class="postal-titulo">Postal secreto: Visto do alto</p><p>${finais.vistoDoAlto}</p></section>` : ''}
+      ${des.vistoDoAlto ? html`<section class="carta-secreta"><h2>Carta secreta: Visto do alto</h2>${folhaCarta(api, finais.vistoDoAlto, { completa: true })}</section>` : ''}
       <section class="album-impressao" aria-hidden="true">${capitais.filter((c) => visitada(c.id)).map((c) => detalheCartao(api, c))}</section>
       <div class="acoes"><button class="btn" data-acao="imprimir">Exportar em PDF</button><button class="btn primario" data-acao="voltar">Voltar</button></div>
     </main>`,

@@ -14,7 +14,7 @@ export function novoJogo({ semente, nivel, dados, perks = {} }) {
   const caso = criarCaso({ semente, nivel, dados, opcoes: { crispinaAcerto: perks.crispinaAcerto ?? 0 } });
   const { porDia } = dados.regras.niveis[nivel];
   return {
-    versao: 1,
+    versao: 2,
     semente,
     nivel,
     porDia,

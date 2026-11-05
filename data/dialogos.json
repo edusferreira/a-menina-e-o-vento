@@ -7,7 +7,7 @@
     "adelaide": { "nome": "Tia Adelaide", "papel": "Mandona, adora regras" },
     "adalgisa": { "nome": "Tia Adalgisa", "papel": "Concorda com tudo" },
     "aurelia": { "nome": "Tia Aurélia", "papel": "Sonhadora, quer voar" },
-    "mae": { "nome": "A Mãe", "papel": "Recebe os postais de Maria" },
+    "mae": { "nome": "A Mãe", "papel": "Recebe as cartas que Maria escreve em folhas de árvore" },
     "vovo": { "nome": "A Vovó", "papel": "Ouve pela metade" },
     "velha": { "nome": "A Velha que Viu", "papel": "Garante que viu tudo" },
     "reporter": { "nome": "A Repórter", "papel": "Tudo vira manchete" },
@@ -43,9 +43,14 @@
     ]
   },
   "mae": [
-    "Recruta {nome}, chegou um postal da Maria! Ela escreveu que {rastro}. Isso é normal?",
-    "Alô? É a mãe da Maria. O postal de hoje diz que ela {rastro}. Ninguém me explica nada!",
-    "Ai, {nome}, que alívio: um postal! Ela {rastro}. E mandou beijo."
+    "Recruta {nome}, o vento acabou de trazer uma folha de árvore pela minha janela. É carta da Maria! Escuta só:",
+    "Alô? É a mãe da Maria. Entrou uma folha voando aqui em casa, com a letrinha dela. Vou ler:",
+    "Ai, {nome}, que alívio! Mais uma folha com carta da Maria. Ninguém me explica como ela faz isso!"
+  ],
+  "cartaDespedida": [
+    "Não se preocupe, estou ventarolando bem. Beijo, Maria.",
+    "O Vento mandou um sopro para você. Beijo, Maria.",
+    "Estou bem, juro! Beijo, Maria."
   ],
   "maeLocal": "O orelhão da praça toca. É a Mãe, ligando de casa.",
   "sinaisVento": [
@@ -112,7 +117,7 @@
   },
   "encontro": {
     "titulo": "Onde ela está nesta cidade?",
-    "postal": "A Mãe liga, aflita: chegou o último postal. Maria escreveu que {rastro}. Será que ela ainda está lá?",
+    "carta": "A Mãe liga, aflita: o vento trouxe mais uma folha. Será que a Maria ainda está lá? Escuta:",
     "vento": "Hunf. Então você é o recruta que anda atrás da menina. Antes de chamá-la, quero saber se você prestou atenção na viagem.",
     "pergunta": "Em {capital}, o que a menina fez?",
     "digno": "Hunf... Você prestou atenção em tudo. É digno. MARIA! Tem visita!",
@@ -126,7 +131,7 @@
     "testePerfeito": "acertar as 3 perguntas do Vento",
     "aurelia": "ouvir a Tia Aurélia em pelo menos 2 capitais",
     "diario": "completar todas as páginas do Diário",
-    "postais": "coletar todos os postais da Mãe"
+    "postais": "receber todas as cartas de Maria, as folhas que o vento leva para a Mãe"
   },
   "aureliaBonus": "Bilhete da Tia Aurélia, escondido no seu bolso: \"Psiu! O Ventinho comentou que ia para {pista}.\"",
   "prologo": [
@@ -139,6 +144,6 @@
   "dicas": {
     "capital": "Visite os locais para ouvir os informantes. Cada visita custa 1 período. O Diário e o mapa são de graça.",
     "aeroporto": "Viagens até 2.000 km custam 1 período; mais longe, 2. Errar o destino custa a ida e mais 1 período para voltar.",
-    "encontro": "Escolha o lugar que combina com o último postal. Errar custa 1 período."
+    "encontro": "Escolha o lugar que combina com a última carta de Maria. Errar custa 1 período."
   }
 }

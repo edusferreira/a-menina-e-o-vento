@@ -38,7 +38,7 @@ describe('perfil', () => {
     e = viajar(e, errada, dados).estado;
     const p = sincronizarAlbum(carregarPerfil(storageFalso(), {}), e);
     expect(p.album[errada].visitada).toBe(true);
-    expect(p.album[e.caso.rota[0]].postal).toBeTruthy();
+    expect(p.album[e.caso.rota[0]].carta).toBe(e.caso.paradas[0].locais[postal].carta);
   });
 
   it('registrar o fim soma pontos, guarda o final e libera vantagens', () => {

@@ -23,7 +23,7 @@ function pagina(api, p) {
     <ul class="espacos">${p.rastros.map((r) => html`<li class="${r ? '' : 'vazio'}">${r ? `Maria ${r}.` : VAZIO}</li>`)}</ul>
     ${p.ultima ? '' : html`<h3>Para onde ela foi</h3>
       <ul class="espacos">${p.destino.map((d) => html`<li class="${d ? '' : 'vazio'}">${d ? html`<strong>${dialogos.personagens[d.informante].nome}:</strong> ${d.pista.texto}` : VAZIO}</li>`)}</ul>
-      <p class="postal-status">${p.postal ? '✓ Postal da Mãe coletado' : '○ Postal da Mãe ainda não coletado'}</p>`}
+      <p class="carta-status">${p.postal ? '✓ Carta de Maria recebida, numa folha de árvore' : '○ Carta de Maria ainda não recebida'}</p>`}
     ${p.ultima ? '' : balao(api, 'atlantica', recapAtlantica(pistas, dialogos), { classe: 'pequena' })}
   </article>`;
 }
@@ -36,7 +36,7 @@ export function diario(api) {
   return {
     html: html`${hud(api)}<main class="tela diario">
       <h1>Diário da Aventura</h1>
-      <p>${r.completas} de ${r.total} páginas completas · ${r.postais} postal(is) · Tia Aurélia ouvida em ${r.aureliaCapitais} capital(is)</p>
+      <p>${r.completas} de ${r.total} páginas completas · ${r.postais} carta(s) de Maria · Tia Aurélia ouvida em ${r.aureliaCapitais} capital(is)</p>
       <div class="moldura mapa-capa">${cru(desenharMapa({ capitais, porId, destaque: destaqueDaRota(j), rotulo: 'Mapa da rota percorrida; capitais erradas marcadas com X', mostrarTodas: false }))}</div>
       <p class="nota">A linha tracejada é o caminho do Vento até agora. Um X marca capital errada.</p>
       ${r.paginas.slice().reverse().map((p) => pagina(api, p))}

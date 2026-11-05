@@ -34,6 +34,15 @@ describe('capitais.json', () => {
     expect(c.lon).toBeLessThan(-34);
   });
 
+  it('cada local tem uma carta de Maria em primeira pessoa, que não entrega a capital', () => {
+    capitais.forEach((c) => c.locais.forEach((l) => {
+      expect(l.carta, `${c.id}/${l.nome}`).toBeTruthy();
+      expect(l.carta).not.toMatch(/^Maria\b/);
+      expect(l.carta).toMatch(/[.!]$/);
+      expect(semAcento(l.carta), c.id).not.toContain(semAcento(c.nome));
+    }));
+  });
+
   it('vinhetas e rastros não entregam o nome da capital', () => {
     capitais.forEach((c) => {
       const nome = semAcento(c.nome);

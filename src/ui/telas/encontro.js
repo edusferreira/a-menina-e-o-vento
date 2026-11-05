@@ -1,7 +1,7 @@
 // Encontro final (seção 8.2): achar Maria na cidade, passar no teste do Vento e escolher o final na conversa.
 
 import { html, cru } from '../dom.js';
-import { hud, balao, retrato, avatarJogador, nomeCapital, nomeRecruta } from '../comum.js';
+import { hud, balao, retrato, avatarJogador, nomeCapital, nomeRecruta, folhaCarta, tintaDaMaria } from '../comum.js';
 import { cenaCapital } from '../cenas.js';
 import { desenharVento } from '../avatar.js';
 import { blocoChegada, sinalDoVento } from './capital.js';
@@ -33,7 +33,8 @@ export function encontro(api) {
       ${blocoChegada(api, api.params.chegada)}
       <p class="vinheta">${cap.vinheta}</p>
       ${sinalDoVento(api, parada)}
-      ${balao(api, 'mae', preencher(e.postal, { rastro: certo.rastro }))}
+      ${balao(api, 'mae', e.carta)}
+      ${folhaCarta(api, certo.carta, { chave: `${j.semente}:final`, tinta: tintaDaMaria(api) })}
       ${api.params.crispina ? balao(api, 'crispina', variante(dialogos.crispinaComemora, `${j.gastos}`)) : ''}
       ${soprado
         ? html`<section class="soprado">${cru(desenharVento({ bravo: true }))}<p class="balao solto">${e.soprado}</p><p>${e.soproCusto}</p>

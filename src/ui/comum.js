@@ -5,6 +5,7 @@ import { desenharAvatar } from './avatar.js';
 import { momento, opacidadeMaria } from '../engine/tempo.js';
 import { patente } from '../engine/pontos.js';
 import { desbloqueios } from '../app/perfil.js';
+import { variante } from '../engine/falas.js';
 
 export function retrato(api, id, { classe = 'retrato', opacidade = 1 } = {}) {
   const { avatar, dialogos } = api.dados;
@@ -63,6 +64,26 @@ export function hud(api) {
       <button class="btn pequeno" data-acao="diario">Diário</button>
     </div>
   </header>`;
+}
+
+/** Na partida, a tinta das cartas some junto com Maria a partir da noite de sábado (seção 6.1), sem ficar ilegível. */
+export function tintaDaMaria(api) {
+  const j = api.jogo;
+  return j ? Math.max(0.55, opacidadeMaria(j.gastos, j.porDia)) : 1;
+}
+
+/**
+ * Carta de Maria escrita numa folha de árvore, como na peça: o vento leva as folhas até a Mãe.
+ * `carta` é o miolo em primeira pessoa; com `completa`, o texto já traz saudação e despedida.
+ */
+export function folhaCarta(api, carta, { chave = '', completa = false, tinta = 1 } = {}) {
+  const despedida = completa ? '' : variante(api.dados.dialogos.cartaDespedida, chave);
+  return html`<figure class="folha-carta" role="group" aria-label="Carta de Maria escrita numa folha de árvore">
+    <blockquote style="opacity:${tinta}">
+      <p>${completa ? carta : `Mãe, ${carta}`}</p>
+      ${despedida ? html`<p class="assinatura">${despedida}</p>` : ''}
+    </blockquote>
+  </figure>`;
 }
 
 export function botaoVoltar(rotulo = 'Voltar', acao = 'voltar') {

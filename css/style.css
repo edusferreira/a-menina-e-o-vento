@@ -161,12 +161,20 @@ code { background: #0000000d; padding: 0 .3em; border-radius: 4px; }
 .local-quem { grid-column: 2; grid-row: 1 / span 2; }
 .local.visto .local-botao { background: #f1f6ee; }
 .local-botao:disabled { opacity: .55; cursor: not-allowed; }
-.postal {
-  background: #fffdf5; border: 2px solid var(--tinta); border-radius: 6px; padding: 10px 14px; margin: 12px 0;
-  box-shadow: 4px 4px 0 var(--palha); max-width: 520px; position: relative;
+/* Carta de Maria numa folha de árvore: na peça, o vento leva as folhas até a Mãe. */
+.folha-carta {
+  margin: 14px auto; max-width: 540px; padding: 9% 13% 9% 16%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120' preserveAspectRatio='none'%3E%3Cpath d='M2 61 L14 60' stroke='%238a5a2b' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M12 60 Q52 2 124 7 Q182 13 198 60 Q182 107 124 113 Q52 118 12 60Z' fill='%23dcefb4' stroke='%235f8f3a' stroke-width='2.5'/%3E%3Cg stroke='%237aa64c' fill='none' opacity='.35' stroke-width='1.6'%3E%3Cpath d='M14 60 H192'/%3E%3Cpath d='M50 60 L78 26 M50 60 L78 94 M95 60 L124 18 M95 60 L124 102 M140 60 L166 26 M140 60 L166 94'/%3E%3C/g%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  transform: rotate(-2deg); animation: chegarFolha .9s ease-out; filter: drop-shadow(0 4px 6px #0000001f);
 }
-.postal::after { content: ""; position: absolute; right: 10px; top: 10px; width: 34px; height: 40px; border: 2px dashed var(--verde); border-radius: 4px; }
-.postal-titulo { font-weight: 700; color: var(--verde-escuro); margin-top: 0; }
+.folha-carta blockquote {
+  margin: 0; color: #2c3a1e; font-size: 1.05rem; line-height: 1.45;
+  font-family: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", cursive;
+}
+.folha-carta p { margin: .3em 0; }
+.folha-carta .assinatura { text-align: right; font-size: .95rem; }
+@media (max-width: 480px) { .folha-carta { padding: 13% 14% 13% 18%; } }
+.carta-secreta { margin: 16px 0; }
 
 /* Aeroporto */
 .destinos { list-style: none; padding: 0; display: grid; gap: 10px; }
@@ -195,7 +203,7 @@ code { background: #0000000d; padding: 0 .3em; border-radius: 4px; }
 .espacos { padding-left: 20px; }
 .espacos li { margin: 4px 0; }
 .espacos li.vazio { color: #8a8576; font-style: italic; }
-.postal-status { font-weight: 700; }
+.carta-status { font-weight: 700; }
 .mapa-capa { max-width: 420px; }
 
 /* Mapa */
@@ -290,7 +298,6 @@ code { background: #0000000d; padding: 0 .3em; border-radius: 4px; }
 .ficha dt { font-weight: 700; font-size: .85rem; color: var(--tinta-suave); }
 .ficha dd { margin: 0; }
 .cartao-extra { background: var(--palha-claro); border-radius: var(--raio); padding: 6px 16px; margin: 16px 0; }
-.postal.secreto { max-width: none; }
 .album-impressao { display: none; }
 
 /* Prólogo e créditos */
@@ -311,6 +318,7 @@ code { background: #0000000d; padding: 0 .3em; border-radius: 4px; }
 @keyframes flutuar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 @keyframes soprar { 0%, 100% { opacity: .3; transform: translateX(0); } 50% { opacity: 1; transform: translateX(6px); } }
 @keyframes balancar { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+@keyframes chegarFolha { from { opacity: 0; transform: translate(-60px, -30px) rotate(-20deg); } to { opacity: 1; transform: rotate(-2deg); } }
 @keyframes pulsar { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 @keyframes voarFolha { from { transform: translate(-40px, 0) rotate(0); } to { transform: translate(440px, -30px) rotate(540deg); } }
 @media (prefers-reduced-motion: reduce) {

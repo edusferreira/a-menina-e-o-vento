@@ -69,6 +69,16 @@ describe('telas', () => {
     expect(tela).not.toContain('Veja a peça');
   });
 
+  it('na tela inicial, folhinhas de outono caem sobre a Maria e o Vento (e somem para quem prefere menos movimento)', () => {
+    const tela = renderizar('abertura', null, {});
+    const arte = tela.match(/<div class="abertura-arte" aria-hidden="true">[\s\S]*?<p class="verso">/)[0];
+    expect(arte).toContain('class="folhas-outono"');
+    expect((arte.match(/class="folha-outono[" ]/g) ?? []).length).toBeGreaterThanOrEqual(6);
+    const css = readFileSync(new URL('../css/style.css', import.meta.url), 'utf8');
+    expect(css).toMatch(/@keyframes cairFolha/);
+    expect(css).toMatch(/@media \(prefers-reduced-motion: reduce\) \{\n(?: {2}.*\n)* {2}\.folhas-outono \{ display: none; \}/);
+  });
+
   it('quem chega a Furacão ganha a capa de vento e o título na tela inicial', () => {
     expect(dados.avatar.uniformes.furacao.capa).toBe(true);
     expect(JSON.stringify(dados.avatar)).not.toMatch(/ventarolador/i);

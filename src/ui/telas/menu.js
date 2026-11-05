@@ -6,6 +6,20 @@ import { retrato, avatarJogador, uniformeAtual } from '../comum.js';
 import { patente } from '../../engine/pontos.js';
 import { desbloqueios } from '../../app/perfil.js';
 
+// Folhinhas de outono caindo sobre a Maria e o Vento: [posição, tamanho, duração, atraso, cor].
+// Atrasos negativos fazem as folhas já estarem no meio da queda quando a tela abre.
+const FOLHAS_OUTONO = [
+  ['6%', 18, 7.5, -1, '#d9822b'], ['19%', 14, 9, -5.5, '#a8432a'], ['31%', 20, 8, -3, '#e8b84a'],
+  ['44%', 15, 10, -7, '#c4561d'], ['57%', 19, 7, -2, '#b9892f'], ['69%', 13, 9.5, -6, '#d9822b'],
+  ['81%', 17, 8.5, -4, '#a8432a'], ['92%', 15, 11, -8.5, '#e8b84a'],
+];
+const FOLHA = (cor) => `<svg viewBox="-8 -12 16 24"><path d="M0 -11 C7 -6 7 5 0 10 C-7 5 -7 -6 0 -11Z" fill="${cor}"/><path d="M0 -9 V12" stroke="#00000033" stroke-width="1.2"/></svg>`;
+
+function folhasDeOutono() {
+  const folhas = FOLHAS_OUTONO.map(([x, w, dur, atraso, cor], i) => `<span class="folha-outono${i % 2 ? ' vira' : ''}" style="left:${x};width:${w}px;animation-duration:${dur}s;animation-delay:${atraso}s">${FOLHA(cor)}</span>`);
+  return `<div class="folhas-outono">${folhas.join('')}</div>`;
+}
+
 function proximaTelaDeJogo(api) {
   if (!api.perfil.prologoVisto) return 'prologo';
   return api.perfil.temAvatar ? 'delegacia' : 'recruta';
@@ -24,7 +38,7 @@ export function abertura(api) {
         <h1>Onde está Maria?</h1>
         ${pt.atual.id === 'furacao' ? html`<p class="titulo-honra">${pt.atual.nome} ${perfil.avatar.nome}</p>` : ''}
       </header>
-      <div class="abertura-arte" aria-hidden="true">${retrato(api, 'maria', { classe: 'grande' })}${cru(desenharVento({ classe: 'grande' }))}</div>
+      <div class="abertura-arte" aria-hidden="true">${retrato(api, 'maria', { classe: 'grande' })}${cru(desenharVento({ classe: 'grande' }))}${cru(folhasDeOutono())}</div>
       <p class="verso">${dados.finais.verso}</p>
       <nav class="menu" aria-label="Menu principal">
         <button class="btn primario" data-acao="jogar">${temPartida ? 'Novo caso' : 'Jogar'}</button>

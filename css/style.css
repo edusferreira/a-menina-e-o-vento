@@ -74,7 +74,12 @@ a.btn { display: inline-flex; align-items: center; justify-content: center; text
 .logo .sobretitulo { font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--verde); margin: 18px 0 0; }
 .logo h1 { font-size: clamp(2rem, 7vw, 3.2rem); margin: 0; }
 .titulo-honra { display: inline-block; background: var(--palha); border-radius: 999px; padding: 2px 14px; font-weight: 700; }
-.abertura-arte { display: flex; justify-content: center; align-items: flex-end; gap: 0; margin: 8px 0; }
+.abertura-arte { position: relative; display: flex; justify-content: center; align-items: flex-end; gap: 0; margin: 8px 0; }
+/* Folhinhas de outono caindo sobre a Maria e o Vento: a folha cai balançando e o desenho dentro dela vira de um lado para o outro. */
+.folhas-outono { position: absolute; inset: -24px 0 0; overflow: hidden; pointer-events: none; }
+.folha-outono { position: absolute; top: 0; display: block; opacity: 0; animation: cairFolha 8s linear infinite; }
+.folha-outono svg { display: block; width: 100%; height: auto; animation: rodopiarFolha 2.4s ease-in-out infinite; }
+.folha-outono.vira svg { animation-direction: reverse; animation-duration: 3.1s; }
 .verso { font-style: italic; color: var(--verde-escuro); font-size: 1.05rem; }
 .menu { display: grid; gap: 10px; max-width: 360px; margin: 16px auto; }
 .config { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; align-items: center; margin-top: 20px; color: var(--tinta-suave); }
@@ -322,9 +327,20 @@ a.btn { display: inline-flex; align-items: center; justify-content: center; text
 @keyframes chegarFolha { from { opacity: 0; transform: translate(-60px, -30px) rotate(-20deg); } to { opacity: 1; transform: rotate(-2deg); } }
 @keyframes esvoacar { 0%, 100% { transform: rotate(-1.5deg); } 50% { transform: rotate(1.5deg); } }
 @keyframes pulsar { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes cairFolha {
+  0% { transform: translate(0, -20px); opacity: 0; }
+  8% { opacity: .95; }
+  25% { transform: translate(16px, 30px); }
+  50% { transform: translate(-12px, 85px); }
+  75% { transform: translate(14px, 140px); }
+  92% { opacity: .95; }
+  100% { transform: translate(-6px, 190px); opacity: 0; }
+}
+@keyframes rodopiarFolha { 0%, 100% { transform: rotate(-40deg); } 50% { transform: rotate(45deg); } }
 @keyframes voarFolha { from { transform: translate(-40px, 0) rotate(0); } to { transform: translate(440px, -30px) rotate(540deg); } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  .folhas-outono { display: none; }
 }
 
 @media (min-width: 720px) {

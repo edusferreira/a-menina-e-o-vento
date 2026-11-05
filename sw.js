@@ -10,7 +10,7 @@ const ARQUIVOS = [
   'src/app/main.js', 'src/app/app.js', 'src/app/perfil.js', 'src/app/som.js',
   'src/engine/rng.js', 'src/engine/geo.js', 'src/engine/tempo.js', 'src/engine/rota.js', 'src/engine/caso.js',
   'src/engine/diario.js', 'src/engine/teste.js', 'src/engine/pontos.js', 'src/engine/jogo.js', 'src/engine/falas.js',
-  'src/ui/dom.js', 'src/ui/avatar.js', 'src/ui/mapa.js', 'src/ui/cenas.js', 'src/ui/comum.js',
+  'src/ui/dom.js', 'src/ui/avatar.js', 'src/ui/figurinos.js', 'src/ui/mapa.js', 'src/ui/cenas.js', 'src/ui/comum.js',
   'src/ui/telas/index.js', 'src/ui/telas/menu.js', 'src/ui/telas/prologo.js', 'src/ui/telas/recruta.js',
   'src/ui/telas/delegacia.js', 'src/ui/telas/capital.js', 'src/ui/telas/diario.js', 'src/ui/telas/viagem.js',
   'src/ui/telas/encontro.js', 'src/ui/telas/final.js', 'src/ui/telas/album.js',

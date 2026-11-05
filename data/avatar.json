@@ -30,6 +30,7 @@
     { "id": "crespo", "nome": "Crespo volumoso" },
     { "id": "trancas", "nome": "Tranças" },
     { "id": "coque", "nome": "Coque" },
+    { "id": "coqueAlto", "nome": "Coque alto" },
     { "id": "rabo", "nome": "Rabo de cavalo" },
     { "id": "topete", "nome": "Topete" },
     { "id": "raspado", "nome": "Raspado" }
@@ -53,9 +54,9 @@
   "personagens": {
     "maria": { "pele": 2, "rosto": "redondo", "olhos": "redondos", "boca": "aberta", "cabelo": "liso", "corCabelo": 1, "acessorio": "chapeu", "roupa": "#f2c14e" },
     "pedro": { "pele": 3, "rosto": "quadrado", "olhos": "pontos", "boca": "sorriso", "cabelo": "topete", "corCabelo": 0, "acessorio": "bone", "roupa": "#3a8fb7" },
-    "adelaide": { "pele": 0, "rosto": "oval", "olhos": "pontos", "boca": "timida", "cabelo": "coque", "corCabelo": 0, "acessorio": "oculos", "roupa": "#5b2a3a", "extras": ["rugas"] },
-    "adalgisa": { "pele": 1, "rosto": "redondo", "olhos": "pontos", "boca": "sorriso", "cabelo": "coque", "corCabelo": 2, "acessorio": "nenhum", "roupa": "#8a6fb0" },
-    "aurelia": { "pele": 1, "rosto": "coracao", "olhos": "cilios", "boca": "aberta", "cabelo": "liso", "corCabelo": 3, "acessorio": "nenhum", "roupa": "#8fd0c0", "extras": ["flor"] },
+    "adelaide": { "pele": 0, "rosto": "oval", "olhos": "pontos", "boca": "timida", "cabelo": "coqueAlto", "corCabelo": 1, "acessorio": "nenhum", "roupa": "#211c24", "renda": "#6b6070", "saia": "#d0313a", "extras": ["colar", "sobrancelhas"], "chapeuAba": { "cor": "#1d2230", "faixa": "#2f3647", "enfeite": "pena", "corEnfeite": "#d0202f" } },
+    "adalgisa": { "pele": 1, "rosto": "redondo", "olhos": "pontos", "boca": "sorriso", "cabelo": "coqueAlto", "corCabelo": 1, "acessorio": "nenhum", "roupa": "#f8f6f1", "renda": "#d8d1c2", "chapeuAba": { "cor": "#e0646f", "faixa": "#c44f5b", "enfeite": "flor", "corEnfeite": "#ffffff", "palha": true } },
+    "aurelia": { "pele": 1, "rosto": "coracao", "olhos": "cilios", "boca": "aberta", "cabelo": "coqueAlto", "corCabelo": 1, "acessorio": "nenhum", "roupa": "#efa1ab", "renda": "#fbd3d8", "chapeuAba": { "cor": "#d65a78", "faixa": "#b8445f", "enfeite": "flor-pena", "corEnfeite": "#e0307a", "palha": true } },
     "mae": { "pele": 2, "rosto": "oval", "olhos": "redondos", "boca": "sorriso", "cabelo": "chanel", "corCabelo": 1, "acessorio": "nenhum", "roupa": "#e86f6f", "extras": ["telefone"] },
     "vovo": { "pele": 0, "rosto": "redondo", "olhos": "pontos", "boca": "timida", "cabelo": "coque", "corCabelo": 5, "acessorio": "oculos", "roupa": "#b0c4de", "extras": ["rugas"] },
     "velha": { "pele": 4, "rosto": "oval", "olhos": "cilios", "boca": "aberta", "cabelo": "liso", "corCabelo": 5, "acessorio": "nenhum", "roupa": "#7b4fa0", "extras": ["lenco", "rugas"] },

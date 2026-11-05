@@ -66,7 +66,32 @@ const CABELOS = {
     frente: (c) => `<path d="M29 40 Q29 23 44 21 Q52 9 66 16 Q75 22 71 40 Q62 28 46 30 Q35 30 29 40Z" fill="${c}"/>`,
   },
   raspado: { tras: () => '', frente: (c) => `<path d="M29 42 Q29 24 50 24 Q71 24 71 42 Q64 30 50 30 Q36 30 29 42Z" fill="${c}" opacity=".55"/>` },
+  // Coque alto das tias (figurino do espetáculo): cabelo todo puxado para cima, sem franja.
+  coqueAlto: {
+    tras: (c) => `<ellipse cx="50" cy="11" rx="11" ry="9" fill="${c}"/><path d="M41 16 Q50 22 59 16 L60 25 H40Z" fill="${c}"/>`,
+    frente: (c) => `<path d="M28 45 Q26 21 50 21 Q74 21 72 45 Q70 33 60 29 Q50 26 40 29 Q30 33 28 45Z" fill="${c}"/><path d="M38 25 Q44 23 50 27 Q56 23 62 25" stroke="#0003" stroke-width="1.2" fill="none"/>`,
+  },
 };
+
+/** Chapéu de aba larga do início do século XX, inclinado e com enfeite (pena e/ou flor) do lado esquerdo. */
+function chapeuAba({ cor, enfeite, corEnfeite, faixa = '#0003', palha = false }) {
+  const flor = (x, y) => [0, 72, 144, 216, 288]
+    .map((a) => `<ellipse rx="4" ry="6" transform="translate(${x} ${y}) rotate(${a}) translate(0 -4.5)" fill="${corEnfeite}" stroke="#0002" stroke-width=".6"/>`)
+    .join('') + `<circle cx="${x}" cy="${y}" r="3" fill="${corEnfeite}" stroke="#0003" stroke-width=".8"/>`;
+  const pena = `<path d="M41 15 Q22 13 19 1 Q31 7 47 11Z" fill="${corEnfeite}"/><path d="M42 14 Q29 10 22 3" stroke="#0004" stroke-width="1" fill="none"/>`;
+  const tramas = palha ? '<ellipse cx="50" cy="24" rx="33" ry="6" fill="none" stroke="#0002"/><ellipse cx="50" cy="24" rx="25" ry="4.5" fill="none" stroke="#0002"/>' : '';
+  const enfeites = { pena: pena + flor(42, 19), flor: flor(35, 17), 'flor-pena': pena + flor(35, 17) + flor(42, 14) };
+  return `<g data-camada="chapeu-aba" transform="rotate(-8 50 24)">
+    <ellipse cx="50" cy="25.5" rx="41" ry="9.5" fill="${cor}" stroke="#0003" stroke-width="1.2"/>${tramas}
+    <path d="M31 24 Q31 4 50 4 Q69 4 69 24Z" fill="${cor}" stroke="#0003" stroke-width="1.2"/>
+    <path d="M31 19 Q50 24 69 19 L69 24 Q50 29 31 24Z" fill="${faixa}"/>${enfeites[enfeite] ?? ''}</g>`;
+}
+
+/** Gola alta de renda cobrindo o pescoço (blusas das tias). */
+function golaAlta(roupa, renda) {
+  const bordado = Array.from({ length: 5 }, (_, i) => `<circle cx="${42 + i * 4}" cy="66" r="2" fill="${renda}"/>`).join('');
+  return `<g data-camada="gola-alta"><path d="M41 66 H59 L60 86 Q50 89 40 86Z" fill="${roupa}"/><path d="M41 71 H59 M41 77 H59" stroke="${renda}" stroke-width="1.4"/>${bordado}</g>`;
+}
 
 const ACESSORIOS = {
   nenhum: () => '',
@@ -85,12 +110,25 @@ const EXTRAS = {
   lenco: () => '<path d="M25 44 Q24 14 50 14 Q76 14 75 44 Q70 30 50 30 Q30 30 25 44Z" fill="#7b4fa0"/><circle cx="40" cy="22" r="2" fill="#f2c14e"/><circle cx="56" cy="20" r="2" fill="#f2c14e"/><circle cx="66" cy="28" r="2" fill="#f2c14e"/>',
   rugas: () => `<path d="M33 41 q3 -2 6 0 M61 41 q3 -2 6 0" stroke="${CONTORNO}" stroke-width="1" fill="none" opacity=".6"/>`,
   telefone: () => '<path d="M74 70 q6 -2 8 4 l-2 16 q-1 6 -8 5Z" fill="#d94f3d"/>',
+  colar: () => '<g data-camada="colar"><path d="M42 86 Q50 101 58 86" stroke="#d9b45a" stroke-width="1.4" fill="none"/><circle cx="50" cy="99" r="2.4" fill="#d9b45a"/></g>',
+  sobrancelhas: () => `<path d="M35 41 L45 44 M65 41 L55 44" stroke="${CONTORNO}" stroke-width="2.2" stroke-linecap="round"/>`,
 };
+
+/** Peito de blusa de renda (pontinhos claros) e, se houver, a cintura da saia aparecendo embaixo. */
+function rendaESaia(cfg) {
+  const pontos = [[40, 96], [46, 100], [54, 100], [60, 96], [43, 106], [50, 108], [57, 106]]
+    .map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.6" fill="${cfg.renda}"/>`).join('');
+  const peito = cfg.renda ? `<path d="M36 90 Q50 98 64 90 L62 112 Q50 117 38 112Z" fill="${cfg.renda}" opacity=".45"/>${pontos}` : '';
+  const pregas = [30, 42, 58, 70].map((x) => `<path d="M${x} 114 V122" stroke="#0003" stroke-width="1.2"/>`).join('');
+  const saia = cfg.saia ? `<path d="M17 112 H83 L84 122 H16Z" fill="${cfg.saia}"/>${pregas}` : '';
+  return peito + saia;
+}
 
 function corpo(cfg, uniforme) {
   const roupa = cfg.roupa ?? '#f4efe6';
   const gola = cfg.corpo === 'menino' ? 'M43 85 L50 94 L57 85' : 'M42 85 Q50 95 58 85';
-  const camiseta = `<path d="M16 122 Q18 87 50 84 Q82 87 84 122Z" fill="${roupa}"/><path d="${gola}" stroke="#0002" stroke-width="2" fill="none"/>`;
+  const decote = cfg.renda ? '' : `<path d="${gola}" stroke="#0002" stroke-width="2" fill="none"/>`;
+  const camiseta = `<path d="M16 122 Q18 87 50 84 Q82 87 84 122Z" fill="${roupa}" stroke="#0001"/>${decote}${rendaESaia(cfg)}`;
   if (cfg.roupa || !uniforme) return camiseta;
   return `${camiseta}<path d="M16 122 Q18 88 40 85 L46 122Z" fill="${uniforme.cor}"/><path d="M84 122 Q82 88 60 85 L54 122Z" fill="${uniforme.cor}"/><path d="M66 96 l2.4 4.8 5.3.8 -3.8 3.7 .9 5.3 -4.8-2.5 -4.8 2.5 .9-5.3 -3.8-3.7 5.3-.8Z" fill="${uniforme.detalhe}"/>`;
 }
@@ -115,7 +153,9 @@ export function desenharAvatar(cfg, { opcoes, uniforme, rotulo = 'Avatar', class
     uniforme?.capa ? CAPA : '',
     corpo(cfg, uniforme),
     `<rect x="43" y="66" width="14" height="20" rx="5" fill="${pele}"/>`,
-    sobreCabeca ? '' : cabelo.tras(cabeloCor),
+    cfg.renda ? golaAlta(cfg.roupa, cfg.renda) : '',
+    // Sob um chapéu de aba, o coque fica escondido pela copa (como nas fotos do espetáculo).
+    sobreCabeca || (cfg.chapeuAba && cfg.cabelo?.startsWith('coque')) ? '' : cabelo.tras(cabeloCor),
     `<ellipse cx="28" cy="51" rx="4" ry="6" fill="${pele}"/><ellipse cx="72" cy="51" rx="4" ry="6" fill="${pele}"/>`,
     (ROSTOS[cfg.rosto] ?? ROSTOS.oval)(pele),
     '<circle cx="36" cy="58" r="4" fill="#ff8f8f" opacity=".35"/><circle cx="64" cy="58" r="4" fill="#ff8f8f" opacity=".35"/>',
@@ -124,6 +164,7 @@ export function desenharAvatar(cfg, { opcoes, uniforme, rotulo = 'Avatar', class
     sobreCabeca ? '' : cabelo.frente(cabeloCor),
     ...extras.map((e) => EXTRAS[e]?.() ?? ''),
     (ACESSORIOS[cfg.acessorio] ?? ACESSORIOS.nenhum)(),
+    cfg.chapeuAba ? chapeuAba(cfg.chapeuAba) : '',
   ];
   const nome = rotulo.replace(/["<>&]/g, '');
   return `<svg class="avatar ${classe}" ${attrs} viewBox="0 0 104 124" role="img" aria-label="${nome}" style="opacity:${opacidade}">${camadas.join('')}</svg>`;

@@ -69,6 +69,15 @@ describe('telas', () => {
     expect(tela).not.toContain('Veja a peça');
   });
 
+  it('quem chega a Furacão ganha a capa de vento e o título na tela inicial', () => {
+    expect(dados.avatar.uniformes.furacao.capa).toBe(true);
+    expect(JSON.stringify(dados.avatar)).not.toMatch(/ventarolador/i);
+    const perfil = { ...perfilVazio(dados.avatar.padrao), temAvatar: true, pontos: 7000, finaisVistos: ['final1', 'final2', 'final3'] };
+    const tela = String(TELAS.abertura({ ...api(null, {}), perfil: { ...perfil, avatar: { ...perfil.avatar, nome: 'Lia' } } }).html);
+    expect(tela).toContain('Furacão Lia');
+    expect(tela).toContain('Patente: Furacão');
+  });
+
   it('telas fora da partida renderizam', () => {
     ['abertura', 'recruta', 'delegacia', 'album', 'passeio', 'patente', 'creditos'].forEach((t) => renderizar(t, null, {}));
     [0, 1, 2, 3, 4].forEach((n) => renderizar('prologo', null, { n }));

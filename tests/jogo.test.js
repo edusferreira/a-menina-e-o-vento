@@ -198,11 +198,16 @@ describe('encontro e finais', () => {
 });
 
 describe('patentes', () => {
-  it('sobe com pontos acumulados; Ventarolador exige os 3 finais', () => {
+  it('sobe com pontos acumulados; Furacão exige os 3 finais', () => {
     expect(patente(0, [], regras).atual.id).toBe('recruta');
     expect(patente(1500, [], regras).atual.id).toBe('vento');
     expect(patente(7000, ['final1'], regras).atual.id).toBe('ventania');
-    expect(patente(7000, ['final1', 'final2', 'final3'], regras).atual.id).toBe('ventarolador');
+    expect(patente(7000, ['final1', 'final2', 'final3'], regras).atual.id).toBe('furacao');
     expect(patente(600, [], regras).proxima.id).toBe('vento');
+  });
+
+  it('a patente 5 se chama Furacão', () => {
+    expect(regras.patentes[4]).toMatchObject({ id: 'furacao', nome: 'Furacão' });
+    expect(JSON.stringify(regras)).not.toMatch(/ventarolador/i);
   });
 });

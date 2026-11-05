@@ -22,7 +22,7 @@ export function abertura(api) {
       <header class="logo">
         <p class="sobretitulo">A Menina e o Vento</p>
         <h1>Onde está Maria?</h1>
-        ${pt.atual.id === 'ventarolador' ? html`<p class="titulo-honra">Ventarolador ${perfil.avatar.nome}</p>` : ''}
+        ${pt.atual.id === 'furacao' ? html`<p class="titulo-honra">${pt.atual.nome} ${perfil.avatar.nome}</p>` : ''}
       </header>
       <div class="abertura-arte" aria-hidden="true">${retrato(api, 'maria', { classe: 'grande' })}${cru(desenharVento({ classe: 'grande' }))}</div>
       <p class="verso">${dados.finais.verso}</p>

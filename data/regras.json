@@ -48,6 +48,6 @@
     { "id": "brisa", "nome": "Brisa", "pontos": 500, "libera": "Segundo uniforme; Crispina erra menos" },
     { "id": "vento", "nome": "Vento", "pontos": 1500, "libera": "Terceiro uniforme; o sinal do Vento aparece com mais frequência" },
     { "id": "ventania", "nome": "Ventania", "pontos": 3500, "libera": "Uniforme de gala; o Comissário passa a chamar você pelo nome" },
-    { "id": "ventarolador", "nome": "Ventarolador", "pontos": 6000, "exigeTodosFinais": true, "libera": "Capa de vento; título na tela inicial; Passeio de domingo em todas as capitais" }
+    { "id": "furacao", "nome": "Furacão", "pontos": 6000, "exigeTodosFinais": true, "libera": "Capa de vento; título na tela inicial; Passeio de domingo em todas as capitais" }
   ]
 }

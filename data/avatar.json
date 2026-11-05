@@ -56,7 +56,7 @@
     "brisa": { "nome": "Colete Brisa", "cor": "#3a8fb7", "detalhe": "#e8f4ff" },
     "vento": { "nome": "Colete Vento", "cor": "#6b4fa0", "detalhe": "#f2c14e" },
     "ventania": { "nome": "Uniforme de gala", "cor": "#1f2f5c", "detalhe": "#f2c14e" },
-    "ventarolador": { "nome": "Gala com capa de vento", "cor": "#1f2f5c", "detalhe": "#f2c14e", "capa": true }
+    "furacao": { "nome": "Gala com capa de vento", "cor": "#1f2f5c", "detalhe": "#f2c14e", "capa": true }
   },
   "padrao": { "nome": "", "corpo": "menina", "pele": 2, "rosto": "oval", "olhos": "redondos", "boca": "sorriso", "cabelo": "cacheado", "corCabelo": 1, "acessorio": "nenhum" },
   "personagens": {

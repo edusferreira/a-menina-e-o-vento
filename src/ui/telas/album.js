@@ -59,7 +59,7 @@ export function album(api) {
 
 export function passeio(api) {
   const { capitais, porId, pistas, dialogos } = api.dados;
-  const todas = patente(api.perfil.pontos, api.perfil.finaisVistos, api.dados.regras).atual.id === 'ventarolador';
+  const todas = patente(api.perfil.pontos, api.perfil.finaisVistos, api.dados.regras).atual.id === 'furacao';
   const liberadas = capitais.filter((c) => todas || api.perfil.album[c.id]?.visitada);
   const atual = porId[api.params.capital] ?? null;
   const { informantes } = api.dados.regras;

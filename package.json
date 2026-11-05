@@ -1,0 +1,19 @@
+{
+  "name": "a-menina-e-o-vento",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Menina e o Vento: Onde está Maria? — jogo de investigação pelas 27 capitais do Brasil",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "vitest run",
+    "test:node": "vitest run --project=node",
+    "test:blast": "vitest run --changed HEAD --project=node",
+    "test:blast:full": "vitest run --changed HEAD",
+    "test:smoke": "vitest run --config vitest.smoke.config.ts",
+    "test:clear": "vitest --clearCache"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.7"
+  }
+}

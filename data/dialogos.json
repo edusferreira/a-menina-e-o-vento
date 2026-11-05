@@ -1,0 +1,144 @@
+{
+  "_sobre": "Falas do jogo. {pista} = texto da pista, {rastro} = o que Maria fez, {nome} = nome do recruta, {capital} = nome de uma capital. Texto próprio do protótipo, escrito na voz descrita na seção 3 da especificação.",
+  "personagens": {
+    "maria": { "nome": "Maria", "papel": "A fugitiva" },
+    "vento": { "nome": "O Vento", "papel": "Antagonista simpático" },
+    "pedro": { "nome": "Pedro", "papel": "Segue a investigação escondido" },
+    "adelaide": { "nome": "Tia Adelaide", "papel": "Mandona, adora regras" },
+    "adalgisa": { "nome": "Tia Adalgisa", "papel": "Concorda com tudo" },
+    "aurelia": { "nome": "Tia Aurélia", "papel": "Sonhadora, quer voar" },
+    "mae": { "nome": "A Mãe", "papel": "Recebe os postais de Maria" },
+    "vovo": { "nome": "A Vovó", "papel": "Ouve pela metade" },
+    "velha": { "nome": "A Velha que Viu", "papel": "Garante que viu tudo" },
+    "reporter": { "nome": "A Repórter", "papel": "Tudo vira manchete" },
+    "fotografa": { "nome": "A Fotógrafa", "papel": "Registra tudo, meio tremido" },
+    "placido": { "nome": "Comissário Plácido", "papel": "Seu chefe" },
+    "crispina": { "nome": "Crispina", "papel": "Colega que conclui rápido demais" },
+    "atlantica": { "nome": "Atlântica", "papel": "Colega que anota tudo" }
+  },
+  "informantes": {
+    "aurelia": [
+      "Se eu fosse o Ventinho, levaria a menina para {pista}... Mas não diga à Adelaide que eu disse isso.",
+      "Ai, voar... Aposto que eles foram para {pista}. Eu iria, se tivesse asas."
+    ],
+    "velha": [
+      "Vi a menina numa nuvem, indo para {pista}. Vi tudo, sempre vejo.",
+      "Eu vi! Vi do alto do coqueiro: ela ia para {pista}. E vi mais coisa, mas não cabe aqui."
+    ],
+    "reporter": [
+      "EXTRA! EXTRA! MENINA VOADORA PARTE PARA {PISTA}!",
+      "URGENTE! FONTES CONFIRMAM: VENTO CARREGA GAROTA PARA {PISTA}!"
+    ],
+    "fotografa": [
+      "Saiu tremida, mas dá para ver que ela ia para {pista}. Isso ajuda?",
+      "Olha esta foto. Cortei a cabeça do Vento, mas aparece o caminho: {pista}."
+    ],
+    "pedro": [
+      "O moleque daqui disse que a Maria foi para {pista}. Eu sei onde é, mas não vou contar de graça.",
+      "Recruta, eu cheguei primeiro. A Maria falou que ia para {pista}. Adivinha aí."
+    ],
+    "vovo": [
+      "A menina falou que ia para {pista}... ou foi isso que eu ouvi. Fala mais alto, menino!",
+      "Hein? Ah, a Maria! Disse que ia para {pista}. Ou era pra lá ou era pra cá, sei lá."
+    ]
+  },
+  "mae": [
+    "Recruta {nome}, chegou um postal da Maria! Ela escreveu que {rastro}. Isso é normal?",
+    "Alô? É a mãe da Maria. O postal de hoje diz que ela {rastro}. Ninguém me explica nada!",
+    "Ai, {nome}, que alívio: um postal! Ela {rastro}. E mandou beijo."
+  ],
+  "maeLocal": "O orelhão da praça toca. É a Mãe, ligando de casa.",
+  "sinaisVento": [
+    "Chapéus voam pela praça, todos para o mesmo lado.",
+    "Uma placa de rua está virada de cabeça para baixo.",
+    "As bandeiras do porto estão tortas, apontando para o céu.",
+    "Folhas secas rodopiam em fila, como se dançassem.",
+    "Uma pipa voa sozinha, sem ninguém segurando a linha.",
+    "Os varais estão vazios e as roupas, penduradas no alto dos postes.",
+    "As nuvens fizeram o desenho de um chapéu de palha."
+  ],
+  "interferencias": {
+    "adelaide": [
+      "Isso não é lugar para mocinhas! Nem para recrutas. Volte já para a delegacia e preencha três formulários.",
+      "Recruta {nome}! Onde já se viu investigar sem uniforme passado? Fique aí até eu terminar a bronca."
+    ],
+    "adalgisa": [
+      "Isso mesmo que a Adelaide disse. Não é lugar para... como era mesmo? Ah: {eco}.",
+      "Concordo com a Adelaide. E com a Aurélia também. Ela disse alguma coisa sobre {eco}."
+    ],
+    "adalgisaSemEco": "Isso mesmo que a Adelaide disse! Seja lá o que ela disse.",
+    "adelaideCusto": "A bronca custou mais um período.",
+    "crispina": [
+      "Recruta, já resolvi: só pode ser {capital}! Compra a passagem!",
+      "Escuta a Crispina: {capital}. Tenho certeza absoluta. Quase absoluta."
+    ],
+    "vento": [
+      "Uma rajada de vento levanta você do chão e deixa você mais adiante, na frente do informante.",
+      "Hunf. O Vento sopra a seu favor, só desta vez. Você chega antes do previsto."
+    ],
+    "ventoBonus": "O Vento devolveu um período."
+  },
+  "velhaNaoViu": [
+    "Aqui? Não vi nada. E olha que eu vejo tudo. Nem menina, nem vento, nem brisa.",
+    "Hum... Por aqui só passou um calor danado. Menina voadora, não."
+  ],
+  "crispinaAeroporto": [
+    "Eu iria para {capital}. Confia na Crispina!",
+    "{capital}, sem dúvida. Já estou até de mala pronta.",
+    "Tudo aponta para {capital}. Bom, quase tudo."
+  ],
+  "crispinaComemora": [
+    "ACHEI! Ela está aqui! ...Não, era uma pipa. Perdemos um período.",
+    "Caso encerrado, Comissário! ...Ops, era outra menina de chapéu."
+  ],
+  "atlantica": "Comissário mandou anotar: {lista}. Anotado. O que significa não é comigo.",
+  "atlanticaVazia": "Comissário mandou anotar, mas ainda não tem nada para anotar.",
+  "chegada": {
+    "acertou": "Na mosca! Você chegou a {capital}.",
+    "porque": "Por que a pista apontava para cá:",
+    "errou": "Você chegou a {capital}. Algo está estranho: nenhum sinal do Vento."
+  },
+  "briefing": {
+    "placido": [
+      "Recruta {nome}, o caso é simples: a menina Maria sumiu no domingo, na Cova do Vento.",
+      "O suspeito é invisível. Literalmente: é o Vento.",
+      "Você tem uma semana, até o fim do domingo que vem. Eu já resolvi o caso, só preciso que você descubra onde, quando e como."
+    ],
+    "placidoComNome": "Recruta {nome}, conto com você. Quer dizer: conto comigo, mas você ajuda.",
+    "atlantica": "Aqui está o Diário da Aventura, vazio, e o calendário. Eu anoto tudo o que você descobrir.",
+    "pedro": "Antes de sumir, o Vento falou que ia levar a Maria para {pista}. Eu ouvi tudinho, escondido atrás de uma pedra.",
+    "crispina": "Isso é {capital}, certeza! Vamos agora!",
+    "partida": "Você confere o mapa e segue a pista do Pedro."
+  },
+  "encontro": {
+    "titulo": "Onde ela está nesta cidade?",
+    "postal": "A Mãe liga, aflita: chegou o último postal. Maria escreveu que {rastro}. Será que ela ainda está lá?",
+    "vento": "Hunf. Então você é o recruta que anda atrás da menina. Antes de chamá-la, quero saber se você prestou atenção na viagem.",
+    "pergunta": "Em {capital}, o que a menina fez?",
+    "digno": "Hunf... Você prestou atenção em tudo. É digno. MARIA! Tem visita!",
+    "zomba": "Errou uma, recruta. Tsc, tsc. Mas tudo bem, eu chamo a menina. MARIA!",
+    "soprado": "Não sabe nem o que ela comeu? FUUUU! O Vento sopra você para longe. Volte quando tiver prestado atenção.",
+    "soproCusto": "Você perdeu 2 períodos para voltar até aqui. Consulte o Diário e tente de novo.",
+    "maria": "Maria aparece ventarolando, de braços abertos contra o vento, rindo. — Você veio até aqui por minha causa? O que você quer me dizer?"
+  },
+  "faltam": {
+    "teste": "passar no teste do Vento",
+    "testePerfeito": "acertar as 3 perguntas do Vento",
+    "aurelia": "ouvir a Tia Aurélia em pelo menos 2 capitais",
+    "diario": "completar todas as páginas do Diário",
+    "postais": "coletar todos os postais da Mãe"
+  },
+  "aureliaBonus": "Bilhete da Tia Aurélia, escondido no seu bolso: \"Psiu! O Ventinho comentou que ia para {pista}.\"",
+  "prologo": [
+    { "titulo": "Domingo, a fuga", "texto": "Maria e Pedro fogem da aula das três tias e correm para a Cova do Vento, uma praia com uma caverna de que a cidade inteira tem medo." },
+    { "titulo": "O Vento dorme", "texto": "Dentro da caverna, o Vento ronca sobre as pedras, velho e barrigudo. Pedro quer voltar. Maria quer acordar o Vento." },
+    { "titulo": "O Vento acorda", "texto": "O Vento acorda furioso e sopra Pedro para longe. Pedro cai na areia gritando que bem que avisou. Maria fica." },
+    { "titulo": "Ventarolar", "texto": "Maria anda contra o vento, de braços abertos: está ventarolando. O Vento, impressionado, para de soprar. Os dois conversam e viram amigos." },
+    { "titulo": "O convite", "texto": "O Vento convida Maria para conhecer o Brasil nas costas dele, e os dois somem no céu. As tias chegam e só encontram Pedro e o chapéu de palha. Tia Adelaide decreta: \"Isso não é lugar para mocinhas. Chamem a polícia!\"" }
+  ],
+  "dicas": {
+    "capital": "Visite os locais para ouvir os informantes. Cada visita custa 1 período. O Diário e o mapa são de graça.",
+    "aeroporto": "Viagens até 2.000 km custam 1 período; mais longe, 2. Errar o destino custa a ida e mais 1 período para voltar.",
+    "encontro": "Escolha o lugar que combina com o último postal. Errar custa 1 período."
+  }
+}

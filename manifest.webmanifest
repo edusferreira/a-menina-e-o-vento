@@ -1,0 +1,12 @@
+{
+  "name": "A Menina e o Vento: Onde está Maria?",
+  "short_name": "Onde está Maria?",
+  "description": "Jogo de investigação pelas 27 capitais do Brasil.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbf8ef",
+  "theme_color": "#2f7d4f",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

@@ -1,0 +1,434 @@
+[
+  {
+    "id": "riobranco", "nome": "Rio Branco", "uf": "AC", "estado": "Acre", "regiao": "Norte",
+    "lat": -9.97, "lon": -67.81, "bioma": "Amazônia", "rio": "Rio Acre", "fuso": -5, "litoral": false,
+    "vinheta": "O avião desce sobre um tapete verde sem fim, cortado por um rio barrento que faz curvas de cobra. Na praça cheira a tucupi quente, e uma passarela atravessa o rio de uma margem à outra.",
+    "curiosidades": [
+      "O Acre só passou a fazer parte do Brasil em 1903, pelo Tratado de Petrópolis, assinado com a Bolívia.",
+      "Chico Mendes, seringueiro e defensor da floresta, nasceu em Xapuri, no Acre.",
+      "O relógio no Acre fica 2 horas atrás do horário de Brasília."
+    ],
+    "locais": [
+      { "nome": "Passarela Joaquim Macedo", "rastro": "atravessou o rio Acre a pé, por cima da água, contando as tábuas" },
+      { "nome": "Mercado Velho", "rastro": "tomou uma cuia de tacacá com jambu que fez a boca tremer" },
+      { "nome": "Parque Chico Mendes", "rastro": "plantou uma semente de seringueira e prometeu voltar para ver crescer" }
+    ],
+    "distratores": ["portovelho", "manaus"]
+  },
+  {
+    "id": "macapa", "nome": "Macapá", "uf": "AP", "estado": "Amapá", "regiao": "Norte",
+    "lat": 0.03, "lon": -51.07, "bioma": "Amazônia", "rio": "Rio Amazonas", "fuso": -3, "litoral": false,
+    "vinheta": "Daqui o rio é tão largo que parece mar, e a água corre marrom até onde a vista alcança. Uma fortaleza de pedra guarda a margem, e no meio de um estádio uma linha pintada divide o mundo em dois.",
+    "curiosidades": [
+      "A linha do Equador passa pela cidade: no Marco Zero dá para ficar com um pé em cada hemisfério.",
+      "A Fortaleza de São José de Macapá foi construída pelos portugueses no século XVIII.",
+      "No estádio Zerão, a linha do meio de campo coincide com a linha do Equador."
+    ],
+    "locais": [
+      { "nome": "Marco Zero do Equador", "rastro": "ficou com um pé no hemisfério norte e o outro no hemisfério sul" },
+      { "nome": "Fortaleza de São José", "rastro": "espiou o rio pelas frestas de muralhas de pedra antigas" },
+      { "nome": "Trapiche Eliezer Levy", "rastro": "viu o sol se pôr sobre o rio da ponta de um píer comprido" }
+    ],
+    "distratores": ["belem", "boavista"]
+  },
+  {
+    "id": "manaus", "nome": "Manaus", "uf": "AM", "estado": "Amazonas", "regiao": "Norte",
+    "lat": -3.12, "lon": -60.02, "bioma": "Amazônia", "rio": "Rio Negro e Rio Solimões", "fuso": -4, "litoral": false,
+    "vinheta": "No meio da floresta aparece, de repente, a cúpula colorida de um teatro de ópera. Lá embaixo, dois rios correm lado a lado, um cor de café e outro cor de café com leite, e nenhum quer se misturar.",
+    "curiosidades": [
+      "O Teatro Amazonas foi inaugurado em 1896, no tempo da riqueza da borracha.",
+      "No Encontro das Águas, os rios Negro e Solimões correm juntos por vários quilômetros sem se misturar.",
+      "Depois do encontro, no Brasil, o rio passa a se chamar Amazonas."
+    ],
+    "locais": [
+      { "nome": "Teatro Amazonas", "rastro": "assistiu a um concerto debaixo de uma cúpula com as cores da bandeira" },
+      { "nome": "Encontro das Águas", "rastro": "pôs uma mão na água escura e a outra na água barrenta, ao mesmo tempo" },
+      { "nome": "Mercado Adolpho Lisboa", "rastro": "comeu tambaqui assado num mercado de ferro antigo à beira do rio" }
+    ],
+    "distratores": ["belem", "portovelho"]
+  },
+  {
+    "id": "belem", "nome": "Belém", "uf": "PA", "estado": "Pará", "regiao": "Norte",
+    "lat": -1.46, "lon": -48.49, "bioma": "Amazônia", "rio": "Baía do Guajará e Rio Guamá", "fuso": -3, "litoral": false,
+    "vinheta": "Às três da tarde o céu escurece, despenca uma chuva grossa e, meia hora depois, o sol volta como se nada fosse. As ruas são túneis de mangueiras, e no mercado da beira d'água há cheiros que você nunca sentiu.",
+    "curiosidades": [
+      "O Círio de Nazaré, em outubro, leva mais de 2 milhões de pessoas às ruas.",
+      "O Ver-o-Peso nasceu no século XVII como posto onde se pesavam as mercadorias que chegavam pelo rio.",
+      "Belém é chamada de Cidade das Mangueiras pelas árvores que sombreiam as ruas."
+    ],
+    "locais": [
+      { "nome": "Mercado Ver-o-Peso", "rastro": "lambeu o dedo depois de uma coisa roxa gelada e disse que era melhor que sorvete" },
+      { "nome": "Basílica de Nazaré", "rastro": "segurou uma corda gigante junto com milhares de pessoas" },
+      { "nome": "Estação das Docas", "rastro": "tomou sorvete de cupuaçu nos galpões antigos do porto, à beira da baía" }
+    ],
+    "distratores": ["manaus", "saoluis"]
+  },
+  {
+    "id": "portovelho", "nome": "Porto Velho", "uf": "RO", "estado": "Rondônia", "regiao": "Norte",
+    "lat": -8.76, "lon": -63.90, "bioma": "Amazônia", "rio": "Rio Madeira", "fuso": -4, "litoral": false,
+    "vinheta": "Uma locomotiva antiga descansa ao lado de um rio largo e barrento. Três caixas d'água gigantes, iguais e lado a lado, parecem vigiar a cidade.",
+    "curiosidades": [
+      "A Estrada de Ferro Madeira-Mamoré foi construída entre 1907 e 1912 e ficou conhecida como Ferrovia do Diabo.",
+      "As Três Caixas d'Água, do começo do século XX, são o símbolo da cidade.",
+      "O rio Madeira é um dos maiores afluentes do rio Amazonas."
+    ],
+    "locais": [
+      { "nome": "Complexo da Madeira-Mamoré", "rastro": "subiu numa locomotiva antiga e apitou de mentirinha" },
+      { "nome": "Três Caixas d'Água", "rastro": "deu um nome para cada uma de três torres de água iguaizinhas" },
+      { "nome": "Orla do Rio Madeira", "rastro": "comeu peixe frito olhando balsas descerem um rio barrento" }
+    ],
+    "distratores": ["riobranco", "cuiaba"]
+  },
+  {
+    "id": "boavista", "nome": "Boa Vista", "uf": "RR", "estado": "Roraima", "regiao": "Norte",
+    "lat": 2.82, "lon": -60.67, "bioma": "Amazônia (lavrado)", "rio": "Rio Branco", "fuso": -4, "litoral": false,
+    "vinheta": "Visto de cima, o centro da cidade parece um leque aberto, com as ruas saindo de uma praça como varetas. Em volta, em vez de floresta fechada, há um campo aberto de capim e buritis.",
+    "curiosidades": [
+      "O traçado do centro em forma de leque foi planejado nos anos 1940.",
+      "É a única capital brasileira inteira no hemisfério norte.",
+      "O Monte Roraima, na fronteira com a Venezuela e a Guiana, tem rochas com cerca de 2 bilhões de anos."
+    ],
+    "locais": [
+      { "nome": "Praça do Centro Cívico", "rastro": "ficou no meio de uma praça de onde as ruas saem como varetas de leque" },
+      { "nome": "Orla Taumanan", "rastro": "viu o rio Branco brilhar no fim da tarde de um mirante de madeira" },
+      { "nome": "Parque Anauá", "rastro": "fez piquenique debaixo de um buriti num parque enorme" }
+    ],
+    "distratores": ["macapa", "manaus"]
+  },
+  {
+    "id": "palmas", "nome": "Palmas", "uf": "TO", "estado": "Tocantins", "regiao": "Norte",
+    "lat": -10.18, "lon": -48.33, "bioma": "Cerrado", "rio": "Rio Tocantins", "fuso": -3, "litoral": false,
+    "vinheta": "Uma cidade novinha, de avenidas largas e retas, aparece no meio do Cerrado. Ao lado, um lago imenso tem praias de areia branca e água doce.",
+    "curiosidades": [
+      "Palmas foi fundada em 1989 e é a capital mais nova do Brasil.",
+      "A Praça dos Girassóis é uma das maiores praças da América Latina.",
+      "No Jalapão, perto dali, há fervedouros: nascentes onde a água empurra a gente para cima e ninguém afunda."
+    ],
+    "locais": [
+      { "nome": "Praça dos Girassóis", "rastro": "atravessou uma praça tão grande que cansou antes de chegar ao meio" },
+      { "nome": "Praia da Graciosa", "rastro": "tomou banho numa praia de água doce no meio do Cerrado" },
+      { "nome": "Feira de artesanato", "rastro": "ganhou uma pulseira de capim dourado que brilha feito ouro" }
+    ],
+    "distratores": ["brasilia", "goiania"]
+  },
+  {
+    "id": "saoluis", "nome": "São Luís", "uf": "MA", "estado": "Maranhão", "regiao": "Nordeste",
+    "lat": -2.53, "lon": -44.30, "bioma": "Amazônia (litoral de mangues)", "rio": "Rios Anil e Bacanga", "fuso": -3, "litoral": true,
+    "vinheta": "Casarões antigos cobertos de azulejos coloridos brilham no sol. Da janela de um bar sai um reggae bem alto, e na rua alguém ensaia uma dança com um boi enfeitado de fitas.",
+    "curiosidades": [
+      "O Centro Histórico, com seus casarões de azulejo, é Patrimônio Mundial da UNESCO desde 1997.",
+      "A cidade é chamada de Jamaica Brasileira pelo amor ao reggae.",
+      "É a única capital brasileira fundada por franceses, em 1612."
+    ],
+    "locais": [
+      { "nome": "Centro Histórico", "rastro": "contou os azulejos de um casarão até perder a conta" },
+      { "nome": "Arraial de bumba meu boi", "rastro": "dançou ao lado de um boi enfeitado de fitas e brilhos" },
+      { "nome": "Lagoa da Jansen", "rastro": "tomou um refrigerante cor-de-rosa e achou que era chiclete líquido" }
+    ],
+    "distratores": ["belem", "teresina"]
+  },
+  {
+    "id": "teresina", "nome": "Teresina", "uf": "PI", "estado": "Piauí", "regiao": "Nordeste",
+    "lat": -5.09, "lon": -42.80, "bioma": "Cerrado (transição para a Caatinga)", "rio": "Rios Parnaíba e Poti", "fuso": -3, "litoral": false,
+    "vinheta": "O sol queima forte e o ar parece tremer sobre o asfalto. Dois rios se juntam num parque, e o povo se refresca com uma bebida dourada e clarinha.",
+    "curiosidades": [
+      "Teresina foi planejada em 1852 para ser capital, uma das primeiras cidades planejadas do país.",
+      "O nome homenageia a imperatriz Teresa Cristina.",
+      "Pelas muitas descargas elétricas nas tempestades, ganhou o apelido de Chapada do Corisco."
+    ],
+    "locais": [
+      { "nome": "Parque Encontro dos Rios", "rastro": "viu dois rios virarem um só e ouviu a lenda do Cabeça de Cuia" },
+      { "nome": "Ponte Estaiada", "rastro": "subiu no mirante de uma ponte de cabos e viu a cidade toda lá de cima" },
+      { "nome": "Mercado do Troca-Troca", "rastro": "tomou cajuína gelada e disse que era suco de caju chique" }
+    ],
+    "distratores": ["saoluis", "palmas", "fortaleza"]
+  },
+  {
+    "id": "fortaleza", "nome": "Fortaleza", "uf": "CE", "estado": "Ceará", "regiao": "Nordeste",
+    "lat": -3.72, "lon": -38.54, "bioma": "Caatinga (litoral de dunas)", "rio": "Rios Ceará e Cocó", "fuso": -3, "litoral": true,
+    "vinheta": "Jangadas de vela branca voltam do mar no fim da tarde. Na feirinha da orla, uma senhora tece renda com bilros que batem como castanholas, e todo mundo conta piada.",
+    "curiosidades": [
+      "O Ceará tem fama de terra do humor, berço de muitos humoristas.",
+      "A Praia de Iracema tem o nome da heroína do romance de José de Alencar, escritor cearense.",
+      "Às quintas-feiras, a tradição é comer caranguejo na Praia do Futuro."
+    ],
+    "locais": [
+      { "nome": "Ponte dos Ingleses", "rastro": "andou numa ponte velha sobre o mar para ver o pôr do sol" },
+      { "nome": "Mercado Central", "rastro": "cochilou numa rede de dormir no meio de uma loja" },
+      { "nome": "Praia do Futuro", "rastro": "comeu caranguejo com martelinho numa quinta-feira" }
+    ],
+    "distratores": ["natal", "joaopessoa", "teresina"]
+  },
+  {
+    "id": "natal", "nome": "Natal", "uf": "RN", "estado": "Rio Grande do Norte", "regiao": "Nordeste",
+    "lat": -5.79, "lon": -35.21, "bioma": "Mata Atlântica (dunas e restingas)", "rio": "Rio Potengi", "fuso": -3, "litoral": true,
+    "vinheta": "Dunas altíssimas de areia clara despencam até o mar, e dromedários passeiam como se aqui fosse o deserto. Na boca do rio, um forte em forma de estrela olha para o oceano.",
+    "curiosidades": [
+      "O Forte dos Reis Magos é de 1598; a cidade foi fundada no Natal de 1599, daí o nome.",
+      "O maior cajueiro do mundo fica em Pirangi, pertinho de Natal, e cobre mais de 8 mil m².",
+      "Na Segunda Guerra, uma base aérea americana deu a Natal o apelido de Trampolim da Vitória."
+    ],
+    "locais": [
+      { "nome": "Forte dos Reis Magos", "rastro": "tirou foto num forte antigo bem onde o rio encontra o mar" },
+      { "nome": "Dunas de Genipabu", "rastro": "desceu uma duna sentada numa prancha e caiu direto numa lagoa" },
+      { "nome": "Ponta Negra", "rastro": "olhou um morro de areia careca onde ninguém pode subir" }
+    ],
+    "distratores": ["fortaleza", "joaopessoa"]
+  },
+  {
+    "id": "joaopessoa", "nome": "João Pessoa", "uf": "PB", "estado": "Paraíba", "regiao": "Nordeste",
+    "lat": -7.12, "lon": -34.86, "bioma": "Mata Atlântica", "rio": "Rios Paraíba e Sanhauá", "fuso": -3, "litoral": true,
+    "vinheta": "Na praia, um hotel redondo parece uma nave pousada na areia. No centro, uma lagoa cercada de palmeiras, e bem cedinho, antes de todo mundo, o sol aparece no mar.",
+    "curiosidades": [
+      "A Ponta do Seixas é o ponto mais a leste das Américas: ali o sol nasce primeiro no continente.",
+      "Fundada em 1585, a cidade já se chamou Filipeia de Nossa Senhora das Neves e Parahyba.",
+      "O nome atual homenageia João Pessoa, governador da Paraíba assassinado em 1930."
+    ],
+    "locais": [
+      { "nome": "Ponta do Seixas", "rastro": "acordou antes de todo mundo para ver o sol nascer primeiro" },
+      { "nome": "Praia de Tambaú", "rastro": "deu a volta inteira num hotel redondo na beira da praia" },
+      { "nome": "Parque Solon de Lucena", "rastro": "deu comida aos peixes de uma lagoa no meio da cidade" }
+    ],
+    "distratores": ["natal", "recife"]
+  },
+  {
+    "id": "recife", "nome": "Recife", "uf": "PE", "estado": "Pernambuco", "regiao": "Nordeste",
+    "lat": -8.05, "lon": -34.88, "bioma": "Mata Atlântica (manguezais)", "rio": "Rios Capibaribe e Beberibe", "fuso": -3, "litoral": true,
+    "vinheta": "A cidade é cortada por rios e cheia de pontes, uma atrás da outra. No bairro antigo, um bloco passa tocando metais e alguém gira um guarda-chuvinha colorido no ar.",
+    "curiosidades": [
+      "O frevo é Patrimônio Imaterial da Humanidade pela UNESCO desde 2012.",
+      "Pelos rios e pontes, Recife é chamada de Veneza Brasileira.",
+      "Na Rua do Bom Jesus funcionou a Kahal Zur Israel, a primeira sinagoga das Américas."
+    ],
+    "locais": [
+      { "nome": "Marco Zero", "rastro": "ficou bem no meio de uma rosa dos ventos gigante desenhada no chão" },
+      { "nome": "Rua do Bom Jesus", "rastro": "girou um guarda-chuvinha colorido dançando frevo" },
+      { "nome": "Parque das Esculturas", "rastro": "viu esculturas gigantes no meio do mar, no fim de um quebra-mar" }
+    ],
+    "distratores": ["joaopessoa", "maceio", "salvador"]
+  },
+  {
+    "id": "maceio", "nome": "Maceió", "uf": "AL", "estado": "Alagoas", "regiao": "Nordeste",
+    "lat": -9.67, "lon": -35.74, "bioma": "Mata Atlântica", "rio": "Lagoa Mundaú", "fuso": -3, "litoral": true,
+    "vinheta": "O mar tem tantos tons de verde e azul que parece pintado. Na maré baixa, jangadas levam gente até piscinas naturais no meio do oceano, e do outro lado da cidade há uma lagoa calma cheia de pescadores.",
+    "curiosidades": [
+      "As piscinas naturais de Pajuçara aparecem na maré baixa, a cerca de 2 km da praia.",
+      "O Quilombo dos Palmares, de Zumbi, ficava na Serra da Barriga, em Alagoas.",
+      "O sururu, um marisco da lagoa Mundaú, é prato símbolo da cidade."
+    ],
+    "locais": [
+      { "nome": "Piscinas de Pajuçara", "rastro": "foi de jangada até uma piscina no meio do mar e viu peixinhos coloridos" },
+      { "nome": "Lagoa Mundaú", "rastro": "comeu sururu, um mariscozinho da lagoa, com leite de coco" },
+      { "nome": "Pontal da Barra", "rastro": "ganhou uma toalhinha bordada pelas rendeiras de filé" }
+    ],
+    "distratores": ["recife", "aracaju"]
+  },
+  {
+    "id": "aracaju", "nome": "Aracaju", "uf": "SE", "estado": "Sergipe", "regiao": "Nordeste",
+    "lat": -10.91, "lon": -37.07, "bioma": "Mata Atlântica", "rio": "Rio Sergipe", "fuso": -3, "litoral": true,
+    "vinheta": "Uma orla enorme e arrumadinha, com lagos, ciclovia e quiosques. Num dos cantos, uma passarela inteira dedicada a um bicho de casca dura e muitas patas.",
+    "curiosidades": [
+      "Aracaju foi planejada em 1855, com ruas retas como um tabuleiro de xadrez.",
+      "Sergipe é o menor estado do Brasil em área.",
+      "Na Passarela do Caranguejo, na Orla de Atalaia, há uma estátua de caranguejo gigante."
+    ],
+    "locais": [
+      { "nome": "Orla de Atalaia", "rastro": "andou de bicicleta numa orla tão comprida que perdeu a conta dos quiosques" },
+      { "nome": "Passarela do Caranguejo", "rastro": "tirou foto com um caranguejo de estátua e depois comeu um de verdade" },
+      { "nome": "Mercado Thales Ferraz", "rastro": "provou amendoim cozido quentinho vendido no saquinho" }
+    ],
+    "distratores": ["maceio", "salvador"]
+  },
+  {
+    "id": "salvador", "nome": "Salvador", "uf": "BA", "estado": "Bahia", "regiao": "Nordeste",
+    "lat": -12.97, "lon": -38.50, "bioma": "Mata Atlântica", "rio": "Baía de Todos-os-Santos", "fuso": -3, "litoral": true,
+    "vinheta": "Um elevador enorme liga a cidade de cima à cidade de baixo. Nas ladeiras de casarões coloridos, tambores ecoam, rodas de capoeira se formam e o cheiro de dendê toma conta de tudo.",
+    "curiosidades": [
+      "Salvador foi a primeira capital do Brasil, de 1549 a 1763.",
+      "O Elevador Lacerda, inaugurado em 1873, sobe cerca de 70 metros da Cidade Baixa à Cidade Alta.",
+      "O Centro Histórico, com o Pelourinho, é Patrimônio Mundial da UNESCO desde 1985."
+    ],
+    "locais": [
+      { "nome": "Pelourinho", "rastro": "batucou num tambor junto com uma banda nas ladeiras coloridas" },
+      { "nome": "Elevador Lacerda", "rastro": "subiu da cidade de baixo para a cidade de cima num elevador" },
+      { "nome": "Igreja do Bonfim", "rastro": "amarrou uma fitinha colorida no braço e fez três pedidos" }
+    ],
+    "distratores": ["recife", "riodejaneiro", "aracaju"]
+  },
+  {
+    "id": "belohorizonte", "nome": "Belo Horizonte", "uf": "MG", "estado": "Minas Gerais", "regiao": "Sudeste",
+    "lat": -19.92, "lon": -43.94, "bioma": "Cerrado (transição para a Mata Atlântica)", "rio": "Ribeirão Arrudas", "fuso": -3, "litoral": false,
+    "vinheta": "Montanhas cercam a cidade inteira, como uma parede verde e marrom. Em cada esquina há um boteco, o cheiro de pão de queijo sai do forno e alguém diz: uai, sô!",
+    "curiosidades": [
+      "Belo Horizonte foi planejada e inaugurada em 1897 para substituir Ouro Preto como capital de Minas.",
+      "O Conjunto Moderno da Pampulha, de Oscar Niemeyer, é Patrimônio Mundial da UNESCO desde 2016.",
+      "A cidade tem fama de capital dos botecos do Brasil."
+    ],
+    "locais": [
+      { "nome": "Lagoa da Pampulha", "rastro": "viu uma igrejinha cheia de curvas e azulejos azuis na beira de uma lagoa" },
+      { "nome": "Mercado Central", "rastro": "comeu pão de queijo quentinho e levou um queijo inteiro para a mãe" },
+      { "nome": "Mirante do Mangabeiras", "rastro": "olhou a cidade toda lá de cima, cercada de montanhas" }
+    ],
+    "distratores": ["goiania", "vitoria", "saopaulo"]
+  },
+  {
+    "id": "vitoria", "nome": "Vitória", "uf": "ES", "estado": "Espírito Santo", "regiao": "Sudeste",
+    "lat": -20.32, "lon": -40.34, "bioma": "Mata Atlântica", "rio": "Baía de Vitória", "fuso": -3, "litoral": true,
+    "vinheta": "A cidade fica numa ilha ligada ao continente por pontes. No alto de um morro, um convento antigo olha para o mar, e no porto navios gigantes carregam montanhas de minério.",
+    "curiosidades": [
+      "Vitória é uma das três capitais brasileiras em ilha, com Florianópolis e São Luís.",
+      "O Convento da Penha, na vizinha Vila Velha, começou a ser erguido no século XVI.",
+      "O ofício das paneleiras de Goiabeiras, que fazem as panelas da moqueca, é patrimônio cultural do Brasil."
+    ],
+    "locais": [
+      { "nome": "Convento da Penha", "rastro": "subiu um morro até um convento antigo e viu o mar lá de cima" },
+      { "nome": "Paneleiras de Goiabeiras", "rastro": "viu panelas de barro preto sendo feitas só com as mãos" },
+      { "nome": "Praia de Camburi", "rastro": "contou os navios esperando no mar para entrar no porto" }
+    ],
+    "distratores": ["florianopolis", "salvador", "riodejaneiro"]
+  },
+  {
+    "id": "riodejaneiro", "nome": "Rio de Janeiro", "uf": "RJ", "estado": "Rio de Janeiro", "regiao": "Sudeste",
+    "lat": -22.91, "lon": -43.17, "bioma": "Mata Atlântica", "rio": "Baía de Guanabara", "fuso": -3, "litoral": true,
+    "vinheta": "Uma estátua de braços abertos no alto da montanha parece abraçar a cidade inteira. Um bondinho sobe até um morro arredondado, e na areia alguém grita: olha o biscoito!",
+    "curiosidades": [
+      "O Rio foi a capital do Brasil de 1763 a 1960.",
+      "O Cristo Redentor, inaugurado em 1931, tem 30 metros de altura, fora o pedestal.",
+      "A Floresta da Tijuca, replantada no século XIX, é uma das maiores florestas urbanas do mundo."
+    ],
+    "locais": [
+      { "nome": "Cristo Redentor", "rastro": "abriu os braços igualzinho a uma estátua gigante no alto do morro" },
+      { "nome": "Pão de Açúcar", "rastro": "subiu de bondinho até um morro redondo" },
+      { "nome": "Praia de Copacabana", "rastro": "comeu biscoito de polvilho na areia e tomou mate gelado" }
+    ],
+    "distratores": ["salvador", "vitoria", "saopaulo"]
+  },
+  {
+    "id": "saopaulo", "nome": "São Paulo", "uf": "SP", "estado": "São Paulo", "regiao": "Sudeste",
+    "lat": -23.55, "lon": -46.63, "bioma": "Mata Atlântica", "rio": "Rios Tietê e Pinheiros", "fuso": -3, "litoral": false,
+    "vinheta": "Prédios até onde a vista alcança e uma garoa fininha que quase não molha, mas não para. Numa avenida larga, um museu parece flutuar sobre quatro pilares vermelhos.",
+    "curiosidades": [
+      "É a maior cidade do Brasil e da América do Sul, com mais de 11 milhões de habitantes.",
+      "O Brasil tem a maior população de origem japonesa fora do Japão, e o bairro da Liberdade é seu endereço mais famoso.",
+      "O MASP, de Lina Bo Bardi, tem um vão livre de 74 metros sem nenhuma coluna no meio."
+    ],
+    "locais": [
+      { "nome": "Avenida Paulista", "rastro": "passou por baixo de um museu que flutua sobre pilares vermelhos" },
+      { "nome": "Bairro da Liberdade", "rastro": "comeu com palitinhos debaixo de lanternas vermelhas penduradas na rua" },
+      { "nome": "Mercado Municipal", "rastro": "comeu um sanduíche de mortadela do tamanho da cabeça dela" }
+    ],
+    "distratores": ["curitiba", "riodejaneiro", "belohorizonte"]
+  },
+  {
+    "id": "curitiba", "nome": "Curitiba", "uf": "PR", "estado": "Paraná", "regiao": "Sul",
+    "lat": -25.43, "lon": -49.27, "bioma": "Mata Atlântica (mata de araucárias)", "rio": "Rio Iguaçu", "fuso": -3, "litoral": false,
+    "vinheta": "Faz frio de bater o queixo e todo mundo anda de casaco. Árvores com galhos que parecem taças de cabeça para cima aparecem por toda parte, e uma estufa de vidro brilha no meio de um jardim.",
+    "curiosidades": [
+      "A araucária, a árvore que dá o pinhão, é símbolo do Paraná.",
+      "A Ópera de Arame, feita de tubos de aço, foi construída em 75 dias, em 1992.",
+      "Curitiba tem fama de capital mais fria do Brasil."
+    ],
+    "locais": [
+      { "nome": "Jardim Botânico", "rastro": "entrou numa estufa de vidro que parece casinha de conto de fadas" },
+      { "nome": "Ópera de Arame", "rastro": "atravessou uma ponte sobre um lago até um teatro feito de arame" },
+      { "nome": "Largo da Ordem", "rastro": "comeu pinhão cozido quentinho para espantar o frio" }
+    ],
+    "distratores": ["saopaulo", "florianopolis", "portoalegre"]
+  },
+  {
+    "id": "florianopolis", "nome": "Florianópolis", "uf": "SC", "estado": "Santa Catarina", "regiao": "Sul",
+    "lat": -27.60, "lon": -48.55, "bioma": "Mata Atlântica", "rio": "Lagoa da Conceição", "fuso": -3, "litoral": true,
+    "vinheta": "A cidade é quase toda uma ilha, cheia de praias, e uma ponte pênsil antiga brilha à noite. O povo fala rapidinho e cantado, e as ostras saem fresquinhas do mar.",
+    "curiosidades": [
+      "A Ponte Hercílio Luz, de 1926, é a maior ponte pênsil do Brasil.",
+      "Os açorianos chegaram no século XVIII e deixaram a renda de bilro, o boi de mamão e o jeito manezinho de falar.",
+      "Santa Catarina é o maior produtor de ostras do Brasil."
+    ],
+    "locais": [
+      { "nome": "Ponte Hercílio Luz", "rastro": "viu uma ponte antiga se acender inteirinha quando anoiteceu" },
+      { "nome": "Lagoa da Conceição", "rastro": "desceu as dunas da lagoa numa prancha de areia" },
+      { "nome": "Ribeirão da Ilha", "rastro": "comeu ostras na beira do mar e fez careta na primeira" }
+    ],
+    "distratores": ["vitoria", "curitiba", "portoalegre"]
+  },
+  {
+    "id": "portoalegre", "nome": "Porto Alegre", "uf": "RS", "estado": "Rio Grande do Sul", "regiao": "Sul",
+    "lat": -30.03, "lon": -51.23, "bioma": "Pampa (transição para a Mata Atlântica)", "rio": "Lago Guaíba", "fuso": -3, "litoral": false,
+    "vinheta": "No fim da tarde, todo mundo se junta na beira de uma água enorme para ver o sol se pôr, cada um com sua cuia. O cheiro de churrasco vem de algum lugar e alguém diz: bah, tchê!",
+    "curiosidades": [
+      "O pôr do sol no Guaíba é um dos mais famosos do Brasil.",
+      "O chimarrão, feito de erva-mate e tomado na cuia, é a bebida tradicional gaúcha.",
+      "A Revolução Farroupilha (1835–1845) é lembrada todo 20 de setembro."
+    ],
+    "locais": [
+      { "nome": "Orla do Guaíba", "rastro": "viu o sol se pôr na beira de uma água tão grande que parece mar" },
+      { "nome": "Mercado Público", "rastro": "tomou chimarrão na cuia e queimou a língua na bomba" },
+      { "nome": "Parque da Redenção", "rastro": "passeou numa feira de domingo num parque cheio de árvores" }
+    ],
+    "distratores": ["curitiba", "campogrande", "florianopolis"]
+  },
+  {
+    "id": "campogrande", "nome": "Campo Grande", "uf": "MS", "estado": "Mato Grosso do Sul", "regiao": "Centro-Oeste",
+    "lat": -20.47, "lon": -54.62, "bioma": "Cerrado", "rio": "Córregos Prosa e Segredo", "fuso": -4, "litoral": false,
+    "vinheta": "A terra é vermelha e o céu, imenso. Na feira, uma sopa de macarrão vinda do Japão divide o balcão com um pãozinho de queijo do Paraguai, e todo mundo carrega uma garrafa de chá gelado de erva-mate.",
+    "curiosidades": [
+      "O sobá, sopa trazida por imigrantes de Okinawa, é patrimônio cultural da cidade.",
+      "O tereré, herança paraguaia, é o chimarrão tomado com água gelada.",
+      "Pela cor vermelha da terra, a cidade é chamada de Cidade Morena."
+    ],
+    "locais": [
+      { "nome": "Feira Central", "rastro": "tomou uma tigela de sobá, uma sopa de macarrão que veio de Okinawa" },
+      { "nome": "Parque das Nações Indígenas", "rastro": "viu capivaras passeando na grama de um parque enorme" },
+      { "nome": "Mercadão Municipal", "rastro": "comeu chipa, um pãozinho de queijo do Paraguai" }
+    ],
+    "distratores": ["cuiaba", "portoalegre", "goiania"]
+  },
+  {
+    "id": "cuiaba", "nome": "Cuiabá", "uf": "MT", "estado": "Mato Grosso", "regiao": "Centro-Oeste",
+    "lat": -15.60, "lon": -56.10, "bioma": "Cerrado (entre o Pantanal e a Amazônia)", "rio": "Rio Cuiabá", "fuso": -4, "litoral": false,
+    "vinheta": "O calor é tanto que o ar parece um forno aberto. No meio da cidade, um marco diz ser o centro do continente, e na beira do rio vendem peixe pintado e pacu assado.",
+    "curiosidades": [
+      "Cuiabá fica perto do centro geodésico da América do Sul.",
+      "Mato Grosso tem o Pantanal ao sul e a Amazônia ao norte.",
+      "A Chapada dos Guimarães, a uns 65 km, tem cachoeiras e paredões de arenito."
+    ],
+    "locais": [
+      { "nome": "Marco do Centro Geodésico", "rastro": "ficou bem no meio do continente, segundo uma placa" },
+      { "nome": "Orla do Porto", "rastro": "comeu pacu assado na beira do rio" },
+      { "nome": "Chapada dos Guimarães", "rastro": "viu uma cachoeira cair igual a um véu de noiva" }
+    ],
+    "distratores": ["campogrande", "portovelho", "goiania"]
+  },
+  {
+    "id": "goiania", "nome": "Goiânia", "uf": "GO", "estado": "Goiás", "regiao": "Centro-Oeste",
+    "lat": -16.68, "lon": -49.25, "bioma": "Cerrado", "rio": "Rio Meia Ponte", "fuso": -3, "litoral": false,
+    "vinheta": "Prédios de linhas retas e cantos arredondados, no estilo dos anos 1930, enfeitam o centro. No almoço o arroz vem amarelinho, com um fruto que tem espinhos por dentro, e no rádio só toca música sertaneja.",
+    "curiosidades": [
+      "Goiânia foi fundada em 1933, planejada, e tem um dos maiores conjuntos art déco do Brasil.",
+      "O pequi tem espinhos por dentro: não se morde, se rói com cuidado.",
+      "A cidade tem fama de capital da música sertaneja."
+    ],
+    "locais": [
+      { "nome": "Praça Cívica", "rastro": "contou os prédios de cantos redondinhos no centro antigo" },
+      { "nome": "Mercado Central", "rastro": "comeu uma coisa amarela com espinho dentro e quase perdeu um dente" },
+      { "nome": "Parque Vaca Brava", "rastro": "dançou num show de música sertaneja ao ar livre" }
+    ],
+    "distratores": ["brasilia", "belohorizonte", "campogrande"]
+  },
+  {
+    "id": "brasilia", "nome": "Brasília", "uf": "DF", "estado": "Distrito Federal", "regiao": "Centro-Oeste",
+    "lat": -15.79, "lon": -47.88, "bioma": "Cerrado", "rio": "Lago Paranoá", "fuso": -3, "litoral": false,
+    "vinheta": "Vista do alto, a cidade tem o desenho de um avião. Há duas torres gêmeas, duas cúpulas, uma virada para cima e outra para baixo, e uma igreja que parece mãos se abrindo para o céu.",
+    "curiosidades": [
+      "Brasília foi inaugurada em 21 de abril de 1960.",
+      "O Plano Piloto foi desenhado por Lúcio Costa, e os principais prédios, por Oscar Niemeyer.",
+      "O Lago Paranoá é artificial: foi criado junto com a cidade."
+    ],
+    "locais": [
+      { "nome": "Congresso Nacional", "rastro": "deitou na grama em frente a duas cúpulas, uma de boca para cima e outra de boca para baixo" },
+      { "nome": "Catedral", "rastro": "olhou para cima numa igreja que parece mãos abertas para o céu" },
+      { "nome": "Ponte JK", "rastro": "viu o pôr do sol atrás de uma ponte com arcos que pulam como pedrinhas na água" }
+    ],
+    "distratores": ["goiania", "palmas"]
+  }
+]

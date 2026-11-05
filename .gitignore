@@ -1,0 +1,13 @@
+node_modules/
+workflow-graph/
+
+# Ferramentas locais de agentes de IA (não fazem parte do jogo)
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.claude/
+.cursor/
+.windsurf/
+.github/copilot-instructions.md
+.claudeignore
+.copilotignore

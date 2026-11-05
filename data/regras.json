@@ -1,0 +1,53 @@
+{
+  "_sobre": "Números de balanceamento (seções 6 e 10 da especificação). São o ponto de partida: o playtest ajusta aqui, sem mexer em código.",
+  "dias": ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
+  "periodos": ["Manhã", "Tarde", "Fim de tarde", "Noite", "Madrugada"],
+  "niveis": {
+    "facil": { "nome": "Fácil", "apelido": "Brisa", "capitais": 5, "porDia": 4, "opcoes": 3, "pistas": ["direta", "dedutiva"] },
+    "medio": { "nome": "Médio", "apelido": "Vento", "capitais": 7, "porDia": 4, "opcoes": 3, "pistas": ["direta", "dedutiva"] },
+    "dificil": { "nome": "Difícil", "apelido": "Ventania", "capitais": 9, "porDia": 5, "opcoes": 4, "pistas": ["dedutiva", "dedutiva"] }
+  },
+  "custos": {
+    "visita": 1,
+    "viagemCurta": 1,
+    "viagemLonga": 2,
+    "limiteKm": 2000,
+    "voltar": 1,
+    "adelaide": 1,
+    "ventoBonus": 1,
+    "localErradoEncontro": 1,
+    "sopro": 2
+  },
+  "interferencia": {
+    "chance": 0.3,
+    "pesos": { "adelaide": 45, "crispina": 35, "vento": 20 },
+    "pesosVentoFrequente": { "adelaide": 40, "crispina": 30, "vento": 30 }
+  },
+  "crispinaAcertoComPerk": 0.3,
+  "informantes": {
+    "comida": ["velha"],
+    "festa": ["reporter"],
+    "ponto": ["fotografa"],
+    "fala": ["pedro"],
+    "bioma": ["velha", "aurelia"],
+    "hidro": ["aurelia"],
+    "posicao": ["aurelia", "vovo"],
+    "historia": ["vovo", "fotografa"]
+  },
+  "pontos": {
+    "primeira": 100,
+    "umErro": 50,
+    "maisErros": 20,
+    "pagina": 30,
+    "periodo": 10,
+    "final": 200,
+    "finalEspecial": 100
+  },
+  "patentes": [
+    { "id": "recruta", "nome": "Recruta", "pontos": 0, "libera": "Uniforme básico" },
+    { "id": "brisa", "nome": "Brisa", "pontos": 500, "libera": "Segundo uniforme; Crispina erra menos" },
+    { "id": "vento", "nome": "Vento", "pontos": 1500, "libera": "Terceiro uniforme; o sinal do Vento aparece com mais frequência" },
+    { "id": "ventania", "nome": "Ventania", "pontos": 3500, "libera": "Uniforme de gala; o Comissário passa a chamar você pelo nome" },
+    { "id": "ventarolador", "nome": "Ventarolador", "pontos": 6000, "exigeTodosFinais": true, "libera": "Capa de vento; título na tela inicial; Passeio de domingo em todas as capitais" }
+  ]
+}

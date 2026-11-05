@@ -1,0 +1,64 @@
+{
+  "_sobre": "Finais (seção 9) e textos de promoção do espetáculo (seção 14). O verso final está sujeito à licença do texto de Maria Clara Machado; links vazios aparecem como 'em breve'.",
+  "verso": "O vento é verde, a chuva é branca, lá vem a menina cavalgando numa nuvem.",
+  "finais": {
+    "final1": {
+      "titulo": "A menina e o vento",
+      "fala": "Você não precisa voltar se não quiser. Eu só precisava saber que você está bem.",
+      "cena": [
+        "Maria sorri e decide seguir viagem com o Vento.",
+        "O Comissário Plácido chega correndo, gritando ordens de prisão. O Vento dá uma bufada e o deixa pendurado no galho mais alto de uma árvore, de onde ele continua dando ordens.",
+        "Crispina e Atlântica anotam tudo. Pedro ri tanto que cai sentado."
+      ],
+      "desbloqueia": "Postal secreto \"Visto do alto\" no Álbum"
+    },
+    "final2": {
+      "titulo": "O Ventinho da Tia Aurélia",
+      "fala": "Tem alguém na sua casa que sempre quis voar. Ela não é quem você pensa.",
+      "cena": [
+        "Maria decide voltar, mas antes apresenta o Vento à Tia Aurélia, que o chama de Ventinho e fica feliz da vida.",
+        "Tia Adelaide tenta proibir. Tia Adalgisa concorda com as duas ao mesmo tempo.",
+        "E Tia Aurélia, enfim, dá uma volta de ventarola pela praia, de braços abertos."
+      ],
+      "desbloqueia": "Acessório catavento para o avatar; Tia Aurélia deixa um bilhete com pista bônus nas próximas partidas"
+    },
+    "final3": {
+      "titulo": "O vento é bom",
+      "fala": "Sua mãe não está brava. Ela só quer entender. Vamos explicar juntos.",
+      "cena": [
+        "Maria volta para casa e, com a Mãe, convence a família, a polícia e a cidade inteira de que o Vento é bom.",
+        "O Vento promete visitar: toda tarde de domingo ele passa para buscá-la para um passeio.",
+        "O Comissário Plácido declara o Vento \"suspeito liberado por bom comportamento\"."
+      ],
+      "desbloqueia": "Modo Passeio de domingo: viagem livre, sem relógio, pelas capitais do seu Álbum"
+    },
+    "derrota": {
+      "titulo": "Maria virou brisa",
+      "cena": [
+        "Domingo à noite. O Vento está sozinho na Cova.",
+        "Uma brisa passa e levanta o chapéu de palha de Maria. A Mãe segura o último postal.",
+        "O Comissário Plácido encerra o inquérito: \"Caso resolvido por falta de suspeito.\""
+      ]
+    }
+  },
+  "vistoDoAlto": "Mãe, daqui de cima o Brasil parece uma colcha de retalhos: verde, amarelo, marrom e azul. O Vento diz que cada retalho tem um cheiro. Já senti vinte e sete. Beijo, estou ventarolando bem.",
+  "convite": "Agora que você encontrou a Maria, veja a história no palco!",
+  "convidaDerrota": "A Maria virou brisa por aqui, mas no palco ela sempre volta. Veja a peça!",
+  "espetaculo": {
+    "titulo": "A Menina e o Vento — o espetáculo",
+    "texto": "Musical infantil com texto de Maria Clara Machado e direção de Cininha de Paula.",
+    "temporada": "Próxima temporada: a confirmar"
+  },
+  "links": {
+    "ingressos": "",
+    "lojinha": "",
+    "instagram": "",
+    "peca": ""
+  },
+  "aviso": "Este link abre um site fora do jogo. Se você tem menos de 18 anos, chame um adulto antes de continuar.",
+  "patrocinio": {
+    "ventania": [],
+    "vento": [],
+    "brisa": []
+  }
+}

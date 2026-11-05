@@ -119,6 +119,12 @@ describe('dialogos.json e finais.json', () => {
     expect(icone).not.toMatch(/#e8c46a|#e1b955/);
   });
 
+  it('no briefing o Comissário reluta em acreditar que o Vento levou Maria', () => {
+    const falas = dialogos.briefing.placido.join(' ');
+    expect(falas).not.toMatch(/Literalmente: é o Vento/);
+    expect(falas).toMatch(/Onde já se viu/);
+  });
+
   it('o prólogo tem 5 cenas e há 3 finais felizes mais a derrota', () => {
     expect(dialogos.prologo).toHaveLength(5);
     expect(Object.keys(finais.finais)).toEqual(['final1', 'final2', 'final3', 'derrota']);

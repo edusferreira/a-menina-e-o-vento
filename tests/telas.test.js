@@ -115,6 +115,8 @@ describe('telas', () => {
       e = viajar(e, errada, dados).estado;
       if (e.fase === 'errada') e = { ...e, fase: 'capital', capitalAtual: e.caso.rota[e.parada] };
     }
-    expect(renderizar('final', e)).toContain('A rota de Maria');
+    const derrota = renderizar('final', e);
+    expect(derrota).toContain('A rota de Maria');
+    expect(derrota).toContain('Maria virando brisa');
   });
 });

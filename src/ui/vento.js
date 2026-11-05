@@ -1,6 +1,7 @@
 // O Vento, desenhado à parte dos outros personagens. Figura mística e andrógina do espetáculo: manto claro de mangas
 // largas que abrem como asas, faixas de tecido esfarrapadas em tons de vermelho e terra, capuz de tiras, rosto claro de
 // olhos escuros e braços erguidos. A nuvem rabugenta da primeira versão fica disponível em { estilo: 'nuvem' }.
+// O mesmo corpo serve para a Maria virando brisa, na derrota: { cabeca: <svg da cabeça dela>, brisa: true }.
 
 const MANTO = '#ece3d3';
 const DOBRA = '#d3c6ad';
@@ -20,7 +21,7 @@ const FITAS_COSTAS = [[49, 6, 62, -3, 3], [55, 5, 56, 2, 5], [95, 5, 58, -2, 2],
 const PENDURADAS = [[24, 3, 14, -2, 0], [31, 4, 18, 2, 2], [39, 3, 12, -1, 4], [47, 3.5, 16, 2, 1]];
 
 const ehLateral = ([x]) => x < 64 || x > 86;
-const fitasFrente = () => FITAS_FRENTE.map((f) => fita(f, ehLateral(f) ? 30 : 50)).join('');
+const fitasFrente = (topoLateral) => FITAS_FRENTE.map((f) => fita(f, ehLateral(f) ? topoLateral : 50)).join('');
 const fitasCostas = () => FITAS_COSTAS.map((f) => fita(f, 44)).join('');
 const PONTAS_MANGA = [[26, 82], [33, 84], [41, 82], [49, 78]];
 const penduradas = () => PENDURADAS.map((f, i) => fita([PONTAS_MANGA[i][0], ...f.slice(1)], PONTAS_MANGA[i][1] - 4)).join('');
@@ -56,7 +57,7 @@ const FRANJA = '<path d="M62 24 L65.5 30 L68.5 25 L71.5 31 L75 25 L78.5 31 L81.5
 const SOPRO = '<g class="sopro" stroke="#ffffffcc" stroke-width="2.4" fill="none" stroke-linecap="round">'
   + '<path d="M4 98 q12 -6 26 0"/><path d="M10 106 q10 -4 20 0"/><path d="M120 98 q12 -6 26 0"/><path d="M120 106 q10 -4 20 0"/></g>';
 
-function figura({ bravo, dormindo }) {
+function figura({ bravo, dormindo, cabeca }) {
   // Dormindo, os braços descem (giram no ombro) e as tiras penduradas somem.
   const braco = (svg) => (dormindo ? `<g transform="rotate(-94 58 52)">${svg}</g>` : svg);
   const manga = braco(`<path d="${MANGA}" fill="${MANTO}" stroke="#0003" stroke-width="1.2"/><path d="M54 57 Q40 50 23 35" stroke="${DOBRA}" stroke-width="1.2" fill="none"/>${ENROLADAS}`);
@@ -67,10 +68,8 @@ function figura({ bravo, dormindo }) {
       <g class="esvoaca" style="transform-origin:40px 80px">${pontas}</g></g>
     <g data-camada="maos">${braco(MAO)}${espelho(braco(MAO))}</g>
     <g data-camada="manto"><path d="M58 46 Q75 40 92 46 L112 108 Q75 112 38 108Z" fill="${MANTO}" stroke="#0003" stroke-width="1.2"/><path d="M66 60 L60 106 M84 60 L90 106" stroke="${DOBRA}" stroke-width="1.4"/></g>
-    <g data-camada="capuz">${CAPUZ}</g>
-    ${rosto({ bravo, dormindo })}
-    ${FRANJA}
-    <g data-camada="faixas"><g>${GOLA}</g><g class="esvoaca" style="transform-origin:75px 40px">${fitasFrente()}</g></g>
+    ${cabeca ?? `<g data-camada="capuz">${CAPUZ}</g>${rosto({ bravo, dormindo })}${FRANJA}`}
+    <g data-camada="faixas"><g>${GOLA}</g><g class="esvoaca" style="transform-origin:75px 40px">${fitasFrente(cabeca ? 46 : 30)}</g></g>
   </g>${dormindo ? '' : SOPRO}`;
 }
 
@@ -91,17 +90,24 @@ function nuvem({ bravo }) {
     </g>`;
 }
 
+// Brisa: o corpo fica meio transparente, com um brilho verde-claro atrás e redemoinhos em volta.
+const BRILHO = '<defs><radialGradient id="brilho-brisa"><stop offset="0" stop-color="#e9fbef" stop-opacity=".9"/><stop offset="1" stop-color="#cfe8c3" stop-opacity="0"/></radialGradient></defs>'
+  + '<ellipse data-camada="brisa" cx="75" cy="58" rx="74" ry="54" fill="url(#brilho-brisa)"/>';
+const REDEMOINHOS = '<g stroke="#ffffffcc" stroke-width="2" fill="none" stroke-linecap="round"><path d="M10 40 q8 -8 16 0 q-8 6 -4 12"/><path d="M128 60 q8 -8 16 0 q-8 6 -4 12"/><path d="M30 104 q14 -6 28 0"/><path d="M94 104 q14 -6 28 0"/></g>';
+
 const ROTULOS = {
   figura: ({ bravo, dormindo }) => `O Vento, figura mística envolta em faixas de tecido, de braços erguidos${dormindo ? ', dormindo' : ''}${bravo ? ', bravo' : ''}`,
   nuvem: () => 'O Vento, uma nuvem com rosto de velho rabugento',
 };
 
 /**
- * @param {{classe?: string, bravo?: boolean, dormindo?: boolean, attrs?: string, estilo?: 'figura'|'nuvem'}} opcoes
- * `attrs` posiciona o desenho dentro de uma cena (x, y, width, height).
+ * @param {{classe?: string, bravo?: boolean, dormindo?: boolean, attrs?: string, estilo?: 'figura'|'nuvem',
+ *   cabeca?: string, brisa?: boolean, rotulo?: string}} opcoes
+ * `attrs` posiciona o desenho dentro de uma cena (x, y, width, height); `cabeca` troca o capuz e o rosto por outro SVG.
  */
-export function desenharVento({ classe = '', bravo = false, dormindo = false, attrs = '', estilo = 'figura' } = {}) {
-  const desenho = estilo === 'nuvem' ? nuvem({ bravo }) : figura({ bravo, dormindo });
-  const rotulo = (ROTULOS[estilo] ?? ROTULOS.figura)({ bravo, dormindo });
-  return `<svg class="vento ${classe}" ${attrs} viewBox="0 0 150 110" role="img" aria-label="${rotulo}">${desenho}</svg>`;
+export function desenharVento({ classe = '', bravo = false, dormindo = false, attrs = '', estilo = 'figura', cabeca, brisa = false, rotulo } = {}) {
+  const desenho = estilo === 'nuvem' ? nuvem({ bravo }) : figura({ bravo, dormindo, cabeca });
+  const corpo = brisa ? `${BRILHO}<g opacity=".72">${desenho}</g>${REDEMOINHOS}` : desenho;
+  const nome = (rotulo ?? (ROTULOS[estilo] ?? ROTULOS.figura)({ bravo, dormindo })).replace(/["<>&]/g, '');
+  return `<svg class="vento ${classe}" ${attrs} viewBox="0 0 150 110" role="img" aria-label="${nome}">${corpo}</svg>`;
 }

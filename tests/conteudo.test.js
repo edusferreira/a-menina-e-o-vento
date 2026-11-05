@@ -89,6 +89,12 @@ describe('dialogos.json e finais.json', () => {
     expect(dialogos.prologo[1].texto).toMatch(/faixas/);
   });
 
+  it('a derrota conta que Maria virou brisa ao lado do Vento (como a cena mostra), sem dizer que ele está sozinho', () => {
+    const cena = finais.finais.derrota.cena.join(' ');
+    expect(cena).not.toMatch(/está sozinho/);
+    expect(cena).toMatch(/vive nas rajadas/);
+  });
+
   it('o prólogo tem 5 cenas e há 3 finais felizes mais a derrota', () => {
     expect(dialogos.prologo).toHaveLength(5);
     expect(Object.keys(finais.finais)).toEqual(['final1', 'final2', 'final3', 'derrota']);

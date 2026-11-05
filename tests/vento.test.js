@@ -23,6 +23,17 @@ describe('desenharVento', () => {
     expect(desenharVento({ estilo: 'nuvem' })).toMatch(/aria-label="O Vento, uma nuvem/);
   });
 
+  it('aceita outra cabeça no lugar do capuz e um modo brisa, meio transparente e com brilho (Maria virando brisa)', () => {
+    const svg = desenharVento({ cabeca: '<g id="cabeca-teste"/>', brisa: true, rotulo: 'Maria virando brisa' });
+    expect(svg).toContain('<g id="cabeca-teste"/>');
+    expect(camadas(svg)).not.toEqual(expect.arrayContaining(['capuz']));
+    expect(camadas(svg)).not.toContain('rosto');
+    expect(camadas(svg)).toEqual(expect.arrayContaining(['brisa', 'mangas', 'manto', 'faixas']));
+    expect(svg).toContain('aria-label="Maria virando brisa"');
+    // Sem capuz, as fitas laterais começam no pescoço, para não cobrir a cabeça.
+    expect(svg).not.toMatch(/M59 30 q/);
+  });
+
   it('repassa classe e atributos de posição para usar dentro das cenas', () => {
     const svg = desenharVento({ classe: 'grande', attrs: 'x="10" y="20" width="100" height="73"' });
     expect(svg).toContain('class="vento grande"');

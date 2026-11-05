@@ -173,7 +173,7 @@ function cor(valor, paleta) {
  * @param {object} cfg - avatar (ver data/avatar.json "padrao") e, para personagens, roupa/extras.
  * @param {{opcoes: object, uniforme?: object, rotulo?: string, classe?: string, opacidade?: number}} ctx
  */
-export function desenharAvatar(cfg, { opcoes, uniforme, rotulo = 'Avatar', classe = '', opacidade = 1, attrs = '' }) {
+export function desenharAvatar(cfg, { opcoes, uniforme, rotulo = 'Avatar', classe = '', opacidade = 1, attrs = '', recorte = '0 0 104 124' }) {
   const pele = cor(cfg.pele, opcoes.pele);
   const cabeloCor = cor(cfg.corCabelo, opcoes.corCabelo);
   const cabelo = CABELOS[cfg.cabelo] ?? CABELOS.curto;
@@ -197,5 +197,5 @@ export function desenharAvatar(cfg, { opcoes, uniforme, rotulo = 'Avatar', class
     cfg.chapeuAba ? chapeuAba(cfg.chapeuAba) : '',
   ];
   const nome = rotulo.replace(/["<>&]/g, '');
-  return `<svg class="avatar ${classe}" ${attrs} viewBox="0 0 104 124" role="img" aria-label="${nome}" style="opacity:${opacidade}">${camadas.join('')}</svg>`;
+  return `<svg class="avatar ${classe}" ${attrs} viewBox="${recorte}" role="img" aria-label="${nome}" style="opacity:${opacidade}">${camadas.join('')}</svg>`;
 }

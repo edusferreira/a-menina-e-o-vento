@@ -65,11 +65,18 @@ export function cenaFinal(tipo, opcoes, personagens, avatarJogador) {
   const pessoa = (cfg, x, y, w, rotulo, extra = '') => desenharAvatar(cfg, { opcoes, rotulo, attrs: `x="${x}" y="${y}" width="${w}" height="${w * 1.2}" ${extra}` });
   const p = (id, x, y, w, extra) => pessoa(personagens[id], x, y, w, id, extra);
   const vento = (x, y, w, attrs = '') => desenharVento({ attrs: `x="${x}" y="${y}" width="${w}" height="${w * 0.73}" ${attrs}` });
+  // Na derrota, Maria vira brisa: o corpo do Vento, meio transparente, com a cabeça dela (recortada do avatar).
+  const mariaBrisa = (x, y, w) => desenharVento({
+    brisa: true,
+    rotulo: 'Maria virando brisa: o rosto dela com o corpo do Vento',
+    cabeca: desenharAvatar(personagens.maria, { opcoes, rotulo: 'Maria', recorte: '20 0 64 80', attrs: 'x="58" y="2" width="34" height="42.5"' }),
+    attrs: `x="${x}" y="${y}" width="${w}" height="${w * 0.73}"`,
+  });
   const cenas = {
     final1: () => `${praia('f1', 2)}<rect x="40" y="40" width="10" height="110" fill="#6b4a2b"/><circle cx="45" cy="44" r="38" fill="#2f9e5b"/>${p('placido', 26, 14, 40)}${vento(200, 10, 140)}${p('maria', 344, 58, 42)}${p('pedro', 120, 112, 44)}${pessoa(avatarJogador, 170, 106, 50, 'Você')}`,
     final2: () => `${praia('f2', 1)}${vento(160, 20, 140)}${p('aurelia', 292, 8, 42, 'class="voando"')}${p('adelaide', 40, 108, 48)}${p('adalgisa', 92, 110, 46)}${p('maria', 300, 108, 48)}`,
     final3: () => `${ceu(2, 'f3')}<rect y="130" width="400" height="50" fill="#7cc48a"/><path d="M40 130 V80 L90 50 L140 80 V130Z" fill="#f4efe6"/><path d="M30 82 L90 44 L150 82" stroke="#d94f3d" stroke-width="8" fill="none"/>${vento(230, 10, 140)}${p('mae', 160, 92, 54)}${p('maria', 210, 98, 50)}${pessoa(avatarJogador, 280, 100, 50, 'Você')}`,
-    derrota: () => `${praia('fd', 3)}${caverna}${vento(140, 30, 120)}<g class="voando"><ellipse cx="96" cy="120" rx="20" ry="5" fill="#e8c46a"/><path d="M84 120 Q84 106 96 106 Q108 106 108 120Z" fill="#e1b955"/></g>`,
+    derrota: () => `${praia('fd', 3)}${caverna}${vento(140, 30, 120)}<g class="voando"><ellipse cx="96" cy="120" rx="20" ry="5" fill="#e8c46a"/><path d="M84 120 Q84 106 96 106 Q108 106 108 120Z" fill="#e1b955"/></g>${mariaBrisa(18, 22, 112)}`,
   };
   return `<svg class="cena" viewBox="0 0 400 180" role="img" aria-label="Cena final">${(cenas[tipo] ?? cenas.derrota)()}</svg>`;
 }

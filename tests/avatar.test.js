@@ -38,6 +38,11 @@ describe('avatar', () => {
     expect(pedro.pele).toBeLessThan(avatar.personagens.maria.pele);
   });
 
+  it('pode recortar só um pedaço do desenho (ex.: a cabeça da Maria para a Maria-brisa)', () => {
+    expect(desenharAvatar(avatar.personagens.maria, { opcoes: avatar, recorte: '20 0 64 80' })).toContain('viewBox="20 0 64 80"');
+    expect(desenhar(avatar.padrao)).toContain('viewBox="0 0 104 124"');
+  });
+
   const camadas = (svg) => [...svg.matchAll(/data-camada="([^"]+)"/g)].map((m) => m[1]);
 
   it('Mãe: lisa e escura, adereço azul, vestido vermelho de bolinhas, blusa branca, pérolas e folha na mão', () => {

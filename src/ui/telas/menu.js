@@ -34,7 +34,7 @@ export function abertura(api) {
         ${des.passeio ? html`<button class="btn" data-acao="passeio">Passeio de domingo</button>` : ''}
         <button class="btn" data-acao="prologo">Ver o prólogo</button>
         <button class="btn" data-acao="creditos">Créditos</button>
-        <button class="btn secundario" data-acao="peca">Veja a peça</button>
+        <a class="btn secundario" href="${dados.finais.links.peca}" target="_blank" rel="noopener" data-acao="peca">Site da peça</a>
       </nav>
       <section class="config" aria-label="Configurações">
         <label><input type="checkbox" data-config="som" ${perfil.config.som ? 'checked' : ''}> Som</label>

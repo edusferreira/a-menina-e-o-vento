@@ -63,6 +63,12 @@ describe('telas', () => {
     expect(tela).not.toMatch(/PDF|imprimir|album-impressao/i);
   });
 
+  it('a tela inicial tem o link "Site da peça" para ameninaeovento.com, abrindo em nova aba', () => {
+    const tela = renderizar('abertura', null, {});
+    expect(tela).toMatch(/<a [^>]*href="https:\/\/www\.ameninaeovento\.com\/"[^>]*target="_blank"[^>]*>Site da peça<\/a>/);
+    expect(tela).not.toContain('Veja a peça');
+  });
+
   it('telas fora da partida renderizam', () => {
     ['abertura', 'recruta', 'delegacia', 'album', 'passeio', 'patente', 'creditos'].forEach((t) => renderizar(t, null, {}));
     [0, 1, 2, 3, 4].forEach((n) => renderizar('prologo', null, { n }));

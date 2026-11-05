@@ -83,6 +83,12 @@ describe('dialogos.json e finais.json', () => {
     expect(JSON.stringify(dialogos)).not.toMatch(/Recruta \{nome\}/);
   });
 
+  it('o prólogo descreve o Vento como o desenho atual (figura mística), não como o velho barrigudo da nuvem', () => {
+    const textos = dialogos.prologo.map((c) => c.texto).join(' ');
+    expect(textos).not.toMatch(/velho e barrigudo/);
+    expect(dialogos.prologo[1].texto).toMatch(/faixas/);
+  });
+
   it('o prólogo tem 5 cenas e há 3 finais felizes mais a derrota', () => {
     expect(dialogos.prologo).toHaveLength(5);
     expect(Object.keys(finais.finais)).toEqual(['final1', 'final2', 'final3', 'derrota']);

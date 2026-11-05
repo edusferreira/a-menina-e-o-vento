@@ -75,8 +75,10 @@ export function tintaDaMaria(api) {
 /**
  * Carta de Maria escrita numa folha de árvore, como na peça: o vento leva as folhas até a Mãe.
  * `carta` é o miolo em primeira pessoa; com `completa`, o texto já traz saudação e despedida.
+ * `reserva` (o rastro em terceira pessoa) cobre o caso raro de dados antigos ainda em cache, sem a carta.
  */
-export function folhaCarta(api, carta, { chave = '', completa = false, tinta = 1 } = {}) {
+export function folhaCarta(api, carta, { chave = '', completa = false, tinta = 1, reserva } = {}) {
+  if (!carta && reserva) return folhaCarta(api, `Maria ${reserva}.`, { completa: true, tinta });
   const despedida = completa ? '' : variante(api.dados.dialogos.cartaDespedida, chave);
   return html`<figure class="folha-carta" role="group" aria-label="Carta de Maria escrita numa folha de árvore">
     <blockquote style="opacity:${tinta}">

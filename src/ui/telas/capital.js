@@ -112,7 +112,7 @@ export function local(api) {
   const ouvidas = (j.visitados[j.parada] ?? []).filter((k) => k !== idx).map((k) => parada.locais[k]).filter((x) => x.pista).map((x) => x.pista);
   const conteudo = l.tipo === 'postal'
     ? html`<p class="narracao">${dialogos.maeLocal}</p>${balao(api, 'mae', falaMae(l.rastro, nomeRecruta(api), dialogos, chave))}
-      ${folhaCarta(api, l.carta, { chave, tinta: tintaDaMaria(api) })}`
+      ${folhaCarta(api, l.carta, { chave, tinta: tintaDaMaria(api), reserva: l.rastro })}`
     : html`${balao(api, l.informante, falaInformante(l.informante, l.pista, dialogos, chave))}
       <p class="testemunha">Testemunhas contam que a menina ${l.rastro}.</p>`;
   return {

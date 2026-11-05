@@ -1,7 +1,9 @@
 // Service worker (PWA, seção 13): jogável sem internet depois do primeiro acesso.
 // Estratégia "rede primeiro, cache como reserva": quem edita o conteúdo vê a versão nova na hora.
+// A rede é consultada sempre revalidando (no-cache): o GitHub Pages manda o navegador guardar cada arquivo
+// por 10 minutos, e sem isso um jogador podia misturar código novo com dados antigos logo depois de publicar.
 
-const CACHE = 'amev-v1';
+const CACHE = 'amev-v2';
 const ARQUIVOS = [
   './', 'index.html', 'css/style.css', 'icon.svg', 'manifest.webmanifest',
   'data/capitais.json', 'data/pistas.json', 'data/dialogos.json', 'data/finais.json', 'data/avatar.json', 'data/regras.json',
@@ -26,8 +28,11 @@ self.addEventListener('activate', (ev) => {
 
 self.addEventListener('fetch', (ev) => {
   if (ev.request.method !== 'GET' || new URL(ev.request.url).origin !== self.location.origin) return;
+  const revalidado = ev.request.mode === 'navigate'
+    ? fetch(ev.request.url, { cache: 'no-cache' })
+    : fetch(new Request(ev.request, { cache: 'no-cache' }));
   ev.respondWith(
-    fetch(ev.request)
+    revalidado
       .then((resposta) => {
         const copia = resposta.clone();
         caches.open(CACHE).then((c) => c.put(ev.request, copia));

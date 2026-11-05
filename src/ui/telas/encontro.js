@@ -34,7 +34,7 @@ export function encontro(api) {
       <p class="vinheta">${cap.vinheta}</p>
       ${sinalDoVento(api, parada)}
       ${balao(api, 'mae', e.carta)}
-      ${folhaCarta(api, certo.carta, { chave: `${j.semente}:final`, tinta: tintaDaMaria(api) })}
+      ${folhaCarta(api, certo.carta, { chave: `${j.semente}:final`, tinta: tintaDaMaria(api), reserva: certo.rastro })}
       ${api.params.crispina ? balao(api, 'crispina', variante(dialogos.crispinaComemora, `${j.gastos}`)) : ''}
       ${soprado
         ? html`<section class="soprado">${cru(desenharVento({ bravo: true }))}<p class="balao solto">${e.soprado}</p><p>${e.soproCusto}</p>

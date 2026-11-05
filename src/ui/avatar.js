@@ -27,6 +27,7 @@ const BOCAS = {
   sorriso: () => `<path d="M43 60 Q50 67 57 60" stroke="${CONTORNO}" stroke-width="2.2" fill="none" stroke-linecap="round"/>`,
   aberta: () => `<path d="M42 59 Q50 59 58 59 Q57 69 50 69 Q43 69 42 59Z" fill="#7a2e2e"/><path d="M45 65 Q50 62 55 65 Q50 69 45 65Z" fill="#e86f6f"/>`,
   timida: () => `<path d="M46 62 Q50 64 54 62" stroke="${CONTORNO}" stroke-width="2" fill="none" stroke-linecap="round"/>`,
+  assustada: () => '<ellipse cx="50" cy="63" rx="3.6" ry="4.6" fill="#5a1a24"/><ellipse cx="50" cy="64.8" rx="2" ry="1.8" fill="#e86f6f"/>',
 };
 
 const cachos = (cx, cy, r, n, raio, cor) => Array.from({ length: n }, (_, i) => {
@@ -128,7 +129,6 @@ const ACESSORIOS = {
   nenhum: () => '',
   oculos: () => `<g fill="none" stroke="${CONTORNO}" stroke-width="1.8"><circle cx="41" cy="49" r="7"/><circle cx="59" cy="49" r="7"/><path d="M48 49 h4"/></g>`,
   bone: () => '<path d="M28 34 Q28 15 50 15 Q72 15 72 34Z" fill="#d94f3d"/><path d="M50 32 Q78 30 86 37 Q72 40 50 37Z" fill="#a83426"/><circle cx="50" cy="16" r="2" fill="#a83426"/>',
-  chapeu: () => '<ellipse cx="50" cy="29" rx="38" ry="8.5" fill="#e8c46a" stroke="#b8923a" stroke-width="1.2"/><path d="M33 29 Q33 9 50 9 Q67 9 67 29Z" fill="#e1b955" stroke="#b8923a" stroke-width="1.2"/><path d="M33 24 Q50 28 67 24 L67 28 Q50 32 33 28Z" fill="#2f7d4f"/>',
   catavento: () => '<g><path d="M88 120 V82" stroke="#8a5a2b" stroke-width="2.4"/><g class="gira" style="transform-origin:88px 80px"><path d="M88 80 L88 66 L97 72Z" fill="#e8b84a"/><path d="M88 80 L102 80 L96 89Z" fill="#3a8fb7"/><path d="M88 80 L88 94 L79 88Z" fill="#d94f3d"/><path d="M88 80 L74 80 L80 71Z" fill="#2f9e5b"/><circle cx="88" cy="80" r="2" fill="#fff"/></g></g>',
 };
 
@@ -140,6 +140,7 @@ const EXTRAS = {
   lenco: () => '<path d="M25 44 Q24 14 50 14 Q76 14 75 44 Q70 30 50 30 Q30 30 25 44Z" fill="#7b4fa0"/><circle cx="40" cy="22" r="2" fill="#f2c14e"/><circle cx="56" cy="20" r="2" fill="#f2c14e"/><circle cx="66" cy="28" r="2" fill="#f2c14e"/>',
   rugas: () => `<path d="M33 41 q3 -2 6 0 M61 41 q3 -2 6 0" stroke="${CONTORNO}" stroke-width="1" fill="none" opacity=".6"/>`,
   telefone: () => '<path d="M74 70 q6 -2 8 4 l-2 16 q-1 6 -8 5Z" fill="#d94f3d"/>',
+  sobrancelhasErguidas: () => `<path data-camada="sobrancelhas-erguidas" d="M35 41 Q40 35.5 45 39.5 M55 39.5 Q60 35.5 65 41" stroke="${CONTORNO}" stroke-width="2" fill="none" stroke-linecap="round"/>`,
   sobrancelhas: () => `<path d="M35 41 L45 44 M65 41 L55 44" stroke="${CONTORNO}" stroke-width="2.2" stroke-linecap="round"/>`,
 };
 

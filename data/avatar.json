@@ -23,7 +23,8 @@
   "boca": [
     { "id": "sorriso", "nome": "Sorriso" },
     { "id": "aberta", "nome": "Risada" },
-    { "id": "timida", "nome": "Tímida" }
+    { "id": "timida", "nome": "Tímida" },
+    { "id": "assustada", "nome": "Assustada" }
   ],
   "cabelo": [
     { "id": "curto", "nome": "Curto" },
@@ -48,7 +49,6 @@
     { "id": "nenhum", "nome": "Nenhum" },
     { "id": "oculos", "nome": "Óculos" },
     { "id": "bone", "nome": "Boné" },
-    { "id": "chapeu", "nome": "Chapéu de palha" },
     { "id": "catavento", "nome": "Catavento", "exige": "final2" }
   ],
   "uniformes": {

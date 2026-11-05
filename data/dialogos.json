@@ -60,7 +60,7 @@
     "Folhas secas rodopiam em fila, como se dançassem.",
     "Uma pipa voa sozinha, sem ninguém segurando a linha.",
     "Os varais estão vazios e as roupas, penduradas no alto dos postes.",
-    "As nuvens fizeram o desenho de um chapéu de palha."
+    "As nuvens fizeram o desenho de um laço de fita."
   ],
   "interferencias": {
     "adelaide": [
@@ -94,7 +94,7 @@
   ],
   "crispinaComemora": [
     "ACHEI! Ela está aqui! ...Não, era uma pipa. Perdemos um período.",
-    "Caso encerrado, Comissário! ...Ops, era outra menina de chapéu."
+    "Caso encerrado, Comissário! ...Ops, era outra menina de laço vermelho."
   ],
   "atlantica": "Comissário mandou anotar: {lista}. Anotado. O que significa não é comigo.",
   "atlanticaVazia": "Comissário mandou anotar, mas ainda não tem nada para anotar.",
@@ -137,9 +137,9 @@
   "prologo": [
     { "titulo": "Domingo, a fuga", "texto": "Maria e Pedro fogem da aula das três tias e correm para a Cova do Vento, uma praia com uma caverna de que a cidade inteira tem medo." },
     { "titulo": "O Vento dorme", "texto": "Dentro da caverna, o Vento dorme em pé, envolto em faixas de pano que se mexem sozinhas, mesmo sem nenhuma brisa. Pedro quer voltar. Maria quer acordar o Vento." },
-    { "titulo": "O Vento acorda", "texto": "O Vento acorda furioso e sopra Pedro para longe. Pedro cai na areia gritando que bem que avisou. Maria fica." },
+    { "titulo": "O Vento acorda", "texto": "O Vento acorda furioso e sopra Pedro de volta para casa, girando num redemoinho. Maria fica." },
     { "titulo": "Ventarolar", "texto": "Maria anda contra o vento, de braços abertos: está ventarolando. O Vento, impressionado, para de soprar. Os dois conversam e viram amigos." },
-    { "titulo": "O convite", "texto": "O Vento convida Maria para conhecer o Brasil nas costas dele, e os dois somem no céu. As tias chegam e só encontram Pedro e o chapéu de palha. Tia Adelaide decreta: \"Isso não é lugar para mocinhas. Chamem a polícia!\"" }
+    { "titulo": "O convite", "texto": "O Vento convida Maria para conhecer o Brasil nas costas dele, e os dois somem no céu. As tias chegam à praia e não encontram mais ninguém. Pedro, ainda tonto do redemoinho, conta tudo em casa. Tia Adelaide decreta: \"Isso não é lugar para mocinhas. Chamem a polícia!\"" }
   ],
   "dicas": {
     "capital": "Visite os locais para ouvir os informantes. Cada visita custa 1 período. O Diário e o mapa são de graça.",

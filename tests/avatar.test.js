@@ -43,6 +43,18 @@ describe('avatar', () => {
     expect(desenhar(avatar.padrao)).toContain('viewBox="0 0 104 124"');
   });
 
+  it('tem boca de assustado e sobrancelhas erguidas (Pedro no redemoinho)', () => {
+    expect(avatar.boca.map((b) => b.id)).toContain('assustada');
+    const svgs = avatar.boca.map((b) => desenhar({ ...avatar.padrao, boca: b.id }));
+    expect(new Set(svgs).size).toBe(avatar.boca.length);
+    expect(desenhar({ ...avatar.padrao, extras: ['sobrancelhasErguidas'] })).toContain('data-camada="sobrancelhas-erguidas"');
+  });
+
+  it('o recruta não tem mais chapéu de palha; avatares antigos com ele ficam sem acessório', () => {
+    expect(avatar.acessorio.map((a) => a.id)).not.toContain('chapeu');
+    expect(desenhar({ ...avatar.padrao, acessorio: 'chapeu' })).toBe(desenhar({ ...avatar.padrao, acessorio: 'nenhum' }));
+  });
+
   const camadas = (svg) => [...svg.matchAll(/data-camada="([^"]+)"/g)].map((m) => m[1]);
 
   it('Mãe: lisa e escura, adereço azul, vestido vermelho de bolinhas, blusa branca, pérolas e folha na mão', () => {

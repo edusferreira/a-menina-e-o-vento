@@ -47,13 +47,11 @@ export function album(api) {
         </button></li>`)}</ul>
       <section class="cartao-extra"><h2>Cartão 28: ${finais.espetaculo.titulo}</h2><p>${finais.espetaculo.texto}</p><p>${finais.espetaculo.temporada}</p></section>
       ${des.vistoDoAlto ? html`<section class="carta-secreta"><h2>Carta secreta: Visto do alto</h2>${folhaCarta(api, finais.vistoDoAlto, { completa: true })}</section>` : ''}
-      <section class="album-impressao" aria-hidden="true">${capitais.filter((c) => visitada(c.id)).map((c) => detalheCartao(api, c))}</section>
-      <div class="acoes"><button class="btn" data-acao="imprimir">Exportar em PDF</button><button class="btn primario" data-acao="voltar">Voltar</button></div>
+      <div class="acoes"><button class="btn primario" data-acao="voltar">Voltar</button></div>
     </main>`,
     acoes: {
       filtro: ({ regiao }) => api.ir('album', { regiao }),
       cartao: ({ id }) => api.ir('album', { ...api.params, cartao: id }),
-      imprimir: () => window.print(),
       voltar: () => api.ir('abertura'),
     },
   };

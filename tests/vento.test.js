@@ -19,6 +19,14 @@ describe('desenharVento', () => {
     expect(new Set([calmo, bravo, dormindo]).size).toBe(3);
   });
 
+  it('pode dormir deitado: a figura gira para ficar na horizontal e não flutua', () => {
+    const deitado = desenharVento({ dormindo: true, deitado: true });
+    expect(deitado).toContain('transform="rotate(-90 75 55)"');
+    expect(deitado).toMatch(/aria-label="[^"]*dormindo deitado/);
+    expect(deitado).not.toContain('class="flutua"');
+    expect(deitado).not.toBe(desenharVento({ dormindo: true }));
+  });
+
   it('a nuvem antiga continua disponível para comparação', () => {
     expect(desenharVento({ estilo: 'nuvem' })).toMatch(/aria-label="O Vento, uma nuvem/);
   });

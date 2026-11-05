@@ -299,7 +299,6 @@ code { background: #0000000d; padding: 0 .3em; border-radius: 4px; }
 .ficha dt { font-weight: 700; font-size: .85rem; color: var(--tinta-suave); }
 .ficha dd { margin: 0; }
 .cartao-extra { background: var(--palha-claro); border-radius: var(--raio); padding: 6px 16px; margin: 16px 0; }
-.album-impressao { display: none; }
 
 /* Prólogo e créditos */
 .cena-num { color: var(--tinta-suave); font-weight: 700; margin-bottom: 0; }
@@ -334,9 +333,3 @@ code { background: #0000000d; padding: 0 .3em; border-radius: 4px; }
   .menu .btn.primario { grid-column: span 2; }
 }
 
-@media print {
-  body { background: #fff; }
-  .tela > *:not(.album-impressao), .hud { display: none !important; }
-  .album-impressao { display: block !important; }
-  .cartao-detalhe { break-inside: avoid; border-width: 1px; }
-}

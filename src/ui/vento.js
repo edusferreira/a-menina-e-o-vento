@@ -57,12 +57,14 @@ const FRANJA = '<path d="M62 24 L65.5 30 L68.5 25 L71.5 31 L75 25 L78.5 31 L81.5
 const SOPRO = '<g class="sopro" stroke="#ffffffcc" stroke-width="2.4" fill="none" stroke-linecap="round">'
   + '<path d="M4 98 q12 -6 26 0"/><path d="M10 106 q10 -4 20 0"/><path d="M120 98 q12 -6 26 0"/><path d="M120 106 q10 -4 20 0"/></g>';
 
-function figura({ bravo, dormindo, cabeca }) {
+function figura({ bravo, dormindo, cabeca, deitado }) {
   // Dormindo, os braços descem (giram no ombro) e as tiras penduradas somem.
-  const braco = (svg) => (dormindo ? `<g transform="rotate(-94 58 52)">${svg}</g>` : svg);
+  // Deitado, os braços ficam ao longo do corpo (giram mais); em pé dormindo, só descem.
+  const giroBraco = deitado ? -124 : -94;
+  const braco = (svg) => (dormindo ? `<g transform="rotate(${giroBraco} 58 52)">${svg}</g>` : svg);
   const manga = braco(`<path d="${MANGA}" fill="${MANTO}" stroke="#0003" stroke-width="1.2"/><path d="M54 57 Q40 50 23 35" stroke="${DOBRA}" stroke-width="1.2" fill="none"/>${ENROLADAS}`);
   const pontas = dormindo ? '' : `${penduradas()}${espelho(penduradas())}`;
-  return `<g class="flutua" data-camada="vento-figura">
+  return `<g ${deitado ? '' : 'class="flutua" '}data-camada="vento-figura">
     <g data-camada="faixas-costas" class="esvoaca" style="transform-origin:75px 44px">${fitasCostas()}</g>
     <g data-camada="mangas" opacity=".96">${manga}${espelho(manga)}
       <g class="esvoaca" style="transform-origin:40px 80px">${pontas}</g></g>
@@ -96,7 +98,10 @@ const BRILHO = '<defs><radialGradient id="brilho-brisa"><stop offset="0" stop-co
 const REDEMOINHOS = '<g stroke="#ffffffcc" stroke-width="2" fill="none" stroke-linecap="round"><path d="M10 40 q8 -8 16 0 q-8 6 -4 12"/><path d="M128 60 q8 -8 16 0 q-8 6 -4 12"/><path d="M30 104 q14 -6 28 0"/><path d="M94 104 q14 -6 28 0"/></g>';
 
 const ROTULOS = {
-  figura: ({ bravo, dormindo }) => `O Vento, figura mística envolta em faixas de tecido, de braços erguidos${dormindo ? ', dormindo' : ''}${bravo ? ', bravo' : ''}`,
+  figura: ({ bravo, dormindo, deitado }) => {
+    if (deitado) return 'O Vento, figura mística envolta em faixas de tecido, dormindo deitado no chão';
+    return `O Vento, figura mística envolta em faixas de tecido, de braços erguidos${dormindo ? ', dormindo' : ''}${bravo ? ', bravo' : ''}`;
+  },
   nuvem: () => 'O Vento, uma nuvem com rosto de velho rabugento',
 };
 
@@ -105,9 +110,11 @@ const ROTULOS = {
  *   cabeca?: string, brisa?: boolean, rotulo?: string}} opcoes
  * `attrs` posiciona o desenho dentro de uma cena (x, y, width, height); `cabeca` troca o capuz e o rosto por outro SVG.
  */
-export function desenharVento({ classe = '', bravo = false, dormindo = false, attrs = '', estilo = 'figura', cabeca, brisa = false, rotulo } = {}) {
-  const desenho = estilo === 'nuvem' ? nuvem({ bravo }) : figura({ bravo, dormindo, cabeca });
+export function desenharVento({ classe = '', bravo = false, dormindo = false, deitado = false, attrs = '', estilo = 'figura', cabeca, brisa = false, rotulo } = {}) {
+  const emPe = estilo === 'nuvem' ? nuvem({ bravo }) : figura({ bravo, dormindo: dormindo || deitado, cabeca, deitado });
+  // Deitado: a figura inteira gira 90° (cabeça à esquerda, pés à direita) e continua cabendo na mesma caixa.
+  const desenho = deitado ? `<g transform="rotate(-90 75 55)">${emPe}</g>` : emPe;
   const corpo = brisa ? `${BRILHO}<g opacity=".72">${desenho}</g>${REDEMOINHOS}` : desenho;
-  const nome = (rotulo ?? (ROTULOS[estilo] ?? ROTULOS.figura)({ bravo, dormindo })).replace(/["<>&]/g, '');
+  const nome = (rotulo ?? (ROTULOS[estilo] ?? ROTULOS.figura)({ bravo, dormindo, deitado })).replace(/["<>&]/g, '');
   return `<svg class="vento ${classe}" ${attrs} viewBox="0 0 150 110" role="img" aria-label="${nome}">${corpo}</svg>`;
 }

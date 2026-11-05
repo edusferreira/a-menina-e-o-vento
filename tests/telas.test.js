@@ -58,9 +58,21 @@ describe('telas', () => {
     expect(String(html`<p>${'<script>'}</p>`)).toBe('<p>&lt;script&gt;</p>');
   });
 
+  it('o Álbum não oferece exportar em PDF (não faz sentido num jogo)', () => {
+    const tela = renderizar('album', null, {});
+    expect(tela).not.toMatch(/PDF|imprimir|album-impressao/i);
+  });
+
   it('telas fora da partida renderizam', () => {
     ['abertura', 'recruta', 'delegacia', 'album', 'passeio', 'patente', 'creditos'].forEach((t) => renderizar(t, null, {}));
     [0, 1, 2, 3, 4].forEach((n) => renderizar('prologo', null, { n }));
+    expect(renderizar('prologo', null, { n: 1 })).toMatch(/O Vento[^"]*dormindo deitado/);
+    const cena3 = renderizar('prologo', null, { n: 2 });
+    expect(cena3).toContain('data-camada="redemoinho"');
+    expect(cena3).toContain('data-camada="sobrancelhas-erguidas"');
+    expect(renderizar('prologo', null, { n: 4 })).not.toContain('aria-label="pedro"');
+    // O chapéu de palha (aba #e8c46a, copa #e1b955) não aparece mais caído na praia.
+    expect(renderizar('prologo', null, { n: 4 })).not.toMatch(/#e8c46a|#e1b955/);
     renderizar('passeio', null, { capital: 'belem' });
   });
 
@@ -118,5 +130,16 @@ describe('telas', () => {
     const derrota = renderizar('final', e);
     expect(derrota).toContain('A rota de Maria');
     expect(derrota).toContain('Maria virando brisa');
+    expect(derrota).not.toMatch(/#e8c46a|#e1b955/);
+    // Maria é criança: a Maria-brisa é bem menor que o Vento e pisa na mesma altura que ele.
+    const caixa = (rotulo) => {
+      const tag = new RegExp(`<svg class="vento[^>]*aria-label="${rotulo}[^"]*"`).exec(derrota)[0];
+      const num = (attr) => Number(new RegExp(`${attr}="([\\d.]+)"`).exec(tag)[1]);
+      return { largura: num('width'), base: num('y') + num('height') };
+    };
+    const maria = caixa('Maria virando brisa');
+    const vento = caixa('O Vento');
+    expect(maria.largura).toBeLessThanOrEqual(vento.largura * 0.75);
+    expect(Math.abs(maria.base - vento.base)).toBeLessThan(4);
   });
 });

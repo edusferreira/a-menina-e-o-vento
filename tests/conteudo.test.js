@@ -95,6 +95,30 @@ describe('dialogos.json e finais.json', () => {
     expect(cena).toMatch(/vive nas rajadas/);
   });
 
+  it('na cena 3 do prólogo o Vento sopra Pedro de volta para casa, num redemoinho', () => {
+    const texto = dialogos.prologo[2].texto;
+    expect(texto).toMatch(/de volta para casa/);
+    expect(texto).toMatch(/redemoinho/);
+    expect(texto).not.toMatch(/cai na areia/);
+  });
+
+  it('na cena 5 as tias não encontram mais ninguém na praia: Pedro já foi soprado para casa', () => {
+    const texto = dialogos.prologo[4].texto;
+    expect(texto).not.toMatch(/encontram Pedro/);
+    expect(texto).toMatch(/em casa/);
+  });
+
+  it('o chapéu de palha não existe na história: nenhuma fala, cena ou final cita chapéu de palha', () => {
+    expect(JSON.stringify(dialogos)).not.toMatch(/chapéu de palha|menina de chapéu/i);
+    expect(JSON.stringify(finais)).not.toMatch(/chapéu/i);
+  });
+
+  it('o ícone do jogo é um catavento, não um chapéu de palha', () => {
+    const icone = readFileSync(new URL('../icon.svg', import.meta.url), 'utf8');
+    expect(icone).toMatch(/<title>Catavento/);
+    expect(icone).not.toMatch(/#e8c46a|#e1b955/);
+  });
+
   it('o prólogo tem 5 cenas e há 3 finais felizes mais a derrota', () => {
     expect(dialogos.prologo).toHaveLength(5);
     expect(Object.keys(finais.finais)).toEqual(['final1', 'final2', 'final3', 'derrota']);

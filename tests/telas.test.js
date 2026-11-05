@@ -77,8 +77,9 @@ describe('telas', () => {
     expect(cena3).toContain('data-camada="redemoinho"');
     expect(cena3).toContain('data-camada="sobrancelhas-erguidas"');
     expect(renderizar('prologo', null, { n: 4 })).not.toContain('aria-label="pedro"');
-    // O chapéu de palha (aba #e8c46a, copa #e1b955) não aparece mais caído na praia.
-    expect(renderizar('prologo', null, { n: 4 })).not.toMatch(/#e8c46a|#e1b955/);
+    // O chapéu de palha (copa #e1b955 e aba achatada #e8c46a) não aparece mais caído na praia.
+    const CHAPEU = /fill="#e1b955"|ry="[45]" fill="#e8c46a"/;
+    expect(renderizar('prologo', null, { n: 4 })).not.toMatch(CHAPEU);
     renderizar('passeio', null, { capital: 'belem' });
   });
 
@@ -136,7 +137,7 @@ describe('telas', () => {
     const derrota = renderizar('final', e);
     expect(derrota).toContain('A rota de Maria');
     expect(derrota).toContain('Maria virando brisa');
-    expect(derrota).not.toMatch(/#e8c46a|#e1b955/);
+    expect(derrota).not.toMatch(/fill="#e1b955"|ry="[45]" fill="#e8c46a"/);
     // Maria é criança: a Maria-brisa é bem menor que o Vento e pisa na mesma altura que ele.
     const caixa = (rotulo) => {
       const tag = new RegExp(`<svg class="vento[^>]*aria-label="${rotulo}[^"]*"`).exec(derrota)[0];

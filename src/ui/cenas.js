@@ -94,11 +94,28 @@ export function cenaFinal(tipo, opcoes, personagens, avatarJogador) {
     cabeca: desenharAvatar(personagens.maria, { opcoes, rotulo: 'Maria', recorte: '20 0 64 80', attrs: 'x="58" y="2" width="34" height="42.5"' }),
     attrs: `x="${x}" y="${y}" width="${w}" height="${w * 0.73}"`,
   });
+  // Todo o elenco aparece em todo final, como no agradecimento da peça: quem não está na ação da cena entra nas fileiras.
+  const quem = (id, x, y, w, ajuste = {}) => (id === 'voce' ? pessoa(avatarJogador, x, y, w, 'Você') : pessoa({ ...personagens[id], ...ajuste }, x, y, w, id));
+  const fileiras = (tras, frente, ajustes = {}) => {
+    const linha = (ids, y, w) => {
+      const passo = 400 / ids.length;
+      return ids.map((id, i) => quem(id, (passo * i + (passo - w) / 2).toFixed(1), y, w, ajustes[id])).join('');
+    };
+    return `<g data-camada="elenco">${linha(tras, 104, 34)}${linha(frente, 126, 42)}</g>`;
+  };
   const cenas = {
-    final1: () => `${praia('f1', 2)}<rect x="40" y="40" width="10" height="110" fill="#6b4a2b"/><circle cx="45" cy="44" r="38" fill="#2f9e5b"/>${p('placido', 26, 14, 40)}${vento(200, 10, 140)}${p('maria', 344, 58, 42)}${p('pedro', 120, 112, 44)}${pessoa(avatarJogador, 170, 106, 50, 'Você')}`,
-    final2: () => `${praia('f2', 1)}${vento(160, 20, 140)}${p('aurelia', 292, 8, 42, 'class="voando"')}${p('adelaide', 40, 108, 48)}${p('adalgisa', 92, 110, 46)}${p('maria', 300, 108, 48)}`,
-    final3: () => `${ceu(2, 'f3')}<rect y="130" width="400" height="50" fill="#7cc48a"/><path d="M40 130 V80 L90 50 L140 80 V130Z" fill="#f4efe6"/><path d="M30 82 L90 44 L150 82" stroke="#d94f3d" stroke-width="8" fill="none"/>${vento(230, 10, 140)}${p('mae', 160, 92, 54)}${p('maria', 210, 98, 50)}${pessoa(avatarJogador, 280, 100, 50, 'Você')}`,
-    derrota: () => `${praia('fd', 3)}${caverna}${vento(140, 30, 120)}${mariaBrisa(12, 56, 84)}`,
+    // 1. Maria segue com o Vento; Plácido fica pendurado na árvore; Pedro ri.
+    final1: () => `${praia('f1', 2)}<rect x="40" y="40" width="10" height="110" fill="#6b4a2b"/><circle cx="45" cy="44" r="38" fill="#2f9e5b"/>${p('placido', 26, 14, 40)}${vento(200, 0, 130)}${p('maria', 322, 6, 38)}`
+      + fileiras(['vovo', 'velha', 'reporter', 'fotografa', 'adalgisa', 'aurelia'], ['crispina', 'atlantica', 'pedro', 'voce', 'mae', 'adelaide'], { pedro: { boca: 'aberta', olhos: 'sorriso' } }),
+    // 2. Aurélia voa com o Ventinho; Adelaide tenta proibir e Adalgisa concorda com as duas.
+    final2: () => `${praia('f2', 1)}${vento(150, 0, 130)}${p('aurelia', 282, 2, 40, 'class="voando"')}`
+      + fileiras(['vovo', 'velha', 'reporter', 'fotografa', 'placido', 'crispina', 'atlantica'], ['pedro', 'maria', 'adelaide', 'adalgisa', 'mae', 'voce']),
+    // 3. Maria fica com a Mãe e o Vento passa a visitar; a cidade inteira aparece.
+    final3: () => `${ceu(2, 'f3')}<rect y="130" width="400" height="50" fill="#7cc48a"/><path d="M40 130 V80 L90 50 L140 80 V130Z" fill="#f4efe6"/><path d="M30 82 L90 44 L150 82" stroke="#d94f3d" stroke-width="8" fill="none"/>${vento(240, 0, 130)}`
+      + fileiras(['adelaide', 'adalgisa', 'aurelia', 'vovo', 'velha', 'reporter', 'fotografa'], ['placido', 'pedro', 'mae', 'maria', 'voce', 'crispina', 'atlantica']),
+    // Derrota: Maria virou brisa ao lado do Vento; todos olham da praia.
+    derrota: () => `${praia('fd', 3)}${caverna}${vento(150, 8, 120)}${mariaBrisa(20, 34, 84)}`
+      + fileiras(['adelaide', 'adalgisa', 'aurelia', 'vovo', 'velha', 'reporter'], ['fotografa', 'pedro', 'mae', 'voce', 'placido', 'crispina', 'atlantica']),
   };
   return `<svg class="cena" viewBox="0 0 400 180" role="img" aria-label="Cena final">${(cenas[tipo] ?? cenas.derrota)()}</svg>`;
 }
